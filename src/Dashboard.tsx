@@ -117,7 +117,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                             <span id="status-text"> <FaCity /> Open to opportunities in the UK  </span>
                             <span id="status-text"> <FaBookOpen /> Experimenting with: MantineUI </span>
 
-                            <a id="status-text-a" href="https://reddit-statistics-app.vercel.app"> <FaCode /> Current Project: Spotify Charts App </a>
+                            <a id="status-text-a" href="https://reddit-statistics-app.vercel.app/dashboard"> <FaCode /> Current Project: Spotify Charts App </a>
                         </div>
                     </div>
 
