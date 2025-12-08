@@ -18,10 +18,13 @@
 
     display: flex;
     margin: 0 auto;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    min-height: fit-content;
+    height: 180px;
+    text-align: center;
     width: 100%;
-    font-size: 3.2rem;
+    font-size: 3.0rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     font-style: bold;
@@ -36,9 +39,8 @@
     align-items: center;
     width: 100%;
     margin-bottom: 10px;
-    margin-top: 10px;
     font-size: 1.3rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     color: var(--text-color);
 }
@@ -71,6 +73,9 @@
 .blog-post-content {
     color: var(--text-color);
     margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 @media(min-width: 200px) and (max-width:750px) {
@@ -89,7 +94,7 @@
         line-height: 1.4rem;
         margin: 5px;
         margin-left: 0px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     .blog-post-date {

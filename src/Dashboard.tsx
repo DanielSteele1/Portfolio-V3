@@ -1,6 +1,6 @@
 import { TypeAnimation } from 'react-type-animation';
 import { LuGithub } from "react-icons/lu";
-import { MdEmail } from 'react-icons/md';
+import { MdEmail, MdOpenInBrowser } from 'react-icons/md';
 import { HiDownload } from "react-icons/hi";
 import { FaBookOpen, FaCity, FaCode, FaLinkedin } from "react-icons/fa6";
 import GitHubCalendar from 'react-github-calendar';
@@ -10,7 +10,6 @@ import './react-github-calendar.css';
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { IoMdPin } from 'react-icons/io';
 import Statistics from './Stats.tsx';
-
 
 type Props = {
 
@@ -108,8 +107,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                     <span className="dashboard-title"> Introduction </span>
 
                     <div className="landing-paragraph">
-                        Welcome! I'm Daniel Steele, a junior frontend/ full-stack developer based in the UK, specialising in TypeScript and React.
-                        
+                        Welcome! I'm Daniel Steele, a junior frontend / full-stack developer based in the UK.
                     </div>
 
                     <div className="landing-status-container">
@@ -120,6 +118,12 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                             <a id="status-text-a" href="https://reddit-statistics-app.vercel.app/dashboard"> <FaCode /> Current Project: Spotify Charts App </a>
                         </div>
                     </div>
+
+                    {/* <section className="landing-socials">
+                        <div id="landing-social"> <LuGithub /> Github  </div>
+                        <div id="landing-social"> <FaLinkedin /> Linkedin  </div>
+                        <div id="landing-social"> <MdEmail /> Email  </div>
+                    </section> */}
 
                     <div className="landing-grid">
                         <div id="commit-graph">
@@ -132,7 +136,6 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                     <div className="landing-stats">
                         <Statistics />
                     </div>
-
 
                     <span className="dashboard-title"> Sections </span>
                 </div>
