@@ -1,6 +1,6 @@
 import { TypeAnimation } from 'react-type-animation';
 import { LuGithub } from "react-icons/lu";
-import { MdEmail, MdOpenInBrowser } from 'react-icons/md';
+import { MdEmail} from 'react-icons/md';
 import { HiDownload } from "react-icons/hi";
 import { FaBookOpen, FaCity, FaCode, FaLinkedin } from "react-icons/fa6";
 import GitHubCalendar from 'react-github-calendar';
