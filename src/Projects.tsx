@@ -55,6 +55,7 @@ const Project_card: React.FC<ProjectCardProps> = ({ mediaType = 'image', youtube
                 );
         }
     };
+
     return (
 
         <div className="project-card">
@@ -199,7 +200,7 @@ function Projects() {
                             { icon: <SiMantine />, name: "MantineUI" },
                             { icon: <SiVite />, name: "Vite" },
                         ]}
-                        link="https://github.com/DanielSteele1/Spotify-Statistics-Dashboard"
+                        link="https://reddit-statistics-app.vercel.app/dashboard"
                         github="https://github.com/DanielSteele1/Spotify-Statistics-Dashboard"
                     >
 
