@@ -386,11 +386,12 @@ body {
 
 .dashboard-title {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  margin: 10px;
   align-items: center;
-  height: fit-content;
-  width: fit-content;
-  font-size: 2.5rem;
+  height: 80px;
+  width: 100%;
+  font-size: 3.0rem;
   font-family: 'Open Sans', sans-serif;
   font-weight: 450;
   font-style: bold;
@@ -407,11 +408,13 @@ body {
 
 .landing-status-container {
   display: flex;
+  height: fit-content;
   width: 65%;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 .landing-status {
@@ -420,8 +423,6 @@ body {
   grid-template-rows: repeat(auto, 1fr);
   grid-template-columns: repeat(2, 3fr);
   gap: 10px;
-  padding-top: 5px;
-  padding-bottom: 15px;
 }
 
 #status-text-a,
@@ -493,11 +494,11 @@ body {
 
 .landing-paragraph {
   display: flex;
-  height: fit-content;
+  height: 10vh;
   margin-bottom: 10px;
   align-items: center;
   justify-content: center;
-  width: 77%;
+  width: 100%;
   font-family: 'Open Sans', sans-serif;
   font-weight: 450;
   text-align: flex-start;
@@ -507,8 +508,9 @@ body {
 
 .landing-greeting {
   display: flex;
-  height: 180px;
+  height: 210px;
   width: 100%;
+  margin: 0 auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -516,6 +518,12 @@ body {
   font-weight: 500;
   color: var(--text-color) !important;
   padding-bottom: 10px;
+  border-radius: 20px;
+}
+
+.landing-stats {
+  width: 100%;
+  margin: 0 auto;
 }
 
 .dashboard-component,
@@ -524,7 +532,7 @@ body {
   flex-direction: column;
   border-radius: 8px;
   background-color: var(--component-background);
-  height: 120px;
+  height: 110px;
   width: 100%;
   border: 2px solid transparent;
 }
@@ -1400,9 +1408,10 @@ body {
 
 .landing-grid {
   display: flex;
-  flex-direction: column;
   width: 100%;
   height: fit-content;
+  margin: 10px;
+  padding-top: 10px;
 }
 
 #commit-graph {
@@ -1410,7 +1419,7 @@ body {
   width: 100%;
   height: 100%;
   align-content: center;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .banner,
@@ -1598,7 +1607,6 @@ body {
 .resume-reduced {
 
   display: inline-flex;
-  height: 45px;
   width: fit-content;
   align-items: center !important;
   justify-content: center !important;
@@ -1861,14 +1869,14 @@ svg {
   color: var(--text-color);
 }
 
-#landing-social{
- display: inline-flex;
- justify-content: flex-start;
- align-items: center;
- width: 20%;
- padding: 10px;
- padding-left: 0px;
- font-size: 1.4rem;
+#landing-social {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20%;
+  padding: 10px;
+  padding-left: 0px;
+  font-size: 1.4rem;
 }
 
 .landing-socials svg {
@@ -2010,7 +2018,6 @@ svg {
     width: 100%;
     align-items: center;
     justify-content: flex-start;
-
   }
 
   .landing-status {
@@ -2047,7 +2054,6 @@ svg {
     width: 100%;
     align-items: center;
     justify-content: flex-start;
-
   }
 
   .landing-status {
@@ -2370,11 +2376,24 @@ svg {
     display: none;
   }
 
+  .landing-greeting{
+    width:80%;
+    margin:0 auto;
+
+  }
+
+  .landing-stats {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   .socials-reduced {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    margin-left: 10px;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
   }
 
   /* three items on first row */
@@ -2443,9 +2462,10 @@ svg {
   }
 
   .landing-paragraph {
-    height: 100px;
+    height: 80px;
     padding-bottom: 10px;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     font-size: 1.0rem;
   }
 
@@ -2503,8 +2523,8 @@ svg {
   .dashboard-component {
     margin: 0 auto;
     width: 100%;
-    max-width: 90%;
-    height: 150px;
+    max-width: 80%;
+    height: 120px;
     grid-column: auto;
   }
 
@@ -2519,7 +2539,7 @@ svg {
     width: 100%;
     flex-direction: column;
     margin: 0 auto;
-    line-height: 3.0rem;
+    line-height: 3.5rem;
   }
 
   .type-animation {
@@ -2549,11 +2569,9 @@ svg {
   }
 
   .footer {
-    width: 90%;
-    padding: 0px;
+    width: 85%;
     font-size: 0.9rem;
-    height: 50px;
-    margin-top: 30px;
+    height: fit-content;
     flex-direction: row;
   }
 
@@ -2569,7 +2587,8 @@ svg {
   .landing-grid {
     display: flex;
     flex-direction: column;
-    width: 95%;
+    margin: 0 auto;
+    width: 80%;
   }
 
   #commit-graph {
@@ -2775,6 +2794,8 @@ svg {
 
   .dashboard-title {
     font-size: 2.2rem;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .dashboard-subtitle {
@@ -2889,9 +2910,10 @@ svg {
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: 80px;
+    height: 100px;
     margin: 0 auto;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     text-align: center;
   }
 
@@ -2935,16 +2957,15 @@ svg {
   .dashboard-title {
     width: 100%;
     margin: 0 auto;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
   }
 
   .landing-area {
-    width: 90%;
+    width: 100%;
     height: fit-content;
     min-height: 250px;
     border-radius: 8px;
-    margin: 0 auto;
   }
 
   .breadcrumbs {
@@ -2964,7 +2985,7 @@ svg {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .stat{
+  .stat {
     font-size: 1.8rem;
   }
 

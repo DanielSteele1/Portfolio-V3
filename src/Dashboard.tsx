@@ -104,11 +104,10 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                         </div>
                     </div>
 
-                    <span className="dashboard-title"> Introduction </span>
 
-                    <div className="landing-paragraph">
+                    {/* <div className="landing-paragraph">
                         Welcome! I'm Daniel Steele, a junior frontend / full-stack developer based in the UK.
-                    </div>
+                    </div> */}
 
                     <div className="landing-status-container">
                         <div className="landing-status">
@@ -136,8 +135,6 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                     <div className="landing-stats">
                         <Statistics />
                     </div>
-
-                    <span className="dashboard-title"> Sections </span>
                 </div>
 
                 <div className="dashboard">
