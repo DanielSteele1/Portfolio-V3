@@ -538,11 +538,15 @@ body {
   border: 2px solid transparent;
 }
 
+.component-none {
+  background: var(--main-gradient);
+}
+
 .dashboard-component:hover {
   transform: translateY(-5px) !important;
   transition: 0.2s ease-in;
   cursor: pointer;
-  background-color: var(--component-hover-background);
+  background: var(--main-gradient);
 }
 
 .component-info {
@@ -1046,7 +1050,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-  
+
   font-weight: 400;
   color: var(--text-color);
 }
@@ -1841,6 +1845,7 @@ svg {
   height: 100px;
   width: 100%;
   background-color: var(--component-background);
+
   color: var(--text-color);
   font-size: 1.8rem;
   margin: 0 auto;
@@ -1853,8 +1858,8 @@ svg {
 
 .stat:hover {
   cursor: pointer;
-  transition: 0.2s ease-in-out;
-  background-color: var(--component-hover-background);
+  transition: 0.3s ease-in-out;
+  background: var(--main-gradient);
   transform: translateY(-5px);
 
 }
@@ -1926,7 +1931,6 @@ svg {
   background: var(--main-gradient);
   border-radius: 10px;
   color: white;
-
 }
 
 
