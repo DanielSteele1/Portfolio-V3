@@ -124,16 +124,20 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                         <div id="landing-social"> <MdEmail /> Email  </div>
                     </section> */}
 
-                    <div className="landing-grid">
-                        <div id="commit-graph">
-                            <GitHubCalendar
-                                username="danielsteele1"
-                                colorScheme="dark" />
-                        </div>
-                    </div>
+             
 
                     <div className="landing-stats">
                         <Statistics />
+                    </div>
+                           <div className="landing-grid">
+                        <div id="commit-graph">
+                            <GitHubCalendar
+                                username="danielsteele1"
+                                errorMessage="Could not show Graph right now. Please Reload :)"
+                                loading={false}
+                                hideColorLegend={true}
+                                />
+                        </div>
                     </div>
                 </div>
 

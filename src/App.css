@@ -89,9 +89,9 @@ a {
   --border-color: #3d4157;
   --Nav-menu-background: rgb(255, 255, 255);
   --Nav-icon-background: #a871f1;
-  --component-text-color: rgb(255, 255, 255);
-  --component-background: #b979f5;
-  --component-hover-background: #843fdd;
+  --component-text-color: #9443ff;
+  --component-background: rgb(252, 249, 249);
+  --component-hover-background: #a871f1;
   --heading-color: #222;
   --text-highlight-color: #bb94ee;
 }
@@ -436,7 +436,7 @@ body {
   align-items: center;
   font-weight: 400;
   font-size: 1.0rem;
-  color: whitesmoke;
+  color: var(--text-color);
 }
 
 #status-text,
@@ -566,6 +566,7 @@ body {
 
 .component-description {
   font-size: 1.1rem;
+  color: var(--text-color);
 }
 
 .component-title {
@@ -1410,7 +1411,7 @@ body {
   display: flex;
   width: 100%;
   height: fit-content;
-  margin: 10px;
+  padding-bottom: 10px;
   padding-top: 10px;
 }
 
@@ -1420,6 +1421,7 @@ body {
   height: 100%;
   align-content: center;
   justify-content: center;
+  color: var(--text-color);
 }
 
 .banner,
@@ -1835,6 +1837,7 @@ svg {
   height: 100px;
   width: 100%;
   background-color: var(--component-background);
+  color: var(--text-color);
   font-size: 1.8rem;
   margin: 0 auto;
   justify-content: center;
