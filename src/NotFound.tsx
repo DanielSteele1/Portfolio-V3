@@ -11,10 +11,11 @@ function NotFound() {
           <div className="ErrorMessageContainer">
             <span className="ErrorSVG">
               <VscBracketError />
+              404
             </span>
 
             <span className="ErrorMessage">
-              Error 404 - Page Not Found. Please click here to return to the homepage.
+              Error - Page Not Found. Click here to return to the homepage.
             </span>
 
           </div>

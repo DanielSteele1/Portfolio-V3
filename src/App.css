@@ -1898,9 +1898,7 @@ svg {
 }
 
 
-
 .NotFound {
-
   display: flex;
   width: fit-content;
   height: 100vh;
@@ -1909,10 +1907,16 @@ svg {
   align-items: center;
 }
 
-.ErrorSVG svg {
+.ErrorSVG {
   display: flex;
   width: 100%;
-  font-size: 8.0rem;
+  font-size: 5.0rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.ErrorSVG svg {
+  padding: 10px;
 }
 
 .ErrorMessage {
@@ -1921,18 +1925,23 @@ svg {
   font-size: 1.3rem;
 }
 
+.ErrorMessageContainer:hover {
+  transform: translateY(-3px);
+  transition: 0.3s ease-in;
+}
+
 .ErrorMessageContainer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   height: fit-content;
   padding: 20px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   background: var(--main-gradient);
   border-radius: 10px;
   color: white;
 }
-
 
 @media (min-width: 1200px) and (max-width: 1600px) {
 
@@ -3035,6 +3044,14 @@ svg {
 
   .stat {
     font-size: 1.8rem;
+  }
+
+  .ErrorMessageContainer {
+    width: 80%;
+  }
+
+  .ErrorSVG {
+    font-size: 4.0rem;
   }
 
 }
