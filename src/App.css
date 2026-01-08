@@ -508,7 +508,7 @@ body {
 
 .landing-greeting {
   display: flex;
-  height: 210px;
+  height: 250px;
   width: 100%;
   margin: 0 auto;
   flex-direction: column;
@@ -518,7 +518,8 @@ body {
   font-weight: 500;
   color: var(--text-color) !important;
   padding-bottom: 10px;
-  border-radius: 20px;
+  margin-bottom: 15px;
+
 }
 
 .landing-stats {
@@ -1045,16 +1046,19 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
+  
   font-weight: 400;
   color: var(--text-color);
 }
 
-.footer-icon a {
-  padding-left: 10px;
-  color: var(--icon-color);
+.footer-item a {
+  color: var(--text-color);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.footer-icon a:hover {
+.footer-item a:hover {
   transition: 0.3s ease-in-out;
   color: var(--icon-color);
 }
@@ -1889,6 +1893,43 @@ svg {
 }
 
 
+
+.NotFound {
+
+  display: flex;
+  width: fit-content;
+  height: 100vh;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.ErrorSVG svg {
+  display: flex;
+  width: 100%;
+  font-size: 8.0rem;
+}
+
+.ErrorMessage {
+  text-align: center;
+  line-height: 1.7rem;
+  font-size: 1.3rem;
+}
+
+.ErrorMessageContainer {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  background: var(--main-gradient);
+  border-radius: 10px;
+  color: white;
+
+}
+
+
 @media (min-width: 1200px) and (max-width: 1600px) {
 
   .main-container {
@@ -2379,9 +2420,9 @@ svg {
     display: none;
   }
 
-  .landing-greeting{
-    width:80%;
-    margin:0 auto;
+  .landing-greeting {
+    width: 80%;
+    margin: 0 auto;
 
   }
 

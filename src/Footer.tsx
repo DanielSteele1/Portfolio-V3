@@ -1,5 +1,6 @@
 import { LuGithub } from "react-icons/lu";
 import { IoLogoLinkedin } from "react-icons/io5";
+import { VscBracketError } from "react-icons/vsc";
 
 function Footer() {
 
@@ -11,6 +12,15 @@ function Footer() {
 
             <div className="footer-item">
                 <span className="gradient">Daniel Steele ©{currentYear} </span>
+            </div>
+
+            <div className="footer-item">
+                <a href="*">
+                    <span className="footer-icon">
+                        <VscBracketError style={{ fontSize: '30px', paddingRight: '10px' }} />
+                    </span>
+                    404 Page
+                </a>
             </div>
 
             <div className="footer-item">
