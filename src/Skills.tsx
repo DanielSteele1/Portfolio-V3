@@ -38,7 +38,7 @@ function Skills() {
                     </div>
 
                     <span className="skills-heading">
-                        My Skills 🏗️
+                        My Skills & Experience 
                     </span>
 
                     <span className="skills-sub-heading">

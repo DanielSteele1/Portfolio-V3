@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Quicksand:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+
+
+.technologies {
+    display: flex;
+}
+
+.tech-tag {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    width: 100%;
+    height: fit-content;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.experience-list {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    height: fit-content;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Open-sans', sans-serif;
+}
+
+#company {
+    display: flex;
+    font-size: 2.0rem;
+    color: var(--text-color);
+}
+
+#duration {
+    display: flex;
+    font-size: 1.0rem;
+}
+
+#position {
+    color: var(--icon-color);
+}
+
+.title{
+display: flex;
+width: 100%;
+padding: 10px;
+font-size: 2.0rem;
+color: var(--icon-color);
+}
+
+
+#description {
+    display: flex;
+    font-size: 1.0rem;
+}
+
+@media(min-width: 300px) and (max-width: 750px) {
+
+    .experience{
+        width: 80%;
+        margin: 0 auto;
+        height: fit-content;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

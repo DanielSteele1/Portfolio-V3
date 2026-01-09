@@ -12,10 +12,10 @@ import Projects from './Projects';
 import Blog from './Blog';
 import Links from './Links';
 
-
 import React, { useEffect, useState } from 'react';
 import { Analytics } from "@vercel/analytics/react"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 
 declare global {
   interface Window {
@@ -82,26 +82,27 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navigation
-          handleDownloadAndView={handleDownloadAndView}
-          handleThemeButton={handleThemeButton}
-          isThemeOn={isThemeOn} />
+          <Navigation
+            handleDownloadAndView={handleDownloadAndView}
+            handleThemeButton={handleThemeButton}
+            isThemeOn={isThemeOn} />
 
-        <Routes>
-          <Route path="/" element={React.createElement(Dashboard as any, { isThemeOn, handleDownloadAndView })} />
-          <Route path="*" element={<NotFound />} />
+          <Routes>
+            <Route path="/" element={React.createElement(Dashboard as any, { isThemeOn, handleDownloadAndView })} />
 
-          <Route path="/About" element={<AboutMe />} />
-          <Route path="/Blog" element={<Blog />} />
-          <Route path="/Blog/:slug" element={<BlogPost />} />
-          <Route path="/Skills" element={<Skills />} />
-          <Route path="/Projects" element={<Projects />} />
-          <Route path="/Links" element={<Links />} />
-        </Routes>
+            <Route path="*" element={<NotFound />} />
+
+            <Route path="/About" element={<AboutMe />} />
+            <Route path="/Blog" element={<Blog />} />
+            <Route path="/Blog/:slug" element={<BlogPost />} />
+            <Route path="/Skills" element={<Skills />} />
+            <Route path="/Projects" element={<Projects />} />
+            <Route path="/Links" element={<Links />} />
+          </Routes>
 
         <Footer />
         <Analytics />
-      </BrowserRouter>
+      </BrowserRouter >
 
     </>
   )

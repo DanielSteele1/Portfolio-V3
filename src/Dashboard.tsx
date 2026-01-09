@@ -1,6 +1,6 @@
 import { TypeAnimation } from 'react-type-animation';
 import { LuGithub } from "react-icons/lu";
-import { MdEmail} from 'react-icons/md';
+import { MdEmail } from 'react-icons/md';
 import { HiDownload } from "react-icons/hi";
 import { FaBookOpen, FaCity, FaCode, FaLinkedin } from "react-icons/fa6";
 import GitHubCalendar from 'react-github-calendar';
@@ -10,6 +10,7 @@ import './react-github-calendar.css';
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { IoMdPin } from 'react-icons/io';
 import Statistics from './Stats.tsx';
+import Experience from './Experience.tsx';
 
 type Props = {
 
@@ -79,7 +80,6 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                     </div>
 
                     <div className="resume-reduced-container">
-
                         <div className="socials-reduced">
 
                             <a id="social-link" href="https://www.linkedin.com/in/daniel-steele1" target="_blank" referrerPolicy='no-referrer'>
@@ -114,7 +114,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                             <span id="status-text"> <FaCity /> Open to opportunities in the UK  </span>
                             <span id="status-text"> <FaBookOpen /> Experimenting with: MantineUI </span>
 
-                            <a id="status-text-a" href="https://reddit-statistics-app.vercel.app/dashboard"> <FaCode /> Current Project: Spotify Charts App </a>
+                            <a id="status-text-a" href="https://reddit-statistics-app.vercel.app/dashboard"> <FaCode style={{fontSize: '25px'}}/> Current Project: Spotify Charts App </a>
                         </div>
                     </div>
 
@@ -124,21 +124,25 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                         <div id="landing-social"> <MdEmail /> Email  </div>
                     </section> */}
 
-             
+
 
                     <div className="landing-stats">
                         <Statistics />
                     </div>
-                           <div className="landing-grid">
+
+                    <div className="landing-grid">
                         <div id="commit-graph">
                             <GitHubCalendar
                                 username="danielsteele1"
                                 errorMessage="Could not show Graph right now. Please Reload :)"
                                 loading={false}
                                 hideColorLegend={true}
-                                />
+                            />
                         </div>
                     </div>
+
+                    <Experience />
+
                 </div>
 
                 <div className="dashboard">
@@ -190,11 +194,14 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                             <div className="component-info" id="component-info-links">
                                 <span className="none-title"> Interested? </span>
                                 <span className="none-desc"> Click here to shoot me an email. </span>
-
                             </div>
                         </div>
                     </div>
                 </div>
+
+
+
+
             </div>
         </div>
     )

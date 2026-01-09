@@ -13,15 +13,12 @@ function NotFound() {
               <VscBracketError />
               404
             </span>
-
             <span className="ErrorMessage">
               Error - Page Not Found. Click here to return to the homepage.
             </span>
-
           </div>
         </a>
       </section>
-
     </>
   )
 }
