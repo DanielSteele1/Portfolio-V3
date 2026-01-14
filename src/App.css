@@ -88,7 +88,7 @@ a {
   --text-color: #222;
   --border-color: #3d4157;
   --Nav-menu-background: rgb(255, 255, 255);
-  --Nav-icon-background: #a871f1;
+  --Nav-icon-background: #a35efd;
   --component-text-color: #9443ff;
   --component-background: rgb(252, 249, 249);
   --component-hover-background: #a871f1;
@@ -1638,8 +1638,8 @@ body {
 .theme-button:hover,
 .resume-reduced:hover,
 .theme-button-reduced:hover {
-  transition: 0.1s ease-in;
-  background-color: var(--button-gradient);
+  transition: 0.4s ease-in;
+  background: var(--main-gradient);
 }
 
 .resume a {
@@ -2204,6 +2204,11 @@ svg {
 
 
 @media (min-width: 750px) and (max-width: 1000px) {
+
+    .navigation.scrolled {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
 
   .links {
     width: 80%;
