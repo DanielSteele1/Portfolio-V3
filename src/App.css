@@ -345,6 +345,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-left: 10px;
 }
 
 .breadcrumbs {
@@ -1295,12 +1296,10 @@ body {
   display: grid;
   grid-template-rows: auto 1fr;
   margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
 }
 
-.project-card:hover {
-  transition: 0.4s ease-in;
-  border-color: var(--icon-color);
-}
 
 .project-information {
   display: flex;
@@ -2079,7 +2078,9 @@ svg {
 
   .main-container,
   .projects,
-  .about {
+  .about,
+  .Blog,
+  .footer {
     width: 60%;
   }
 
@@ -2109,6 +2110,22 @@ svg {
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
+
+  .projects,
+  .Blog,
+  .about,
+  .footer{
+    width: 60%;
+  }
+
+  .project-card{
+    width: 100%;
+  }
+
+  .project-information{
+    padding: 0px;
+    padding-top: 20px;
+  }
 
   .Frontend-skills,
   .Backend-skills,
@@ -2166,6 +2183,8 @@ svg {
 
   }
 
+
+
   .landing-status {
     width: fit-content;
     grid-template-rows: repeat(auto, 1fr);
@@ -2181,7 +2200,9 @@ svg {
 
   .main-container,
   .projects,
-  .about {
+  .about,
+  .Blog,
+  .footer {
 
     width: 75%;
   }
@@ -2205,7 +2226,7 @@ svg {
 
 @media (min-width: 750px) and (max-width: 1000px) {
 
-    .navigation.scrolled {
+  .navigation.scrolled {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
@@ -2249,7 +2270,7 @@ svg {
   }
 
   .footer {
-    width: 70%;
+    width: 90%;
   }
 
   .greeting {
@@ -2452,7 +2473,6 @@ svg {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-
 
   .landing-status {
     display: none;
