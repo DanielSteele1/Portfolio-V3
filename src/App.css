@@ -451,8 +451,10 @@ body {
 
 #status-text:hover,
 #status-text-a:hover {
-  background: #a871f1;
-  transition: ease-in 0.3s;
+  transition: ease-in-out 0.3s;
+  background: var(--main-gradient);
+  color: whitesmoke;
+  transform: translateY(-5px);
 }
 
 #status-text-a:hover {
@@ -552,6 +554,13 @@ body {
   transition: 0.2s ease-in;
   cursor: pointer;
   background: var(--main-gradient);
+}
+
+.dashboard-component:hover .component-description {
+
+  transform: translateY(-5px) !important;
+  transition: 0.2s ease-in;
+  color: whiteSmoke;
 }
 
 .component-info {
@@ -931,7 +940,6 @@ body {
 .About-status:hover {
   cursor: pointer;
   transition: 0.3s ease-in-out;
-  border: 2px solid var(--main-accent);
 }
 
 .About-status span {
@@ -1868,6 +1876,7 @@ svg {
   cursor: pointer;
   transition: 0.3s ease-in-out;
   background: var(--main-gradient);
+  color: whitesmoke;
   transform: translateY(-5px);
 
 }
@@ -1956,7 +1965,7 @@ svg {
   font-size: 2.1rem !important;
 }
 
-.footer-icon{
+.footer-icon {
 
   justify-content: center;
   align-items: center;
@@ -2114,15 +2123,15 @@ svg {
   .projects,
   .Blog,
   .about,
-  .footer{
+  .footer {
     width: 60%;
   }
 
-  .project-card{
+  .project-card {
     width: 100%;
   }
 
-  .project-information{
+  .project-information {
     padding: 0px;
     padding-top: 20px;
   }
