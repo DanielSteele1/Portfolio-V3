@@ -12,7 +12,7 @@ interface GraphProps {
     isThemeOn: boolean;
 }
 
-function GithubGraph({ loading, setLoading, isThemeOn}: GraphProps) {
+function GithubGraph({ loading, setLoading}: GraphProps) {
 
     useEffect(() => {
 
