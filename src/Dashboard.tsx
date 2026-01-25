@@ -3,7 +3,6 @@ import { LuGithub } from "react-icons/lu";
 import { MdEmail } from 'react-icons/md';
 import { HiDownload } from "react-icons/hi";
 import { FaBookOpen, FaCity, FaCode, FaLinkedin } from "react-icons/fa6";
-import GitHubCalendar from 'react-github-calendar';
 
 import './react-github-calendar.css';
 
@@ -12,13 +11,18 @@ import { IoMdPin } from 'react-icons/io';
 import Statistics from './Stats.tsx';
 import Experience from './Experience.tsx';
 
+import { useState } from 'react';
+import GithubGraph from './GithubGraph.tsx';
+
 type Props = {
 
     handleDownloadAndView: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
-    theme: boolean;
+    isThemeOn: boolean;
 };
 
-const Dashboard = ({ handleDownloadAndView }: Props) => {
+const Dashboard = ({ handleDownloadAndView, isThemeOn }: Props) => {
+
+    const [loading, setLoading] = useState(true);
 
     return (
 
@@ -59,9 +63,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                 <div className="landing-area">
                     <div className="landing-greeting">
                         <span className="landing-header">
-
                             Hey, I'm <div id="highlight-name"> Daniel Steele </div>
-
                         </span>
                         <TypeAnimation
                             className='type-animation'
@@ -114,32 +116,16 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                             <span id="status-text"> <FaCity /> Open to opportunities in the UK  </span>
                             <span id="status-text"> <FaBookOpen /> Experimenting with: MantineUI </span>
 
-                            <a id="status-text-a" href="https://reddit-statistics-app.vercel.app/dashboard"> <FaCode style={{fontSize: '25px'}}/> Current Project: Spotify Charts App </a>
+                            <a id="status-text-a" href="https://reddit-statistics-app.vercel.app/dashboard"> <FaCode style={{ fontSize: '25px' }} /> Current Project: Spotify Charts App </a>
                         </div>
                     </div>
-
-                    {/* <section className="landing-socials">
-                        <div id="landing-social"> <LuGithub /> Github  </div>
-                        <div id="landing-social"> <FaLinkedin /> Linkedin  </div>
-                        <div id="landing-social"> <MdEmail /> Email  </div>
-                    </section> */}
-
 
 
                     <div className="landing-stats">
                         <Statistics />
                     </div>
 
-                    <div className="landing-grid">
-                        <div id="commit-graph">
-                            <GitHubCalendar
-                                username="danielsteele1"
-                                errorMessage="Could not show Graph right now. Please Reload :)"
-                                loading={false}
-                                hideColorLegend={true}
-                            />
-                        </div>
-                    </div>
+                    <GithubGraph isThemeOn={isThemeOn} loading={loading} setLoading={setLoading}/>
 
                     <Experience />
 
@@ -203,7 +189,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
 
 
             </div>
-        </div>
+        </div >
     )
 }
 

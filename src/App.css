@@ -80,6 +80,7 @@ a {
 
 [data-theme="light"] {
 
+  --skeleton-bg: #f8f2fa;
   --background: #e9e8eb;
   --background-secondary: #f8f2fa;
   --icon-color: #9443ff;
@@ -98,6 +99,7 @@ a {
 
 [data-theme="dark"] {
 
+  --skeleton-bg: #161515;
   --background: #0f0f0f;
   --background-secondary: #161515;
   --main-accent: #9443ff;
@@ -182,6 +184,17 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.loader {
+  background-color: var(--component-background);
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--button-gradient);
+  border-radius: 10px;
 }
 
 .logo,
@@ -1993,7 +2006,7 @@ svg {
   }
 
   .navigation {
-    width: 86%;
+    width: 60%;
   }
 
   .skills {
@@ -2031,7 +2044,7 @@ svg {
   }
 
   .navigation {
-    width: 70%;
+    width: 60%;
   }
 
   .About-status-container {
@@ -2097,9 +2110,6 @@ svg {
     width: 90%;
   }
 
-  .navigation {
-    width: 80%;
-  }
 
   .landing-status-container {
     width: 100%;
@@ -2368,7 +2378,7 @@ svg {
   }
 
   .navigation {
-    width: 100%;
+    width: 95%;
     justify-content: space-between;
   }
 
@@ -2459,15 +2469,20 @@ svg {
   }
 
   .nav-title {
-    width: auto;
     display: flex;
-    margin-left: 70px;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 @media (min-width: 200px) and (max-width: 750px) {
+
+
+  .loader {
+    height: 100px;
+    width: 80%;
+    margin: 0 auto;
+  }
 
   .links {
     width: 80%;
@@ -2490,12 +2505,17 @@ svg {
   .landing-greeting {
     width: 80%;
     margin: 0 auto;
-
+    text-align: center;
+    min-height: 260px;
   }
 
   .landing-stats {
     width: 80%;
     margin: 0 auto;
+  }
+
+  .index-module_type__E-SaG {
+    height: 100px !important;
   }
 
   .socials-reduced {

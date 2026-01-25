@@ -17,6 +17,8 @@ import { Analytics } from "@vercel/analytics/react"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
+import { MantineProvider } from "@mantine/core";
+
 declare global {
   interface Window {
     sa_event?: (event: string) => void;
@@ -24,6 +26,7 @@ declare global {
 }
 
 function App() {
+
 
   const [isThemeOn, setThemeOn] = useState(() => {
 
@@ -78,33 +81,32 @@ function App() {
     document.body.removeChild(link);
   };
 
-
   return (
-    <>
+    <MantineProvider>
       <BrowserRouter>
-          <Navigation
-            handleDownloadAndView={handleDownloadAndView}
-            handleThemeButton={handleThemeButton}
-            isThemeOn={isThemeOn} />
+        <Navigation
+          handleDownloadAndView={handleDownloadAndView}
+          handleThemeButton={handleThemeButton}
+          isThemeOn={isThemeOn} 
+          />
 
-          <Routes>
-            <Route path="/" element={React.createElement(Dashboard as any, { isThemeOn, handleDownloadAndView })} />
+        <Routes>
+          <Route path="/" element={React.createElement(Dashboard as any, { isThemeOn, handleDownloadAndView })} />
 
-            <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
 
-            <Route path="/About" element={<AboutMe />} />
-            <Route path="/Blog" element={<Blog />} />
-            <Route path="/Blog/:slug" element={<BlogPost />} />
-            <Route path="/Skills" element={<Skills />} />
-            <Route path="/Projects" element={<Projects />} />
-            <Route path="/Links" element={<Links />} />
-          </Routes>
+          <Route path="/About" element={<AboutMe />} />
+          <Route path="/Blog" element={<Blog />} />
+          <Route path="/Blog/:slug" element={<BlogPost />} />
+          <Route path="/Skills" element={<Skills />} />
+          <Route path="/Projects" element={<Projects />} />
+          <Route path="/Links" element={<Links />} />
+        </Routes>
 
         <Footer />
         <Analytics />
-      </BrowserRouter >
-
-    </>
+      </BrowserRouter>
+      </MantineProvider>
   )
 }
 
