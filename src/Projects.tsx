@@ -141,7 +141,7 @@ function Projects() {
                 </span>
 
                 <span className="project-sub-heading">
-                    A collection of my most impressive projects in the last year.
+                    A list of my personal projects, of which i complete in my free time to enhance my skills.
                     With each project, I put an emphisis on learning a new tool or skill, ensuring I can keep growing as a developer.
                 </span>
 
@@ -167,6 +167,26 @@ function Projects() {
                     </Project_card>
 
                     <Project_card
+                        title="Audio Stats - Spotify stats App (WIP)"
+                        description="An in progress full-stack web application intended to use Spotify's authentication and API service to get a users listening habits,
+                        and to visualise that data using vis libraries such as D3.js. Uses MongoDB on the backend with React/TS on the frontend."
+                        src="audioStats_early-build.png"
+                        tags={[
+                            { icon: <FaReact />, name: "React" },
+                            { icon: <SiTypescript />, name: "TypeScript" },
+                            { icon: <SiMongodb />, name: "MongoDB" },
+                            { icon: <SiReactrouter />, name: "React-Router" },
+                            { icon: <SiSpotify />, name: "Spotify's public API" },
+                            { icon: <SiMantine />, name: "MantineUI" },
+                            { icon: <SiVite />, name: "Vite" },
+                        ]}
+                        link="https://reddit-statistics-app.vercel.app/dashboard"
+                        github="https://github.com/DanielSteele1/Spotify-Statistics-Dashboard"
+                    >
+
+                    </Project_card>
+
+                    <Project_card
                         title="FocusDev"
                         description="FocusDev is a utility app designed for developers.
                             It features a Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few.
@@ -182,26 +202,6 @@ function Projects() {
                         src="FocusDev.png"
                         link="https://focusdev.vercel.app"
                         github="https://github.com/DanielSteele1/FocusDev"
-                    >
-
-                    </Project_card>
-
-                    <Project_card
-                        title="Audio Stats - Spotify stats App (WIP)"
-                        description="An in progress full-stack web application intended to use Spotify's authentication and API service to get a users listening habits,
-                        and to visualise that data using vis libraries such as D3.js. Uses MongoDB on the backend with React/TS on the frontend."
-                        src=""
-                        tags={[
-                            { icon: <FaReact />, name: "React" },
-                            { icon: <SiTypescript />, name: "TypeScript" },
-                            { icon: <SiMongodb />, name: "MongoDB" },
-                            { icon: <SiReactrouter />, name: "React-Router" },
-                            { icon: <SiSpotify />, name: "Spotify's public API" },
-                            { icon: <SiMantine />, name: "MantineUI" },
-                            { icon: <SiVite />, name: "Vite" },
-                        ]}
-                        link="https://reddit-statistics-app.vercel.app/dashboard"
-                        github="https://github.com/DanielSteele1/Spotify-Statistics-Dashboard"
                     >
 
                     </Project_card>

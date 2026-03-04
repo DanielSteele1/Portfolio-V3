@@ -1327,7 +1327,6 @@ body {
   flex-direction: column;
   width: fit-content;
   color: var(--text-color);
-  padding: 20px;
 }
 
 .project-text {
@@ -1343,13 +1342,18 @@ body {
 }
 
 .project-title {
-  font-size: 1.5rem;
+  display: flex;
+  font-size: 1.8rem;
+  padding-top: 10px;
   align-items: center;
   justify-content: center;
   width: fit-content;
-  padding-top: 10px;
+  height: fit-content;
+  align-items: center;
   font-family: 'Figtree', sans-serif;
   font-weight: 500;
+  margin-bottom: 10px;
+  line-height: normal;
 }
 
 .project-image img {
@@ -2476,7 +2480,6 @@ svg {
 }
 
 @media (min-width: 200px) and (max-width: 750px) {
-
 
   .loader {
     height: 100px;
