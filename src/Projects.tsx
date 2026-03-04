@@ -167,7 +167,7 @@ function Projects() {
                     </Project_card>
 
                     <Project_card
-                        title="Audio Stats - Spotify stats App (WIP)"
+                        title="Audio Stats - Spotify stats App"
                         description="An in progress full-stack web application intended to use Spotify's authentication and API service to get a users listening habits,
                         and to visualise that data using vis libraries such as D3.js. Uses MongoDB on the backend with React/TS on the frontend."
                         src="audioStats_early-build.png"
