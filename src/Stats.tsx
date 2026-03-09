@@ -4,7 +4,6 @@ const Statistics = () => {
 
     return (
         <section className="stats">
-
             <div className="stats-grid">
 
                 <div className="stat" onClick ={() => window.location.href="/"}>
@@ -12,12 +11,12 @@ const Statistics = () => {
                     <FaCity style={{ margin: '10px'}}/> Open to work
                 </div>
 
-                <div className="stat"onClick ={() => window.location.href="/projects"}>
+                <div className="stat"onClick ={() => window.location.href="/Projects"}>
                     <div className="stat-number">05 </div>
                     Projects
                 </div>
 
-                <div className="stat" onClick ={() => window.location.href="/blog"}>
+                <div className="stat" onClick ={() => window.location.href="/Blog"}>
                     <div className="stat-number">02 </div>
                     Blogposts
                 </div>
