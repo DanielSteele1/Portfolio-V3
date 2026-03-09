@@ -13,6 +13,7 @@ import Experience from './Experience.tsx';
 
 import { useState } from 'react';
 import GithubGraph from './GithubGraph.tsx';
+import SkillsMarquee from './SkillsMarquee.tsx';
 
 type Props = {
 
@@ -81,6 +82,8 @@ const Dashboard = ({ handleDownloadAndView, isThemeOn }: Props) => {
                         />
                     </div>
 
+                    <SkillsMarquee />
+
                     <div className="resume-reduced-container">
                         <div className="socials-reduced">
 
@@ -107,10 +110,6 @@ const Dashboard = ({ handleDownloadAndView, isThemeOn }: Props) => {
                     </div>
 
 
-                    {/* <div className="landing-paragraph">
-                        Welcome! I'm Daniel Steele, a junior frontend / full-stack developer based in the UK.
-                    </div> */}
-
                     <div className="landing-status-container">
                         <div className="landing-status">
                             <span id="status-text"> <FaCity /> Open to opportunities in the UK  </span>
@@ -120,13 +119,11 @@ const Dashboard = ({ handleDownloadAndView, isThemeOn }: Props) => {
                         </div>
                     </div>
 
-
                     <div className="landing-stats">
                         <Statistics />
                     </div>
 
-                    <GithubGraph isThemeOn={isThemeOn} loading={loading} setLoading={setLoading}/>
-
+                    <GithubGraph isThemeOn={isThemeOn} loading={loading} setLoading={setLoading} />
                     <Experience />
 
                 </div>

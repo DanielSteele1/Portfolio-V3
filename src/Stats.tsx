@@ -23,7 +23,6 @@ const Statistics = () => {
             </div>
         </section>
     );
-
 }
 
 export default Statistics;

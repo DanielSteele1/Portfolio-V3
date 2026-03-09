@@ -1,0 +1,39 @@
+.skills-marquee-container {
+    display: flex;
+    flex-direction: row;
+    height:100px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+.skills-marquee {
+    display: flex;
+    padding-left: 100%;
+    flex-direction: row;
+    width: 100%;
+    animation: marquee-animation 20s linear infinite;
+}
+
+@keyframes marquee-animation{
+    0% {transform: translate(-100%,0); }
+    100% {transform: translate(-200%,0); }
+}
+
+
+#skill-logo {
+    display: flex;
+    flex-shrink: 0;
+}
+
+#skill-logo svg {
+    display: flex;
+    margin: 10px;
+    width: 100px;
+    color: var(--icon-color);
+    font-size: 40px;
+}

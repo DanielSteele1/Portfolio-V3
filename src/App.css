@@ -83,7 +83,7 @@ a {
   --skeleton-bg: #f8f2fa;
   --background: #e9e8eb;
   --background-secondary: #f8f2fa;
-  --icon-color: #9443ff;
+  --icon-color: #9155eb;
   --main-gradient: linear-gradient(120deg, #9443ff, #b155ff, #d06cff);
   --button-gradient: #a871f1;
   --text-color: #222;
@@ -102,7 +102,7 @@ a {
   --skeleton-bg: #161515;
   --background: #0f0f0f;
   --background-secondary: #161515;
-  --main-accent: #9443ff;
+  --icon-color: #8b49ee;
   --main-gradient: linear-gradient(120deg, #9443ff, #b155ff, #d06cff);
   --button-gradient: #a871f1;
   --text-color: #f5eded;
@@ -2509,7 +2509,7 @@ svg {
     width: 80%;
     margin: 0 auto;
     text-align: center;
-    min-height: 260px;
+    height: fit-content;
   }
 
   .landing-stats {
@@ -2678,7 +2678,6 @@ svg {
 
   .type-animation {
     font-size: 1.5rem !important;
-    margin-bottom: 10px;
   }
 
   .about,
