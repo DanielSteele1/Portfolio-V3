@@ -11,12 +11,13 @@ function SkillsMarquee() {
         { id: 2, item: <SiTypescript /> },
         { id: 3, item: <FaNodeJs /> },
         { id: 4, item: <SiJavascript /> },
-        { id: 4, item: <SiMantine /> },
-        { id: 4, item: <SiMongodb /> },
-        { id: 4, item: <SiExpress /> },
-        { id: 4, item: <SiVite /> },
-        { id: 5, item: <SiCplusplus /> },
-        { id: 6, item: <LuFramer /> },
+        { id: 5, item: <SiMantine /> },
+        { id: 6, item: <SiMongodb /> },
+        { id: 7, item: <SiExpress /> },
+        { id: 8, item: <SiVite /> },
+        { id: 9, item: <SiCplusplus /> },
+        { id: 10, item: <FaFigma /> },
+        { id: 11, item: <LuFramer /> },
     ]
 
     return (
