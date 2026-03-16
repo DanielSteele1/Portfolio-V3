@@ -75,11 +75,13 @@
 }
 
 .blog-post-content {
-    color: var(--text-color);
-    margin-bottom: 20px;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    margin: 0 auto;
+    color: var(--text-color);
+    align-items: flex-start;
+    justify-content: center;
 }
 
 @media(min-width: 200px) and (max-width:750px) {

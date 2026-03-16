@@ -5,17 +5,23 @@ import { useParams } from "react-router-dom";
 
 import './Blog-post.css';
 
-
 import NewSite from './Blog_Posts/New_Site.json';
 import Orbit from './Blog_Posts/Orbit.json';
+//import PKCE from './Blog_Posts/Spotify_PKCE.json';
 import { TbCalendarWeekFilled } from "react-icons/tb";
 import { FaPencil } from "react-icons/fa6";
 import Breadcrumbs from "./Breadcrumbs";
 
+import Markdown from 'react-markdown';
+import { useEffect, useState } from "react";
+
 //Orbit, OtherPost
-export const BlogsArray = [NewSite, Orbit];
+export const BlogsArray = [Orbit, NewSite];
 
 function BlogPost() {
+
+    const [markdownContent, setMarkdownContent] = useState("");
+
     const { slug } = useParams();
 
     //get the slug from the json file
@@ -23,7 +29,32 @@ function BlogPost() {
         p => p.slug === slug
     );
 
-    if (!post) return <div> Post not found </div>
+    useEffect(() => {
+
+        if (post) {
+
+            fetch(`/Markdown_Posts/${slug}.md`)
+                .then(res => res.text())
+                .then(text => setMarkdownContent(text))
+
+        };
+
+
+    }, [slug, post]);
+
+    if (!post) {
+        return (
+            <div className="Blog">
+                <div className="page-nav">
+                    <div className="breadcrumbs">
+                        <Breadcrumbs />
+                    </div>
+                </div>
+                <span> Post not found </span>
+            </div>
+        )
+    };
+
 
     return (
 
@@ -40,26 +71,34 @@ function BlogPost() {
                 <div className="breadcrumbs">
                     <Breadcrumbs />
                 </div>
-
             </div>
 
             <div className="blog-post">
                 <div className="blog-post-top">
-                    <h1 className="blog-post-heading">{post.title}</h1>
-                    <h2 className="blog-post-sub-heading">{post.description}</h2>
+                    <h1 className="blog-post-heading">
+                        {post.title}
+                    </h1>
+                    <h2 className="blog-post-sub-heading">
+                        {post.description}
+                    </h2>
                     <div className="blog-post-info">
-                        <span className="blog-post-date"><TbCalendarWeekFilled style={{ margin: '5px', fontSize: '20px' }} />  {post.date}</span>
-                        <span className="blog-post-date"><FaPencil style={{ margin: '5px' }} /> By Daniel Steele </span>
-
+                        <span className="blog-post-date">
+                            <TbCalendarWeekFilled style={{ margin: '5px', fontSize: '20px' }} />
+                            {post.date}
+                        </span>
+                        <span className="blog-post-date">
+                            <FaPencil style={{ margin: '5px' }} />
+                            By Daniel Steele
+                        </span>
                     </div>
-                </div>
-                <span className="blog-post-content">{post.paragraph1}</span>
-                <span className="blog-post-content">{post.paragraph2}</span>
-                <span className="blog-post-content">{post.paragraph3}</span>
-                <span className="blog-post-content">{post.paragraph4}</span>
-                <span className="blog-post-content">{post.paragraph5}</span>
-                <span className="blog-post-content">{post.paragraph6}</span>
 
+                    <div className="blog-post-content">
+                        <Markdown> 
+                            {markdownContent}
+                        </Markdown>
+                    </div>
+
+                </div>
 
             </div>
         </motion.div>

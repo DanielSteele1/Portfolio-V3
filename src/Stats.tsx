@@ -17,7 +17,7 @@ const Statistics = () => {
                 </div>
 
                 <div className="stat" onClick ={() => window.location.href="/Blog"}>
-                    <div className="stat-number">02 </div>
+                    <div className="stat-number">03 </div>
                     Blogposts
                 </div>
             </div>

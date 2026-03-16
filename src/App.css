@@ -71,6 +71,7 @@ a {
   font-weight: 500;
   text-decoration: inherit;
   width: fit-content;
+  color: var(--component-hover-background);
 }
 
 .fa-spin {
@@ -1620,14 +1621,14 @@ body {
 
 .project-button,
 .blog-button {
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
-  height: 40px;
+  height: fit-content;
   width: fit-content;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
-  padding: 10px;
+  padding: 8px;
   font-size: 1.0rem;
   font-weight: 500;
   font-family: 'Figtree', sans-serif;
@@ -2738,10 +2739,6 @@ svg {
   .About-para-intro {
     display: inline-flex;
     width: 100%;
-  }
-
-  #emoji {
-    display: none;
   }
 
   .skills {

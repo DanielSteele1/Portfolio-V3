@@ -36,7 +36,6 @@ function Blog() {
         blog.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-
     const handleBlogSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
 
         setSearchTerm(e.target.value);
@@ -52,8 +51,6 @@ function Blog() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.2 }}
         >
-
-
             <div className="page-nav">
 
                 <div className="breadcrumbs">
