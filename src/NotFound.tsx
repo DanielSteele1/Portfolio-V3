@@ -1,3 +1,5 @@
+import { Button } from "@mantine/core";
+import { HiHome, HiOutlineHome } from "react-icons/hi";
 import { VscBracketError } from "react-icons/vsc";
 
 
@@ -7,17 +9,20 @@ function NotFound() {
     <>
       <section className="NotFound">
 
-        <a href="/" className="error-link">
-          <div className="ErrorMessageContainer">
-            <span className="ErrorSVG">
-              <VscBracketError />
-              404
-            </span>
-            <span className="ErrorMessage">
-              Error - Page Not Found. Click here to return to the homepage.
-            </span>
-          </div>
-        </a>
+
+        <div className="ErrorMessageContainer">
+          <span className="ErrorSVG">
+            404
+          </span>
+          <span className="ErrorMessage">
+            Error - Page Not Found.
+          </span>
+          <a href="/" className="error-link">
+            <Button className="fourofour-button">
+              <HiOutlineHome /> Click here to return home
+            </Button>
+          </a>
+        </div>
       </section>
     </>
   )
