@@ -1,6 +1,5 @@
 import { LuGithub } from "react-icons/lu";
 import { IoLogoLinkedin } from "react-icons/io5";
-import { VscBracketError } from "react-icons/vsc";
 
 function Footer() {
 
