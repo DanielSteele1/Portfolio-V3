@@ -1,6 +1,5 @@
 import { Button } from "@mantine/core";
-import { HiHome, HiOutlineHome } from "react-icons/hi";
-import { VscBracketError } from "react-icons/vsc";
+import { HiOutlineHome } from "react-icons/hi";
 
 
 function NotFound() {
