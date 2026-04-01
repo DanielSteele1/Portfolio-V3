@@ -1,9 +1,8 @@
 {
-
         "id": 1,
         "emoji": "🎧",
         "slug": "Spotify-PKCE",
         "title": "PKCE Authentication with Spotify's API",
-        "date": "16th March 2026",
+        "date": "1st April 2026",
         "description":"A Writeup/how-to on how I implemented a PKCE Auth Flow in order to use Spotify's API."
 }

@@ -52,9 +52,16 @@ function Navigation({ isThemeOn, handleDownloadAndView, handleThemeButton }: pro
                             </a>
                         </span>
 
+                        
+                        <span className="nav-title" id="nav-projects">
+                            <a href="/Projects">
+                                Projects
+                            </a>
+                        </span>
+
                         <span className="nav-title">
                             <a href="/About">
-                                About Me
+                                About
                             </a>
                         </span>
 
@@ -64,11 +71,6 @@ function Navigation({ isThemeOn, handleDownloadAndView, handleThemeButton }: pro
                             </a>
                         </span>
 
-                        <span className="nav-title" id="nav-projects">
-                            <a href="/Projects">
-                                Projects
-                            </a>
-                        </span>
 
                         <button className="resume" onClick={handleDownloadAndView}>
                             <a href="/Daniel_Steele_Frontend_Developer_CV.pdf">
@@ -133,7 +135,7 @@ function Navigation({ isThemeOn, handleDownloadAndView, handleThemeButton }: pro
 
                             <span className="nav-title">
                                 <a href="/About" onClick={() => { setOpen(false) }}>
-                                    About Me
+                                    About
                                 </a>
                             </span>
 

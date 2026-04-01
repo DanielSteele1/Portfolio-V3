@@ -13,7 +13,7 @@ export default function Breadcrumbs() {
   const crumbs = [
     <div className="crumb" key="home">
       <Link to="/">Home</Link>
-      {pathCrumbs.length > 0 && ' / '}
+      {pathCrumbs.length > 0 && ' > '}
     </div>,
 
     ...pathCrumbs.map((crumb, i) => {
@@ -21,7 +21,7 @@ export default function Breadcrumbs() {
       return (
         <div className="crumb" key={crumb}>
           <Link to={currentLink}>{crumb}</Link>
-          {i < pathCrumbs.length - 1 && ' / '}
+          {i < pathCrumbs.length - 1 && ' > '}
         </div>
       );
     }),

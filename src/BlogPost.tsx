@@ -7,16 +7,17 @@ import './Blog-post.css';
 
 import NewSite from './Blog_Posts/New_Site.json';
 import Orbit from './Blog_Posts/Orbit.json';
-//import PKCE from './Blog_Posts/Spotify_PKCE.json';
+import PKCE from './Blog_Posts/Spotify_PKCE.json';
 import { TbCalendarWeekFilled } from "react-icons/tb";
 import { FaPencil } from "react-icons/fa6";
 import Breadcrumbs from "./Breadcrumbs";
 
-import Markdown from 'react-markdown';
+import Markdown, { Components } from 'react-markdown';
 import { useEffect, useState } from "react";
 
-//Orbit, OtherPost
-export const BlogsArray = [Orbit, NewSite];
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+
+export const BlogsArray = [PKCE, Orbit, NewSite];
 
 function BlogPost() {
 
@@ -36,9 +37,7 @@ function BlogPost() {
             fetch(`/Markdown_Posts/${slug}.md`)
                 .then(res => res.text())
                 .then(text => setMarkdownContent(text))
-
         };
-
 
     }, [slug, post]);
 
@@ -55,6 +54,32 @@ function BlogPost() {
         )
     };
 
+
+    const CodeBlock: Components['code'] = ({
+        node, inline, className, children, ...props }: any) => {
+        const match = /language-(\w+)/.exec(className || '');
+
+        if (!inline && match) {
+            return (
+                <div className="codeBlock-container">
+
+                    <SyntaxHighlighter
+                        className="codeBlock"
+                        language={match[1]}
+                        PreTag="div"
+                    >
+                        {String(children).replace(/\n$/, '')}
+                    </SyntaxHighlighter>
+                </div>
+            );
+        }
+
+        return (
+            <code className={className} {...props}>
+                {children}
+            </code>
+        );
+    };
 
     return (
 
@@ -93,7 +118,8 @@ function BlogPost() {
                     </div>
 
                     <div className="blog-post-content">
-                        <Markdown> 
+                        <Markdown
+                            components={{ code: CodeBlock }}>
                             {markdownContent}
                         </Markdown>
                     </div>
