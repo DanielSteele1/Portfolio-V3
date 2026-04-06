@@ -1,9 +1,11 @@
 ## What is PKCE? 
 PKCE (Proof Key for Code Exchange) is a necessary extension to OAuth 2.0. It's a way to authenticate your (frontend) app with an API in order to generate an access token, used to access specific data. 
-It's especially effective in frontend applications because it's quick to implement compared to a full-stack solution, and doesn't require a need to save sensitive data in order to authenticate. The most you'll ever save is a refresh token (usually in local or session storage).
+It's especially effective in pure frontend applications because it's quick to implement compared to a full-stack solution, and doesn't require a need to save sensitive data in order to authenticate. The most you'll ever save is a refresh token (usually in local or session storage). 
+
+One of the clearest advantages though as that because it's a frontend-only solution, it's great for avoiding backend 'spin-up times' which effect the users experience with your app, and might make the more reluctant to properly trust it. (which is why I ended up using it).
 
 ## How can I implement it into my app? 
-We'll go through the steps in this guide on how to implement a PKCE flow into your frontend app. The below steps involve generating a secure code, verifying that code, then exchanging it for an access token, which you can then finally use to make a secure API call. For this write-up, i'll use Spotify's PKCE as an example. we'll focus on getting back user data. 
+We'll go through the steps in this guide on how to implement a PKCE flow into your frontend app. The below steps involve generating a secure code, verifying that code, then exchanging it for an access token, which you can then finally use to make a secure API call. For this write-up, i'll use Spotify's PKCE as an example. We'll focus on getting back user data. 
 
 ## Developer Dashboard 
 Firstly, you'll need to go to your services developer documentation, and check if they have a PKCE flow to begin with. In Spotify's case, they have a dedicated dashboard for any developer that wants to utilise their app, and requires them to register said app with spotfiy first. Click [here](https://developer.spotify.com/dashboard) and register your app, then set a redirect URI. (this is where a user will be redirected to after logging in with spotify, the route must be exact). Also make a note of your ClientId.  
