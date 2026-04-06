@@ -1,12 +1,12 @@
 ## What is PKCE? 
-PKCE (Proof Key for Code Exchange) is a necessary extention to OAuth 2.0. It's a way to authenticate your (frontend) app with an API in order to generate an access token, used to access specific data. 
+PKCE (Proof Key for Code Exchange) is a necessary extension to OAuth 2.0. It's a way to authenticate your (frontend) app with an API in order to generate an access token, used to access specific data. 
 It's especially effective in frontend applications because it's quick to implement compared to a full-stack solution, and doesn't require a need to save sensitive data in order to authenticate. The most you'll ever save is a refresh token (usually in local or session storage).
 
 ## How can I implement it into my app? 
 We'll go through the steps in this guide on how to implement a PKCE flow into your frontend app. The below steps involve generating a secure code, verifying that code, then exchanging it for an access token, which you can then finally use to make a secure API call. For this write-up, i'll use Spotify's PKCE as an example. we'll focus on getting back user data. 
 
 ## Developer Dashboard 
-Firstly, you'll need to go to your services developer documentation, and check if they have a PKCE flow to begin with. In Spotify's case, they have a dedicated dashboard for any developer that want's to utilise their app, and requires them to register said app with spotfiy first. Click [here](https://developer.spotify.com/dashboard) and register your app, then set a redirect URI. (this is where a user will be redirected to after logging in with spotify, the route must be exact). Also make a note of your ClientId.  
+Firstly, you'll need to go to your services developer documentation, and check if they have a PKCE flow to begin with. In Spotify's case, they have a dedicated dashboard for any developer that wants to utilise their app, and requires them to register said app with spotfiy first. Click [here](https://developer.spotify.com/dashboard) and register your app, then set a redirect URI. (this is where a user will be redirected to after logging in with spotify, the route must be exact). Also make a note of your ClientId.  
 
 ![spotify-dev-dashboard](/spotify-dev-dashboard.png "Spotify's developer dashboard")
 
@@ -16,7 +16,7 @@ Once you have your app registered, head over to your IDE and create a login page
 
 We need to generate a random string in order to securely hash the code challenge. The function generateRandomString() does this for every user and provides a unique string on authentication. This is our codeVerifier. We then have to hash the code using SHA256, which scrambles the code, making it unable to be decoded. Finally, we need to base64 encode the result. 
 
-We now have a code verifier and a code challenge. The idea is that once a user is redirected to the auth page, a challenge is sent to the server(also containing the verifier), and when they log in, that same verifier is then sent, checked upon the code challenge, and then either accepted or denied. Think of it like a one-time ID card for our app. 
+We now have a code verifier and a code challenge (which is a hashed version of the verifier). The idea is that once a user is redirected to the auth page, a challenge is sent to the server, telling it that we have a code. The code verifier is then sent afterwards, checked upon the code challenge, and then either accepted or denied. Think of it like a one-time ID card for our app. 
 
 It's important that we then save the codeVerifier into localStorage, as we'll need it later.
 
@@ -217,9 +217,9 @@ And here's the finished product (i've made some extra API calls to grab more dat
 ![alt text](/dashboard.png)
 
 ## Summary 
-Congrats, now you know how to use PKCE! You can now use this method of authentication in any app to get back personalised data from a user. Just remember to refresh the access token at a regular interval, as it will refresh after an hour, (the user will have to re-authenticate), and your all set. You'll have to get a refresh token for this.
+Congrats, now you know how to use PKCE! You can now use this method of authentication in any app to get back personalised data from a user. Just remember to refresh the access token at a regular interval, as it will refresh after an hour, (the user will have to re-authenticate), and you're all set. You'll have to get a refresh token for this.
 
-Specifically with Spotify's API, there's alot more you can do than just getting someones profile data. You can get a users listening history, create a social app with their followers list or even create a live music player and control playback as well as showing whatever a user is currently listening to. 
+Specifically with Spotify's API, there's a lot more you can do than just getting someones profile data. You can get a users listening history, create a social app with their followers list or even create a live music player and control playback as well as showing whatever a user is currently listening to. 
 
  ## 📖 Resources Used
 
