@@ -21,7 +21,7 @@ const Experience: React.FC = () => {
             company: ['Computer Science Graduate (BSc Hons)', 'Meterbolic Limited', 'Independent Web Developer'],
             position: ['University of Plymouth', 'Software Engineering Intern', 'Newton Abbot, Devon, UK'],
             picture: [''],
-            duration: ['Sept 2021 - July 2024', 'December 2025 - Present', 'September 2024 - Present'],
+            duration: ['Sept 2021 - July 2024', 'December 2025 - Feb 2026', 'September 2024 - Present'],
             description: [
                 'Graduated with valuable knowledge of programming fundimentals, learning JavaScript, C++, C# and much more.',
                 'Helping to create a Dashboard application and Mobile app in React/React Native.',
