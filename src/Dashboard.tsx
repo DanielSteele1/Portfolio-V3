@@ -115,7 +115,7 @@ const Dashboard = ({ handleDownloadAndView, isThemeOn }: Props) => {
                             <span id="status-text"> <FaCity /> Open to opportunities in the UK  </span>
                             <span id="status-text"> <FaBookOpen /> Experimenting with: MantineUI </span>
 
-                            <a id="status-text-a" href="https://reddit-statistics-app.vercel.app/dashboard"> <FaCode style={{ fontSize: '25px' }} /> Current Project: Spotify Charts App </a>
+                            <a id="status-text-a" href="https://reddit-statistics-app.vercel.app"> <FaCode style={{ fontSize: '25px' }} /> Current Project: Spotify Charts App </a>
                         </div>
                     </div>
 

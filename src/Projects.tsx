@@ -180,7 +180,7 @@ function Projects() {
                             { icon: <SiMantine />, name: "MantineUI" },
                             { icon: <SiVite />, name: "Vite" },
                         ]}
-                        link="https://reddit-statistics-app.vercel.app/dashboard"
+                        link="https://reddit-statistics-app.vercel.app"
                         github="https://github.com/DanielSteele1/Spotify-Statistics-Dashboard"
                     >
 
