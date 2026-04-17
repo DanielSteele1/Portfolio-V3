@@ -168,13 +168,12 @@ function Projects() {
 
                     <Project_card
                         title="Audio Stats - Spotify stats App"
-                        description="An in progress full-stack web application intended to use Spotify's authentication and API service to get a users listening habits,
-                        and to visualise that data using vis libraries such as D3.js. Uses MongoDB on the backend with React/TS on the frontend."
+                        description="An in progress frontend web application intended to use Spotify's authentication and API service to get a users listening habits,
+                        and to visualise that data using vis libraries. Uses React/TS on the frontend."
                         src="audioStats_early-build.png"
                         tags={[
                             { icon: <FaReact />, name: "React" },
                             { icon: <SiTypescript />, name: "TypeScript" },
-                            { icon: <SiMongodb />, name: "MongoDB" },
                             { icon: <SiReactrouter />, name: "React-Router" },
                             { icon: <SiSpotify />, name: "Spotify's public API" },
                             { icon: <SiMantine />, name: "MantineUI" },
@@ -197,7 +196,6 @@ function Projects() {
                             { icon: <FaNodeJs />, name: "NodeJs" },
                             { icon: <SiMongodb />, name: "MongoDB" },
                             { icon: <SiCreatereactapp />, name: "Create-React-App" }
-
                         ]}
                         src="FocusDev.png"
                         link="https://focusdev.vercel.app"

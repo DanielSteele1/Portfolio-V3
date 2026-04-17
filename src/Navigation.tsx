@@ -5,6 +5,7 @@ import { HiDownload } from "react-icons/hi";
 import Hamburger from 'hamburger-react';
 
 import { IoIosMoon, IoIosSunny } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 type props = {
     handleDownloadAndView: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
@@ -47,30 +48,29 @@ function Navigation({ isThemeOn, handleDownloadAndView, handleThemeButton }: pro
                     <div className="nav-menu">
 
                         <span className="nav-title">
-                            <a href="/">
+                            <Link to="/">
                                 Home
-                            </a>
+                            </Link>
                         </span>
 
                         
                         <span className="nav-title" id="nav-projects">
-                            <a href="/Projects">
+                            <Link to="/Projects">
                                 Projects
-                            </a>
+                            </Link>
                         </span>
 
                         <span className="nav-title">
-                            <a href="/About">
+                            <Link to="/About">
                                 About
-                            </a>
+                            </Link>
                         </span>
 
                         <span data-tooltip-id="tooltip-1" className="nav-title">
-                            <a href="/Blog">
+                            <Link to="/Blog">
                                 Blog
-                            </a>
+                            </Link>
                         </span>
-
 
                         <button className="resume" onClick={handleDownloadAndView}>
                             <a href="/Daniel_Steele_Frontend_Developer_CV.pdf">
@@ -128,39 +128,37 @@ function Navigation({ isThemeOn, handleDownloadAndView, handleThemeButton }: pro
                         <div className="nav-backing-mobile">
 
                             <span className="nav-title">
-                                <a href="/" onClick={() => { setOpen(false) }}>
+                                <Link to="/" onClick={() => { setOpen(false) }}>
                                     Home
-                                </a>
+                                </Link>
                             </span>
 
                             <span className="nav-title">
-                                <a href="/About" onClick={() => { setOpen(false) }}>
+                                <Link to="/About" onClick={() => { setOpen(false) }}>
                                     About
-                                </a>
+                                </Link>
                             </span>
 
                             <span className="nav-title" id="nav-projects">
-                                <a href="/Projects" onClick={() => { setOpen(false) }}>
+                                <Link to="/Projects" onClick={() => { setOpen(false) }}>
                                     Projects
-                                </a>
+                                </Link>
                             </span>
 
                             <span className="nav-title">
-                                <a href="/Blog" onClick={() => { setOpen(false) }}>
+                                <Link to="/Blog" onClick={() => { setOpen(false) }}>
                                     Blog
-                                </a>
+                                </Link>
                             </span>
 
                             <span className="nav-title">
-                                <a href="/Links" onClick={() => { setOpen(false) }}>
+                                <Link to="/Links" onClick={() => { setOpen(false) }}>
                                     Developer Links 
-                                </a>
+                                </Link>
                             </span>
 
                         </div>
-
                     </div>
-
                 )}
 
             </div>

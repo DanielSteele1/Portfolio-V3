@@ -1,4 +1,5 @@
 import { FaCity } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Statistics = () => {
 
@@ -6,20 +7,20 @@ const Statistics = () => {
         <section className="stats">
             <div className="stats-grid">
 
-                <div className="stat" onClick ={() => window.location.href="/"}>
+                <div className="stat">
                     <div className="stat-number"> </div>
                     <FaCity style={{ margin: '10px'}}/> Open to work
                 </div>
 
-                <div className="stat"onClick ={() => window.location.href="/Projects"}>
+                <Link  className="stat" to="/Projects">
                     <div className="stat-number">05 </div>
                     Projects
-                </div>
+                </Link>
 
-                <div className="stat" onClick ={() => window.location.href="/Blog"}>
+                <Link className="stat" to="/Blog">
                     <div className="stat-number">03 </div>
                     Blogposts
-                </div>
+                </Link>
             </div>
         </section>
     );

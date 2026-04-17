@@ -14,6 +14,7 @@ import Experience from './Experience.tsx';
 import { useState } from 'react';
 import GithubGraph from './GithubGraph.tsx';
 import SkillsMarquee from './SkillsMarquee.tsx';
+import { Link } from 'react-router-dom';
 
 type Props = {
 
@@ -43,20 +44,20 @@ const Dashboard = ({ handleDownloadAndView, isThemeOn }: Props) => {
                         <span id="location"> 🇬🇧 Devon, United Kingdom  </span>
                     </div>
 
-                    <a id="social-link" href="https://www.linkedin.com/in/daniel-steele1" target="_blank" referrerPolicy='no-referrer'>
+                    <Link id="social-link" to="https://www.linkedin.com/in/daniel-steele1" target="_blank" referrerPolicy='no-referrer'>
                         <FaLinkedin />
                         <span> Linkedin </span>
-                    </a>
+                    </Link>
 
-                    <a id="social-link" href="https://github.com/DanielSteele1" target="_blank" referrerPolicy='no-referrer'>
+                    <Link id="social-link" to="https://github.com/DanielSteele1" target="_blank" referrerPolicy='no-referrer'>
                         <LuGithub />
                         <span> Github </span>
-                    </a>
+                    </Link>
 
-                    <a id="social-link" href="mailto:dsteele1906@gmail.com" target="_blank" referrerPolicy='no-referrer'>
+                    <Link id="social-link" to="mailto:dsteele1906@gmail.com" target="_blank" referrerPolicy='no-referrer'>
                         <MdEmail />
                         <span> Email </span>
-                    </a>
+                    </Link>
                 </div>
             </div>
 
@@ -87,20 +88,20 @@ const Dashboard = ({ handleDownloadAndView, isThemeOn }: Props) => {
                     <div className="resume-reduced-container">
                         <div className="socials-reduced">
 
-                            <a id="social-link" href="https://www.linkedin.com/in/daniel-steele1" target="_blank" referrerPolicy='no-referrer'>
+                            <Link id="social-link" to="https://www.linkedin.com/in/daniel-steele1" target="_blank" referrerPolicy='no-referrer'>
                                 <FaLinkedin />
                                 <span> Linkedin </span>
-                            </a>
+                            </Link>
 
-                            <a id="social-link" href="https://github.com/DanielSteele1" target="_blank" referrerPolicy='no-referrer'>
+                            <Link id="social-link" to="https://github.com/DanielSteele1" target="_blank" referrerPolicy='no-referrer'>
                                 <LuGithub />
                                 <span> Github </span>
-                            </a>
+                            </Link>
 
-                            <a id="social-link" href="mailto:dsteele1906@gmail.com" target="_blank" referrerPolicy='no-referrer'>
+                            <Link id="social-link" to="mailto:dsteele1906@gmail.com" target="_blank" referrerPolicy='no-referrer'>
                                 <MdEmail />
                                 <span> Email </span>
-                            </a>
+                            </Link>
 
                             <a id="social-link" href="/Daniel_Steele_Frontend_Developer_CV.pdf" onClick={handleDownloadAndView}>
                                 <HiDownload />
@@ -115,7 +116,7 @@ const Dashboard = ({ handleDownloadAndView, isThemeOn }: Props) => {
                             <span id="status-text"> <FaCity /> Open to opportunities in the UK  </span>
                             <span id="status-text"> <FaBookOpen /> Experimenting with: MantineUI </span>
 
-                            <a id="status-text-a" href="https://reddit-statistics-app.vercel.app"> <FaCode style={{ fontSize: '25px' }} /> Current Project: Spotify Charts App </a>
+                            <Link to="https://reddit-statistics-app.vercel.app" id="status-text-a"> <FaCode style={{ fontSize: '25px' }} /> Current Project: Spotify Charts App </Link>
                         </div>
                     </div>
 
@@ -139,47 +140,47 @@ const Dashboard = ({ handleDownloadAndView, isThemeOn }: Props) => {
                         </div>
                     </div>
 
-                    <div className="dashboard-component component-projects" onClick={() => window.location.href = '/Projects'}>
+                    <Link className="dashboard-component component-projects" to="/Projects">
                         <div className="component-info">
                             <span className="component-title">
                                 Projects 🍵</span>
                             <span className="component-description"> My collection of personal web projects. </span>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="dashboard-component component-skills" id="skills-bg" onClick={() => window.location.href = '/Skills'}>
+                    <Link className="dashboard-component component-skills" id="skills-bg" to="/Skills" >
 
                         <div className="component-info">
                             <span className="component-title"> Skills 🏗️ </span>
                             <span className="component-description"> A list of technologies I'm skilled with. </span>
                         </div>
 
-                    </div>
+                    </Link>
 
-                    <div className="dashboard-component component-blog" onClick={() => window.location.href = '/Blog'}>
+                    <Link className="dashboard-component component-blog" to="/Blog">
                         <div className="component-info">
                             <span className="component-title"> Blog 📰 </span>
                             <span className="component-description"> Write-ups of my projects & more. </span>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="dashboard-component component-links" onClick={() => window.location.href = '/Links'}>
+                    <Link className="dashboard-component component-links" to="/Link">
                         <div className="component-links">
                             <div className="component-info" id="component-info-links">
                                 <span className="component-title"> Useful Links 📌 </span>
                                 <span className="component-description"> Bookmarks & useful repositories for devs. </span>
                             </div>
                         </div>
-                    </div>
+                    </Link>
 
-                    <div className="dashboard-component component-none" onClick={() => window.location.href = 'mailto:Dsteele1906@gmail.com'}>
+                    <Link className="dashboard-component component-none" to="mailto:Dsteele1906@gmail.com">
                         <div className="component-links">
                             <div className="component-info" id="component-info-links">
                                 <span className="none-title"> Interested? </span>
                                 <span className="none-desc"> Click here to shoot me an email. </span>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
 
 
