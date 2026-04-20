@@ -167,10 +167,10 @@ function Projects() {
                     </Project_card>
 
                     <Project_card
-                        title="Audio Stats - Spotify stats App"
-                        description="An in progress frontend web application intended to use Spotify's authentication and API service to get a users listening habits,
+                        title="Audio Stats - Spotify Dashboard"
+                        description="A frontend web application intended to use Spotify's authentication and API service to get a users listening habits,
                         and to visualise that data using vis libraries. Uses React/TS on the frontend."
-                        src="audioStats_early-build.png"
+                        src="AudioStats_Real.png"
                         tags={[
                             { icon: <FaReact />, name: "React" },
                             { icon: <SiTypescript />, name: "TypeScript" },
@@ -179,7 +179,7 @@ function Projects() {
                             { icon: <SiMantine />, name: "MantineUI" },
                             { icon: <SiVite />, name: "Vite" },
                         ]}
-                        link="https://reddit-statistics-app.vercel.app"
+                        link="https://reddit-statistics-app.vercel.app/login"
                         github="https://github.com/DanielSteele1/Spotify-Statistics-Dashboard"
                     >
 
