@@ -164,7 +164,7 @@ const Dashboard = ({ handleDownloadAndView, isThemeOn }: Props) => {
                         </div>
                     </Link>
 
-                    <Link className="dashboard-component component-links" to="/Link">
+                    <Link className="dashboard-component component-links" to="/Links">
                         <div className="component-links">
                             <div className="component-info" id="component-info-links">
                                 <span className="component-title"> Useful Links 📌 </span>

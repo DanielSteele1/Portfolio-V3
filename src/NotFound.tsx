@@ -1,5 +1,6 @@
 import { Button } from "@mantine/core";
 import { HiOutlineHome } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 
 function NotFound() {
@@ -7,8 +8,6 @@ function NotFound() {
   return (
     <>
       <section className="NotFound">
-
-
         <div className="ErrorMessageContainer">
           <span className="ErrorSVG">
             404
@@ -16,11 +15,11 @@ function NotFound() {
           <span className="ErrorMessage">
             Error - Page Not Found.
           </span>
-          <a href="/" className="error-link">
+          <Link  to="/" className="error-link">
             <Button className="fourofour-button">
               <HiOutlineHome /> Click here to return home
             </Button>
-          </a>
+          </Link>
         </div>
       </section>
     </>
