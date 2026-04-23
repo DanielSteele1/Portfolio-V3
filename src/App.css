@@ -553,7 +553,7 @@ body {
 }
 
 .component-none {
-  background: var(--main-gradient);
+  background: var(--component-hover-background);
 }
 
 .dashboard-component:hover {
@@ -1119,14 +1119,12 @@ body {
 .project-sub-heading {
 
   display: flex;
-  width: 80%;
+  width: 100%;
   justify-content: flex-start;
   align-items: flex-start;
   font-family: 'Roboto', sans-serif;
   font-size: 1.1rem;
   font-weight: 400;
-  margin: 10px;
-  margin-left: 10px;
   margin-bottom: 15px;
   color: var(--text-color);
 }
@@ -1322,7 +1320,9 @@ body {
   display: flex;
   flex-direction: column;
   width: fit-content;
+  height: 100%;
   color: var(--text-color);
+  margin-top: 20px;
 }
 
 .project-text {
@@ -1338,8 +1338,6 @@ body {
 .project-title {
   display: flex;
   font-size: 1.9rem;
-  margin-top: 20px;
-  align-items: center;
   justify-content: center;
   width: fit-content;
   height: fit-content;
@@ -1351,12 +1349,11 @@ body {
 }
 
 .project-image img {
-
   display: flex;
   font-family: 'Open-sans', sans-serif;
   background-color: var(--background-secondary);
   color: var(--component-hover-background);
-  min-height: 220px;
+  min-height: 200px;
   min-width: 400px;
   align-items: center;
   height: 100%;
@@ -1370,7 +1367,6 @@ body {
 .project-image {
 
   max-width: 100%;
-  overflow: hidden;
   display: flex;
   border-radius: 8px;
   align-items: center;
@@ -1639,7 +1635,7 @@ body {
   margin-bottom: 10px;
 }
 
-.project-button:hover{
+.project-button:hover {
   background-color: var(--component-hover-background);
   transition: 0.1s ease-in;
 }
@@ -1670,7 +1666,7 @@ body {
 .resume-reduced:hover,
 .theme-button-reduced:hover {
   transition: 0.4s ease-in;
-  background: var(--main-gradient);
+  background: var(--component-hover-background);
 }
 
 .resume a {
@@ -2539,15 +2535,15 @@ svg {
   }
 
   .landing-greeting {
-    width: 80%;
-    height: 200px !important;
+    width: 90%;
+    height: 250px !important;
     padding: 10px;
     margin: 0 auto;
     text-align: center;
   }
 
   .landing-stats {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 
@@ -2691,7 +2687,7 @@ svg {
   .dashboard-component {
     margin: 0 auto;
     width: 100%;
-    max-width: 80%;
+    max-width: 90%;
     height: 120px;
     grid-column: auto;
   }
@@ -2707,7 +2703,8 @@ svg {
     width: 100%;
     flex-direction: column;
     margin: 0 auto;
-    line-height: 3.5rem;
+    line-height: 3.0rem;
+
   }
 
   .type-animation {
@@ -2720,19 +2717,20 @@ svg {
   }
 
   .projects {
-    width: 80%;
+    width: 90%;
   }
 
   .projects-heading {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+    margin-left: 30px;
   }
 
   .project-sub-heading {
     font-size: 1.0rem;
-    width: 80%;
-    margin: 0 auto;
+    width: 85%;
     margin-bottom: 10px;
+    margin: 0 auto;
   }
 
   .footer {
@@ -2755,7 +2753,7 @@ svg {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    width: 80%;
+    width: 90%;
     padding: 10px;
   }
 
@@ -3036,8 +3034,12 @@ svg {
   }
 
   .project-title {
-    font-size: 1.9rem;
-    margin-top: 30px;
+    display: flex;
+    font-size: 2.0rem;
+    height: fit-content;
+    margin-top: 50px;
+    align-items: flex-end;
+    justify-content: center;
   }
 
   .project-text {
@@ -3159,6 +3161,16 @@ svg {
   .ErrorSVG {
     font-size: 8.0rem;
     padding: 0px;
+  }
+
+  .project-image {
+    overflow: hidden !important;
+    min-height: 200px;
+    max-height: 200px;
+  }
+
+  .project-title{
+    margin-top: 0px;
   }
 
 }
