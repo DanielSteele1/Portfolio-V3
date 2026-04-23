@@ -16,6 +16,7 @@ interface Tag {
 
 import { motion } from "motion/react"
 import Breadcrumbs from './Breadcrumbs';
+import { Link } from 'react-router-dom';
 
 interface ProjectCardProps {
 
@@ -97,20 +98,21 @@ const Project_card: React.FC<ProjectCardProps> = ({ mediaType = 'image', youtube
 
                 <div className="project-text">{description}</div>
 
-                <div className="project-buttons">
-                    <div className="project-button">
-                        <a className="live-button" href={link} target="_blank" rel="noopener noreferrer">
-                            <GoLinkExternal style={{ fontSize: "20px" }} />
-                            <span className="button-text">Live Project</span>
-                        </a>
-                    </div>
 
-                    <div className="project-button" id="github-button">
-                        <a className="github-button" href={github} target="_blank" rel="noopener noreferrer">
-                            <LuGithub style={{ fontSize: "23px" }} />
-                            <span className="button-text">Github</span>
-                        </a>
-                    </div>
+            </div>
+            <div className="project-buttons">
+                <div className="project-button">
+                    <Link className="live-button" to={link} target="_blank" rel="noopener noreferrer">
+                        <GoLinkExternal style={{ fontSize: "20px" }} />
+                        <span className="button-text">Live Project</span>
+                    </Link>
+                </div>
+
+                <div className="project-button" id="github-button">
+                    <Link className="github-button" to={github} target="_blank" rel="noopener noreferrer">
+                        <LuGithub style={{ fontSize: "23px" }} />
+                        <span className="button-text">Github</span>
+                    </Link>
                 </div>
             </div>
 
@@ -203,6 +205,16 @@ function Projects() {
                     >
 
                     </Project_card>
+
+                    <Project_card
+                        title="Coming Soon!"
+                        description="Stay tuned for more projects!"
+                        src=""
+                        tags={[
+                        ]}
+                        link=""
+                        github=""
+                    ></Project_card>
                 </div>
 
                 <span className="projects-heading">

@@ -12,7 +12,7 @@ interface GraphProps {
     isThemeOn: boolean;
 }
 
-function GithubGraph({ loading, setLoading}: GraphProps) {
+function GithubGraph({ loading, setLoading }: GraphProps) {
 
     useEffect(() => {
 
@@ -36,14 +36,13 @@ function GithubGraph({ loading, setLoading}: GraphProps) {
             ) : (
 
                 <div className="landing-grid">
-                    <div id="commit-graph">
-                        <GitHubCalendar
-                            username="danielsteele1"
-                            errorMessage="Could not show Graph right now. Please Reload :)"
-                            loading={loading}
-                            hideColorLegend={true}
-                        />
-                    </div>
+                    <GitHubCalendar
+                        id="commit-graph"
+                        username="danielsteele1"
+                        errorMessage="Could not show Graph right now. Please Reload :)"
+                        loading={loading}
+                        hideColorLegend={true}
+                    />
                 </div>
             )}
 
