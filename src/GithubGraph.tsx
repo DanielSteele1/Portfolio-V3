@@ -37,7 +37,6 @@ function GithubGraph({ loading, setLoading }: GraphProps) {
 
                 <div className="landing-grid">
                     <GitHubCalendar
-                        id="commit-graph"
                         username="danielsteele1"
                         errorMessage="Could not show Graph right now. Please Reload :)"
                         loading={loading}
