@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-
 @media (min-width: 750px) and (max-width: 1200px) {
   .dashboard {
     display: flex;
@@ -10,7 +9,6 @@
     width: 100%;
     gap: 20px;
   }
-
 }
 
 ::view-transition-old(root) {
@@ -90,9 +88,9 @@ a {
   --border-color: #3d4157;
   --Nav-menu-background: rgb(255, 255, 255);
   --Nav-icon-background: #a35efd;
-  --component-text-color: #9443ff;
+  --component-text-color: #9e57fa;
   --component-background: rgb(252, 249, 249);
-  --component-hover-background: #a871f1;
+  --component-hover-background: #af71ff;
   --heading-color: #222;
   --text-highlight-color: #bb94ee;
 }
@@ -115,7 +113,7 @@ a {
   --icon-hover-color: #a871f1;
   --component-text-color: #a871f1;
   --component-background: rgb(22, 22, 22);
-  --component-hover-background: #a871f1;
+  --component-hover-background: #a368f0;
   --text-highlight-color: #5602c4e3;
 }
 
@@ -510,8 +508,6 @@ body {
 
 .landing-paragraph {
   display: flex;
-  height: 10vh;
-  margin-bottom: 10px;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -523,7 +519,8 @@ body {
 
 .landing-greeting {
   display: flex;
-  height: 280px;
+  height: 230px;
+  padding: 10px;
   width: 100%;
   margin: 0 auto;
   flex-direction: column;
@@ -2283,6 +2280,18 @@ svg {
     border-bottom-right-radius: 0px;
   }
 
+
+  .landing-greeting {
+    height: 200px;
+    padding: 10px;
+    font-size: 1.5rem;
+  }
+
+  .landing-header {
+    font-size: 3.0rem;
+    line-height: 2.0rem;
+  }
+
   .links {
     width: 80%;
     padding-bottom: 10px;
@@ -2371,16 +2380,6 @@ svg {
     width: 100%;
   }
 
-  .landing-header {
-    width: 100%;
-    margin: 0 auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    margin-left: 0px;
-    line-height: 4.8rem;
-  }
 
   .dashboard-component {
     width: 100%;
@@ -2536,7 +2535,7 @@ svg {
 
   .landing-greeting {
     width: 90%;
-    height: 250px !important;
+    height: 200px !important;
     padding: 10px;
     margin: 0 auto;
     text-align: center;
@@ -2704,8 +2703,9 @@ svg {
     flex-direction: column;
     margin: 0 auto;
     line-height: 3.0rem;
-
+    padding: 10px;
   }
+
 
   .type-animation {
     font-size: 1.5rem !important;
@@ -3169,7 +3169,7 @@ svg {
     max-height: 200px;
   }
 
-  .project-title{
+  .project-title {
     margin-top: 0px;
   }
 
