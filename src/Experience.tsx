@@ -1,80 +1,84 @@
-import React from 'react';
+import '@mantine/core/styles.css';
+import './Experience.css';
+import { motion } from 'motion/react';
+import { FaDownload } from 'react-icons/fa6';
+import { LuGithub } from 'react-icons/lu';
+import { SiLinkedin } from 'react-icons/si';
+import { Link } from 'react-router-dom';
 
-import { Timeline, Text, MantineProvider, MantineThemeOverride } from '@mantine/core';import '@mantine/core/styles.css';import './Experience.css';
-import { FaBriefcase, FaCode, FaGraduationCap } from 'react-icons/fa6';
 
-
-interface ExperienceItem {
-    id: string;
-    company?: string[];
-    position?: string[];
-    picture?: string[];
-    duration?: string[];
-    description?: string[];
-    technologies?: string[];
+interface ExperienceProps {
+    handleDownloadAndView: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
 }
 
-const Experience: React.FC = () => {
-    const experiences: ExperienceItem[] = [
-        {
-            id: '1',
-            company: ['Computer Science Graduate (BSc Hons)', 'Meterbolic Limited', 'Independent Web Developer'],
-            position: ['University of Plymouth', 'Software Engineering Intern', 'Newton Abbot, Devon, UK'],
-            picture: [''],
-            duration: ['Sept 2021 - July 2024', 'December 2025 - Feb 2026', 'September 2024 - Present'],
-            description: [
-                'Graduated with valuable knowledge of programming fundimentals, learning JavaScript, C++, C# and much more.',
-                'Helping to create a Dashboard application and Mobile app in React/React Native.',
-                'Developing my own web applications in ReactJS and TypeScript to enhance my skillset.'
-            ],
-        },
-    ];
+const experiences = [
 
-    const theme: MantineThemeOverride = {
-        components: {
-            Timeline: {
-                defaultProps: {},
-            },
-            Text: {
-                defaultProps: {},
-            },
-        },
-    };
+    {
+        id: '3',
+        company: ['Independent Web Developer'],
+        position: ['Newton Abbot, Devon, UK'],
+        duration: ['Sept 2024 - Present'],
+        description: ['Developing my own web applications in ReactJS and TypeScript to enhance my skillset.'],
+    },
 
+    {
+        id: '2',
+        company: ['Meterbolic Limited'],
+        position: ['Software Engineering Intern'],
+        duration: ['Dec 2025 - Feb 2026'],
+        description: ['Helped create a Dashboard application and Mobile app in React/React Native.'],
+    },
+
+    {
+        id: '2',
+        company: ['Falcon Digital'],
+        position: ['Wordpress Design Internship'],
+        duration: ['Feb 2023 -  April 2023'],
+        description: ['Helped to deliver wordpress websites to multiple local clients around the south west.'],
+    },
+
+    {
+        id: '1',
+        company: ['Computer Science Graduate (BSc Hons)'],
+        position: ['University of Plymouth'],
+        duration: ['Sept 2021 - July 2024'],
+        description: ['Graduated with valuable knowledge of programming fundamentals, learning JavaScript, C++, C# and much more.'],
+    },
+];
+
+function Experience({ handleDownloadAndView }: ExperienceProps) {
     return (
-        <MantineProvider theme={theme}>
+        <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.2 }}
+        >
 
-            <section className="experience">
-                <span className="title"> Experience </span>
-
+            <section className="Experience">
                 <div className="experience-list">
+                    <div className="experience-top">
+                        <span className="experience-heading"> Professional Experience 💼 </span>
+                        <div className="container-div">
+                            <button className="resume" onClick={handleDownloadAndView}><FaDownload /> Resume</button>
+                            <Link className="github" to="https://github.com/danielsteele1"><LuGithub /> Github </Link>
+                            <Link className="linkedin" to="https://www.linkedin.com/in/daniel-steele1/"> <SiLinkedin /> Linkedin</Link>
+                        </div>
+                    </div>
+
                     {experiences.map((exp) => (
                         <div key={exp.id} className="experience-item">
-                            <Timeline active={2} bulletSize={30} lineWidth={2} color={'#a871f1'}>
-                                <Timeline.Item id="company" bullet={<FaGraduationCap size={18} />} title={exp.company?.[0]}>
-                                    <Text id="position" size="lg"> {exp.position?.[0]} </Text>
-                                    <Text id="description" size="xs" mt={5}>{exp.description?.[0]}</Text>
-                                    <Text id="duration" size="xs" mt={5}>{exp.duration?.[0]}</Text>
-                                </Timeline.Item>
-
-                                <Timeline.Item id="company" bullet={<FaBriefcase size={18} />} title={exp.company?.[1]}>
-                                    <Text id="position" size="lg"> {exp.position?.[1]} </Text>
-                                    <Text id="description" size="xs" mt={5}>{exp.description?.[1]}</Text>
-                                    <Text id="duration" size="xs" mt={5}>{exp.duration?.[1]}</Text>
-                                </Timeline.Item>
-
-                                <Timeline.Item id="company" bullet={<FaCode size={18} />} title={exp.company?.[2]}>
-                                    <Text id="position" size="lg"> {exp.position?.[2]} </Text>
-                                    <Text id="description" size="xs" mt={5}>{exp.description?.[2]}</Text>
-                                    <Text id="duration" size="xs" mt={5}>{exp.duration?.[2]}</Text>
-                                </Timeline.Item>
-                            </Timeline>
+                            <div id="company">{exp.company}</div>
+                            <div id="position">{exp.position}</div>
+                            <div id="duration"> {exp.duration} </div>
+                            <div id="description">{exp.description}</div>
                         </div>
                     ))}
 
                 </div>
-            </section>
-        </MantineProvider>
+            </section >
+        </motion.div>
+
     );
 };
 

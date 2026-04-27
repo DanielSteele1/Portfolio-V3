@@ -22,7 +22,6 @@ export const BlogsArray = [PKCE, Orbit, NewSite];
 function BlogPost() {
 
     const [markdownContent, setMarkdownContent] = useState("");
-
     const { slug } = useParams();
 
     //get the slug from the json file

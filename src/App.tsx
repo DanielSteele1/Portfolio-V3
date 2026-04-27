@@ -18,6 +18,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 import { MantineProvider } from "@mantine/core";
+import Experience from './Experience';
 
 declare global {
   interface Window {
@@ -85,7 +86,6 @@ function App() {
     <MantineProvider>
       <BrowserRouter>
         <Navigation
-          handleDownloadAndView={handleDownloadAndView}
           handleThemeButton={handleThemeButton}
           isThemeOn={isThemeOn} 
           />
@@ -100,6 +100,7 @@ function App() {
           <Route path="/Blog/:slug" element={<BlogPost />} />
           <Route path="/Skills" element={<Skills />} />
           <Route path="/Projects" element={<Projects />} />
+          <Route path="/Experience" element={<Experience handleDownloadAndView={handleDownloadAndView}/> } />
           <Route path="/Links" element={<Links />} />
         </Routes>
 

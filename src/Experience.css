@@ -2,8 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-
-
 .technologies {
     display: flex;
 }
@@ -14,70 +12,205 @@
     padding-left: 10px;
 }
 
-.experience {
+.Experience {
     display: flex;
+    margin: 0 auto;
     flex-direction: column;
-    color: var(--text-color);
     width: 100%;
-    height: fit-content;
-    justify-content: flex-start;
-    align-items: flex-start;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+    height: 120dvh;
+    margin-top: 100px;
 }
 
 .experience-list {
     display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
     margin: 0 auto;
+}
+
+.container-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.resume,
+.github,
+.linkedin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: var(--component-hover-background);
+    color: white;
+    border: 2px solid transparent;
+    margin: 10px;
+}
+
+.resume svg,
+.github svg,
+.linkedin svg {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.experience-top {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+    margin: 0 auto;
+    margin: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--text-color);
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: fit-content;
-    justify-content: flex-start;
-    align-items: center;
+    background-color: var(--component-background);
+    border-radius: 12px;
     padding: 10px;
-    font-family: 'Open-sans', sans-serif;
+    color: var(--text-color);
+    margin: 10px;
+    font-family: 'Outfit', sans-serif;
 }
 
 #company {
     display: flex;
     font-size: 2.0rem;
-    color: var(--text-color);
+    color: var(--icon-color);
 }
 
 #duration {
     display: flex;
-    font-size: 1.0rem;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
 }
 
 #position {
-    color: var(--icon-color);
-}
-
-.title {
-    display: flex;
-    width: 100%;
-    padding: 10px;
-    font-size: 2.0rem;
-    background: var(--main-gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
 }
 
 
 #description {
     display: flex;
-    font-size: 1.0rem;
+    font-size: 1.rem;
+}
+
+.experience-item:hover #company,
+.experience-item:hover #position,
+.experience-item:hover #duration,
+.experience-item:hover #description {
+    color: white;
+    /* Or whatever highlight color you prefer */
+    transition: 0.3s ease-in;
+}
+
+.experience-item:hover {
+    background-color: var(--component-hover-background);
+    transition: 0.3s ease-in;
+    color: white;
+}
+
+@media(min-width: 750px) and (max-width: 1000px) {
+
+    .Experience {
+        width: 100%;
+        height: fit-content;
+        margin-top: 80px;
+        margin-bottom: 20px;
+    }
+
+    .experience-heading {
+        line-height: 3.5rem;
+        padding: 10px;
+    }
+
+    .experience-list {
+        width: 80%;
+    }
+
+    .experience-item {
+        width: 100%;
+    }
+
+    #company {
+        line-height: 2.5rem;
+        font-size: 1.7rem;
+        padding-bottom: 10p;
+    }
+
+
+    #description {
+        font-size: 1.0rem;
+    }
 }
 
 @media(min-width: 300px) and (max-width: 750px) {
 
-    .experience {
-        width: 90%;
-        margin: 0 auto;
+    .Experience {
+        width: 100%;
         height: fit-content;
-        margin-top: 20px;
+        margin-top: 80px;
         margin-bottom: 20px;
+    }
+
+    .experience-heading {
+        line-height: 3.5rem;
+        padding: 10px;
+    }
+
+    .experience-list {
+        width: 80%;
+    }
+
+    .experience-item {
+        width: 100%;
+    }
+
+    #company {
+        line-height: 2.5rem;
+        font-size: 1.7rem;
+        padding-bottom: 10p;
+    }
+
+
+    #description {
+        font-size: 1.0rem;
+    }
+
+    .resume,
+    .github,
+    .linkedin {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 100%;
+        font-size: 1.0rem;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 30px;
+        background-color: var(--component-hover-background);
+        color: white;
+        border: 2px solid transparent;
+        margin: 3px;
+    }
+
+    .resume svg,
+    .github svg,
+    .linkedin svg {
+        font-size: 15px;
+        margin-right: 10px;
     }
 }

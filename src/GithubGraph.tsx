@@ -19,7 +19,7 @@ function GithubGraph({ loading, setLoading }: GraphProps) {
         const timer = setTimeout(() => {
 
             setLoading(false);
-        }, 2000);
+        }, 100);
 
         return () => clearTimeout(timer);
 

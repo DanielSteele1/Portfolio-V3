@@ -1,19 +1,17 @@
 import { useEffect, useState } from 'react';
 
 import 'react-tooltip/dist/react-tooltip.css'
-import { HiDownload } from "react-icons/hi";
 import Hamburger from 'hamburger-react';
 
 import { IoIosMoon, IoIosSunny } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
 type props = {
-    handleDownloadAndView: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
     handleThemeButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
     isThemeOn: boolean;
 };
 
-function Navigation({ isThemeOn, handleDownloadAndView, handleThemeButton }: props) {
+function Navigation({ isThemeOn, handleThemeButton }: props) {
 
     const [isOpen, setOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
@@ -72,19 +70,11 @@ function Navigation({ isThemeOn, handleDownloadAndView, handleThemeButton }: pro
                             </Link>
                         </span>
 
-                        <button className="resume" onClick={handleDownloadAndView}>
-                            <a href="/Daniel_Steele_Frontend_Developer_CV.pdf">
-
-                                <HiDownload style={{
-                                    verticalAlign: 'middle',
-                                    marginRight: '5px',
-                                    fontSize: '20px',
-                                    fontWeight: '900',
-                                }} />
-                                Resume
-                            </a>
-
-                        </button>
+                        <span className="nav-title">
+                            <Link to="/Resume">
+                               Resume
+                            </Link>
+                        </span>
 
                         <button className="theme-button" onClick={handleThemeButton}>
                             {isThemeOn ?
