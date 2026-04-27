@@ -71,7 +71,7 @@ function Navigation({ isThemeOn, handleThemeButton }: props) {
                         </span>
 
                         <span className="nav-title">
-                            <Link to="/Resume">
+                            <Link to="/Experience">
                                Resume
                             </Link>
                         </span>
