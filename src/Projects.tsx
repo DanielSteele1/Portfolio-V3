@@ -174,7 +174,7 @@ function Projects() {
                         Features a number of search filters including title, location, seniority, remote & pay.
                         It uses Adzuna's API to get job data, and includes ways for users to track application progress.
                         Planned to implement client side logins, stored with Supasbase."
-                        src=""
+                        src="Job-Board.png"
                         tags={[
                             { icon: <FaReact />, name: "React" },
                             { icon: <SiTypescript />, name: "TypeScript" },
