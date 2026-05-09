@@ -6,7 +6,6 @@ const Statistics = () => {
     return (
         <section className="stats">
             <div className="stats-grid">
-
                 <div className="stat">
                     <div className="stat-number"> </div>
                     <FaCity style={{ margin: '10px'}}/> Open to work
