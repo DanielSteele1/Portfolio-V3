@@ -1,7 +1,7 @@
 import React, { JSX } from 'react';
 import { FaJs, FaNodeJs, FaReact } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
-import { SiCplusplus, SiCreatereactapp, SiMantine, SiMongodb, SiOpengl, SiReactrouter, SiSpotify, SiTypescript, SiVite } from 'react-icons/si';
+import { SiCplusplus, SiCreatereactapp, SiMantine, SiMongodb, SiOpengl, SiReactrouter, SiSpotify, SiSupabase, SiTypescript, SiVite } from 'react-icons/si';
 import { GoLinkExternal } from "react-icons/go";
 
 import { Tooltip as ReactTooltip } from "react-tooltip";
@@ -169,6 +169,26 @@ function Projects() {
                     </Project_card>
 
                     <Project_card
+                        title="Job's Portal"
+                        description="An in progress frontend application to search, track and apply for jobs. 
+                        Features a number of search filters including title, location, seniority, remote & pay.
+                        It uses Adzuna's API to get job data, and includes ways for users to track application progress.
+                        Planned to implement client side logins, stored with Supasbase."
+                        src=""
+                        tags={[
+                            { icon: <FaReact />, name: "React" },
+                            { icon: <SiTypescript />, name: "TypeScript" },
+                            { icon: <SiReactrouter />, name: "React-Router" },
+                            { icon: <FaReact />, name: "Zustand (Global State managment)" },
+                            { icon: <SiMantine />, name: "MantineUI" },
+                            { icon: <SiSupabase />, name: "Supabase" },
+                        ]}
+                        link="https://job-board-murex-eight.vercel.app/"
+                        github="https://github.com/DanielSteele1/JobBoard/tree/main/"
+                    >
+                    </Project_card>
+
+                    <Project_card
                         title="Audio Stats - Spotify Dashboard"
                         description="A frontend web application intended to use Spotify's authentication and API service to get a users listening habits,
                         and to visualise that data using vis libraries. Uses React/TS on the frontend."
@@ -205,6 +225,8 @@ function Projects() {
                     >
 
                     </Project_card>
+
+
 
                     <Project_card
                         title="Coming Soon!"
