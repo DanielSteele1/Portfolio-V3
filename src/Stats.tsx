@@ -13,7 +13,7 @@ const Statistics = () => {
                 </div>
 
                 <Link  className="stat" to="/Projects">
-                    <div className="stat-number">05 </div>
+                    <div className="stat-number">06 </div>
                     Projects
                 </Link>
 
