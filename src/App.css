@@ -336,7 +336,7 @@ body {
   display: flex;
   height: 80px;
   align-items: center;
-  color: whitesmoke;
+  color: var(--text-color);
   justify-content: center;
 }
 
@@ -505,12 +505,11 @@ body {
   font-size: 4.0rem;
   font-weight: 450;
   font-style: bold;
-  color: white;
+  color: var(--component-text-color);
   line-height: 4.0rem;
 }
 
 #highlight-name {
-
   padding-left: 10px;
 }
 
@@ -533,7 +532,7 @@ body {
 
 .landing-greeting {
   display: flex;
-  height: 230px;
+  height: 250px;
   padding: 10px;
   width: 100%;
   margin: 0 auto;
@@ -543,7 +542,6 @@ body {
   font-size: 2.0rem;
   font-weight: 500;
   margin-bottom: 15px;
-  background-color: var(--component-hover-background);
   border-radius: 12px;
 }
 
@@ -1168,7 +1166,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-
 }
 
 .skills-container {
