@@ -19,16 +19,20 @@
   animation: circle-in 1000ms forwards;
 }
 
-p {margin-bottom:50px;}
-::selection {
-    background: var(--component-hover-background);
-    color: black;
-    text-shadow: none;
+p {
+  margin-bottom: 50px;
 }
+
+::selection {
+  background: var(--component-hover-background);
+  color: black;
+  text-shadow: none;
+}
+
 ::-moz-selection {
-    background: var(--component-hover-background);
-    color: #EEE;
-    text-shadow: none;
+  background: var(--component-hover-background);
+  color: #EEE;
+  text-shadow: none;
 }
 
 @keyframes circle-in {
@@ -791,7 +795,7 @@ body {
   align-items: center;
   font-size: 1.3rem;
   font-family: 'Outfit', sans-serif;
-  font-weight:350;
+  font-weight: 350;
   flex-direction: row;
   color: var(--text-color);
 }
@@ -1009,7 +1013,7 @@ body {
   align-items: center;
   width: 100%;
   font-size: 2.8rem;
-    font-family: 'Outfit', sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-weight: 350;
   height: 100px;
   color: var(--text-color);
@@ -1108,7 +1112,7 @@ body {
 .blog-heading,
 .section-heading,
 .projects-heading,
-.experience-heading{
+.experience-heading {
   display: flex;
   margin: 0 auto;
   justify-content: flex-start;
@@ -1183,7 +1187,7 @@ body {
   font-size: 3.0rem;
   width: 100%;
   height: fit-content;
-    font-family: 'Outfit', sans-serif;
+  font-family: 'Outfit', sans-serif;
   color: var(--text-color);
 }
 
@@ -1247,7 +1251,7 @@ body {
 .skills-title {
   color: var(--text-color);
   font-size: 1.2rem;
-   font-family: 'Outfit', sans-serif;
+  font-family: 'Outfit', sans-serif;
   transition: 0.3s;
   font-weight: 400;
   margin-left: 10px;
@@ -1667,6 +1671,35 @@ body {
 
 svg {
   margin-top: 0px;
+}
+
+.resume-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  width: 100%;
+}
+
+.resume-button {
+  display: flex !important;
+  height: 45px !important;
+  border-radius: 20px !important;
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 1.1rem !important;
+  font-weight: 400 !important;
+  color: whitesmoke !important;
+  background-color: var(--component-hover-background) !important;
+}
+
+.resume-button:hover {
+  box-shadow: 0 6px 24px 0 rgba(140, 70, 231, 0.35), 0 4px 16px 0 rgba(0, 0, 0, 0.18);
+  transition: box-shadow 0.22s cubic-bezier(0.4, 0.2, 0.2, 1), transform 0.18s, background 0.18s;
+}
+
+.resume-button svg {
+  margin-right: 10px;
 }
 
 .resume-reduced-container {
@@ -2526,8 +2559,8 @@ svg {
   }
 
   .landing-greeting {
-    width: 90%;
-    height: 200px !important;
+    width: 100%;
+    height: 300px !important;
     padding: 10px;
     margin: 0 auto;
     text-align: center;
@@ -3163,6 +3196,21 @@ svg {
 
   .project-title {
     margin-top: 0px;
+  }
+
+
+  .resume-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 300px !important;
+    width: 100%;
+  }
+
+  .resume-button{
+    height: 45px !important;
+    font-weight: 0.9rem !important;
   }
 
 }

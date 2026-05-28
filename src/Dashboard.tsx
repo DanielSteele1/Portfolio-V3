@@ -15,6 +15,7 @@ import GithubGraph from './GithubGraph.tsx';
 import SkillsMarquee from './SkillsMarquee.tsx';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
+import { Button } from '@mantine/core';
 
 type Props = {
 
@@ -87,6 +88,13 @@ const Dashboard = ({ handleDownloadAndView, isThemeOn }: Props) => {
                                 speed={10}
                                 repeat={Infinity}
                             />
+                            <div className="resume-button-container">
+                                <Button className="resume-button"
+                                onClick={handleDownloadAndView}
+                                >
+                                    <HiDownload /> Download Resume
+                                </Button>
+                            </div>
                         </div>
 
                         <SkillsMarquee />
