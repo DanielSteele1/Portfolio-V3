@@ -1,5 +1,5 @@
 import React, { JSX } from 'react';
-import { FaJs, FaNodeJs, FaReact } from "react-icons/fa";
+import { FaJs, FaNodeJs, FaReact, FaStar } from "react-icons/fa";
 import { LuGithub } from "react-icons/lu";
 import { SiCplusplus, SiCreatereactapp, SiMantine, SiMongodb, SiOpengl, SiReactrouter, SiSpotify, SiSupabase, SiTypescript, SiVite } from 'react-icons/si';
 import { GoLinkExternal } from "react-icons/go";
@@ -15,7 +15,6 @@ interface Tag {
 }
 
 import { motion } from "motion/react"
-import Breadcrumbs from './Breadcrumbs';
 import { Link } from 'react-router-dom';
 
 interface ProjectCardProps {
@@ -28,48 +27,24 @@ interface ProjectCardProps {
     description: string;
     link: string;
     github: string;
+    stars: number;
 }
 
-const Project_card: React.FC<ProjectCardProps> = ({ mediaType = 'image', youtubeId, title, src, tags, description, link, github }) => {
-
-    const renderMedia = () => {
-        switch (mediaType) {
-            case 'youtube':
-                return (
-                    <iframe
-                        className="project-video"
-                        src={`https://www.youtube.com/embed/${youtubeId}`}
-                        title={title}
-                        frameBorder="0"
-                        allow=" autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    />
-                );
-            case 'image':
-            default:
-                return typeof src === 'string' ? (
-                    <a href={github} target="_blank" rel="noopener noreferrer">
-                        <img src={src} alt={title} loading="lazy" />
-                    </a>
-                ) : (
-                    src
-                );
-        }
-    };
+const Project_card: React.FC<ProjectCardProps> = ({ stars, title, src, tags, description, link, github }) => {
 
     return (
 
         <div className="project-card">
-            <div className={`project-image ${mediaType}`}>
-                {renderMedia()}
+            <div className="project-image">
+                <a href={link} target="_blank" rel="noopener noreferrer">
+                    <img src={src} alt={title} loading="lazy" />
+                </a>
             </div>
 
             <div className="project-information">
                 <span className="project-title">
-                    <div className="gradient">{title}</div>
+                    <div className="gradient"> {title}</div>
                 </span>
-
-                {/* mapping the tags, and the tag tooltips that include each tag's name */}
 
                 <div className="project-tags">
                     {tags.map((tag, index) => (
@@ -80,7 +55,9 @@ const Project_card: React.FC<ProjectCardProps> = ({ mediaType = 'image', youtube
                             data-tooltip-content={tag.name}
                         >
                             {tag.icon}
+
                         </span>
+
                     ))}
                     {tags.map((_tag, index) => (
                         <ReactTooltip
@@ -94,10 +71,12 @@ const Project_card: React.FC<ProjectCardProps> = ({ mediaType = 'image', youtube
                             }}
                         />
                     ))}
+
+                    <div className="stars"> <FaStar /> {stars} </div>
+
                 </div>
 
                 <div className="project-text">{description}</div>
-
 
             </div>
             <div className="project-buttons">
@@ -132,22 +111,38 @@ function Projects() {
                 viewport={{ once: true, amount: 0.2 }}
             >
 
-                <div className="page-nav">
-                    <div className="breadcrumbs">
-                        <Breadcrumbs />
-                    </div>
-                </div>
-
                 <span className="projects-heading">
                     My <div id="highlight-name"> Projects </div> 🍵
                 </span>
 
                 <span className="project-sub-heading">
-                    A list of my personal projects, of which i complete in my free time to enhance my skills.
-                    With each project, I put an emphisis on learning a new tool or skill, ensuring I can keep growing as a developer.
+                    <span>
+                        My collection of personal projects and apps, that I use to practice my skills and level up as a developer.
+                    </span>
                 </span>
 
                 <div className="project-container">
+
+                    <Project_card
+                        title="Job's Portal"
+                        description="An in progress frontend application to search, track and apply for jobs. 
+                        Features a number of search filters including title, location, seniority, remote & pay.
+                        It uses Adzuna's API to get job data, and includes ways for users to track application progress.
+                        Planned to implement client side logins, stored with Supabase."
+                        src="Job-board.png"
+                        tags={[
+                            { icon: <FaReact />, name: "React" },
+                            { icon: <SiTypescript />, name: "TypeScript" },
+                            { icon: <SiReactrouter />, name: "React-Router" },
+                            { icon: <FaReact />, name: "Zustand (Global State managment)" },
+                            { icon: <SiMantine />, name: "MantineUI" },
+                            { icon: <SiSupabase />, name: "Supabase" },
+                        ]}
+                        link="https://job-board-murex-eight.vercel.app/"
+                        github="https://github.com/DanielSteele1/JobBoard/tree/main/"
+                        stars={2}
+                    >
+                    </Project_card>
 
                     <Project_card
                         title="Orbit - Productivity Tracker"
@@ -164,29 +159,13 @@ function Projects() {
                         ]}
                         link="https://trello-style-kanban-board-applicati-orcin.vercel.app"
                         github="https://github.com/DanielSteele1/Trello-Clone"
+                        stars={5}
+
                     >
 
                     </Project_card>
 
-                    <Project_card
-                        title="Job's Portal"
-                        description="An in progress frontend application to search, track and apply for jobs. 
-                        Features a number of search filters including title, location, seniority, remote & pay.
-                        It uses Adzuna's API to get job data, and includes ways for users to track application progress.
-                        Planned to implement client side logins, stored with Supasbase."
-                        src="Job-Board.png"
-                        tags={[
-                            { icon: <FaReact />, name: "React" },
-                            { icon: <SiTypescript />, name: "TypeScript" },
-                            { icon: <SiReactrouter />, name: "React-Router" },
-                            { icon: <FaReact />, name: "Zustand (Global State managment)" },
-                            { icon: <SiMantine />, name: "MantineUI" },
-                            { icon: <SiSupabase />, name: "Supabase" },
-                        ]}
-                        link="https://job-board-murex-eight.vercel.app/"
-                        github="https://github.com/DanielSteele1/JobBoard/tree/main/"
-                    >
-                    </Project_card>
+
 
                     <Project_card
                         title="Audio Stats - Spotify Dashboard"
@@ -203,6 +182,8 @@ function Projects() {
                         ]}
                         link="https://reddit-statistics-app.vercel.app/login"
                         github="https://github.com/DanielSteele1/Spotify-Statistics-Dashboard"
+                        stars={3}
+
                     >
 
                     </Project_card>
@@ -222,21 +203,13 @@ function Projects() {
                         src="FocusDev.png"
                         link="https://focusdev.vercel.app"
                         github="https://github.com/DanielSteele1/FocusDev"
+                        stars={5}
+
                     >
+
 
                     </Project_card>
 
-
-
-                    <Project_card
-                        title="Coming Soon!"
-                        description="Stay tuned for more projects!"
-                        src=""
-                        tags={[
-                        ]}
-                        link=""
-                        github=""
-                    ></Project_card>
                 </div>
 
                 <span className="projects-heading">
@@ -260,6 +233,7 @@ function Projects() {
                         ]}
                         link=""
                         github="https://github.com/DanielSteele1/SkyCompass"
+                        stars={3}
 
                     >
 
@@ -274,6 +248,7 @@ function Projects() {
                         ]}
                         link="https://github.com/DanielSteele1/EarthSim"
                         github="https://github.com/DanielSteele1/EarthSim"
+                        stars={3}
 
                     >
                     </Project_card>
