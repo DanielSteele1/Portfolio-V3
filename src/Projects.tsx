@@ -207,7 +207,6 @@ function Projects() {
 
                     >
 
-
                     </Project_card>
 
                 </div>
