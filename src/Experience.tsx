@@ -6,6 +6,7 @@ import { LuGithub } from 'react-icons/lu';
 import { SiLinkedin } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 
+import { TooltipFloating } from '@mantine/core';
 
 interface ExperienceProps {
     handleDownloadAndView: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
@@ -14,39 +15,60 @@ interface ExperienceProps {
 const experiences = [
 
     {
-        id: '3',
-        company: ['Independent Web Developer'],
-        position: ['Newton Abbot, Devon, UK'],
-        duration: ['Sept 2024 - Present'],
-        description: ['Developing my own web applications in ReactJS and TypeScript to enhance my skillset.'],
-    },
-
-    {
-        id: '2',
-        company: ['Meterbolic Limited'],
-        position: ['Software Engineering Intern'],
-        duration: ['Dec 2025 - Feb 2026'],
-        description: ['Helped create a Dashboard application and Mobile app in React/React Native.'],
-    },
-
-    {
-        id: '2',
-        company: ['Falcon Digital'],
-        position: ['Wordpress Design Internship'],
-        duration: ['Feb 2023 -  April 2023'],
-        description: ['Helped to deliver wordpress websites to multiple local clients around the south west.'],
+        id: '0',
+        image: 'FeedUsUpCIC.png',
+        company: ['Feed Us Up CIC'],
+        position: ['Web Application Developer'],
+        duration: ['June 2026 - Present'],
+        description: ['Working with the web development team to complete a full redesign and development of thier digital presence.'],
+        link: 'https://feedusup.org.uk/',
     },
 
     {
         id: '1',
-        company: ['Computer Science Graduate (BSc Hons)'],
-        position: ['University of Plymouth'],
+        image: 'DanielSteele.png',
+        position: ['Independent Web Developer'],
+        company: ['Newton Abbot, Devon, UK'],
+        duration: ['Sept 2024 - Present'],
+        description: ['Developing my own web applications in ReactJS and TypeScript to enhance my skillset.'],
+        link: 'https://danielsteele.dev',
+
+    },
+
+    {
+        id: '2',
+        image: 'Meterbolic LTD.png',
+        company: ['Meterbolic Limited'],
+        position: ['Software Engineering Intern'],
+        duration: ['Dec 2025 - Feb 2026'],
+        description: ['Helped create a Dashboard application and Mobile app in React/React Native.'],
+        link: 'https://meterbolic.com/',
+    },
+
+    {
+        id: '3',
+        image: 'Falcon_Digital.png',
+        company: ['Falcon Digital'],
+        position: ['Wordpress Design Internship'],
+        duration: ['Feb 2023 -  April 2023'],
+        description: ['Helped to deliver wordpress websites to multiple local clients around the south west.'],
+        link: 'https://falcondigital.co.uk/',
+    },
+
+    {
+        id: '4',
+        image: 'UOP_logo.png',
+        position: ['Computer Science Graduate (BSc Hons)'],
+        company: ['University of Plymouth'],
         duration: ['Sept 2021 - July 2024'],
         description: ['Graduated with valuable knowledge of programming fundamentals, learning JavaScript, C++, C# and much more.'],
+        link: 'https://www.plymouth.ac.uk/',
+
     },
 ];
 
 function Experience({ handleDownloadAndView }: ExperienceProps) {
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -67,17 +89,32 @@ function Experience({ handleDownloadAndView }: ExperienceProps) {
                     </div>
 
                     {experiences.map((exp) => (
-                        <div key={exp.id} className="experience-item">
-                            <div id="company">{exp.company}</div>
-                            <div id="position">{exp.position}</div>
-                            <div id="duration"> {exp.duration} </div>
-                            <div id="description">{exp.description}</div>
-                        </div>
-                    ))}
 
+                        <a href={exp.link} className="experience-item">
+
+                            <TooltipFloating
+                                key={exp.id}
+                                label="View Company Website"
+                                portalProps={{ target: document.body }}
+                                id="experience-tooltip"
+                            >
+                                <div>
+                                    <div className="company">
+                                        <div id="position">{exp.position}</div>
+
+                                        <img id="company-logo" src={exp.image} />
+                                    </div>
+                                    <div id="company-name">{exp.company}</div>
+                                    <div id="duration">{exp.duration}</div>
+                                    <div id="description">{exp.description}</div>
+                                </div>
+
+                            </TooltipFloating>
+                        </a>
+                    ))}
                 </div>
-            </section >
-        </motion.div>
+            </section>
+        </motion.div >
 
     );
 };

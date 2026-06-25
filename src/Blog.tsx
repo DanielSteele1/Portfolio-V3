@@ -2,13 +2,14 @@ import React from 'react';
 import "./App.css";
 import { useState } from 'react';
 import { TbCalendarWeekFilled } from 'react-icons/tb';
-import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { motion } from "motion/react"
 import { GoSearch } from 'react-icons/go';
 import { Link } from "react-router-dom";
 
 import { BlogsArray } from "./BlogPost";
 import Breadcrumbs from './Breadcrumbs';
+import { FaArrowRight } from 'react-icons/fa6';
+import { Button } from '@mantine/core';
 
 const Blog_card = (post: any) => {
 
@@ -19,10 +20,13 @@ const Blog_card = (post: any) => {
             <span className="blog-desc">{post.description}</span>
             <Link
                 to={`/blog/${post.slug}`}>
-                <button className="blog-button">
+                <Button
+                    className="blog-button">
                     Read More
-                    <HiOutlineArrowNarrowRight />
-                </button>
+                    <div id="arrow-icon">
+                        <FaArrowRight />
+                    </div>
+                </Button>
             </Link>
         </div >
     );
@@ -56,7 +60,6 @@ function Blog() {
                 <div className="breadcrumbs">
                     <Breadcrumbs />
                 </div>
-
             </div>
 
             <span className="blog-heading"> My Blog 📰</span>
@@ -101,7 +104,7 @@ function Blog() {
                     ))
                 ) : (
 
-                    < div className="blogs-no-results">
+                    <div className="blogs-no-results">
                         No Blogs match your search. Please Try Again.
                     </div>
                 )}

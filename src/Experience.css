@@ -17,7 +17,7 @@
     margin: 0 auto;
     flex-direction: column;
     width: 100%;
-    height: 120dvh;
+    height: fit-content;
     margin-top: 100px;
 }
 
@@ -65,7 +65,8 @@
     height: fit-content;
     width: 100%;
     margin: 0 auto;
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     justify-content: center;
     align-items: flex-start;
     color: var(--text-color);
@@ -78,16 +79,33 @@
     height: fit-content;
     background-color: var(--component-background);
     border-radius: 12px;
-    padding: 10px;
+    padding: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     color: var(--text-color);
-    margin: 10px;
     font-family: 'Outfit', sans-serif;
 }
 
-#company {
+.company {
     display: flex;
-    font-size: 2.0rem;
+    flex-direction: row;
+    align-items: flex-start;
+    height: fit-content;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.8rem;
     color: var(--icon-color);
+}
+
+#company-logo{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    width: 230px;
+    background-color: var(--component-background);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 #duration {
@@ -96,23 +114,22 @@
     padding-bottom: 10px;
 }
 
-#position {
-    padding-bottom: 10px;
+#description {
+    display: flex;
     font-size: 1.2rem;
 }
 
-
-#description {
-    display: flex;
-    font-size: 1.rem;
+#position{
+    color: var(--icon-color);
+    font-size: 2.0rem;
 }
 
-.experience-item:hover #company,
+.experience-item:hover #company-name,
 .experience-item:hover #position,
 .experience-item:hover #duration,
-.experience-item:hover #description {
+.experience-item:hover #description,
+.experience-item:hover #company-logo {
     color: white;
-    /* Or whatever highlight color you prefer */
     transition: 0.3s ease-in;
 }
 
@@ -120,6 +137,16 @@
     background-color: var(--component-hover-background);
     transition: 0.3s ease-in;
     color: white;
+    cursor: pointer;
+}
+
+#experience-tooltip{
+    flex-direction: row;
+    background-color: var(--background-secondary) !important;
+    border-radius: 10px !important;
+    color: var(--text-color);
+    font-size: 1.0rem;
+    font-weight: 500;
 }
 
 @media(min-width: 750px) and (max-width: 1000px) {
@@ -166,8 +193,8 @@
     }
 
     .experience-heading {
-        line-height: 3.5rem;
-        padding: 10px;
+        line-height: 3.2rem;
+        margin-bottom: 10px;
     }
 
     .experience-list {
@@ -176,14 +203,24 @@
 
     .experience-item {
         width: 100%;
+        flex-direction: column;
+        height: fit-content;
+        padding: 10px;
+        margin-bottom: 20px;
     }
 
-    #company {
+    .company {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         line-height: 2.5rem;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         padding-bottom: 10p;
     }
 
+    #position{
+        font-size: 1.4rem;
+    }
 
     #description {
         font-size: 1.0rem;

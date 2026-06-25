@@ -7,8 +7,8 @@ import { GoLinkExternal } from "react-icons/go";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import 'react-tooltip/dist/react-tooltip.css'
 
-// added this interface so that now instead of each tag just being an SVG we can now make each other have it's own name,
-// and then we can display each tag with it's own name this way.
+
+
 interface Tag {
     icon: JSX.Element;
     name: string;
@@ -20,8 +20,7 @@ import { Link } from 'react-router-dom';
 interface ProjectCardProps {
 
     title: string;
-    mediaType?: 'image' | 'youtube'; // either image, or youtube link.
-    youtubeId?: string; // only required if mediaType is 'youtube'
+    mediaType?: 'image';
     src: string;
     tags: Tag[];
     description: string;
@@ -140,7 +139,7 @@ function Projects() {
                         ]}
                         link="https://job-board-murex-eight.vercel.app/"
                         github="https://github.com/DanielSteele1/JobBoard/tree/main/"
-                        stars={2}
+                        stars={3}
                     >
                     </Project_card>
 
@@ -183,7 +182,6 @@ function Projects() {
                         link="https://reddit-statistics-app.vercel.app/login"
                         github="https://github.com/DanielSteele1/Spotify-Statistics-Dashboard"
                         stars={3}
-
                     >
 
                     </Project_card>
