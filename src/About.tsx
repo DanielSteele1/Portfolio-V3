@@ -9,8 +9,6 @@ import SkillsMarquee from "./SkillsMarquee";
 import Statistics from "./Stats";
 import { TooltipFloating } from "@mantine/core";
 import GithubGraph from "./GithubGraph";
-import { LuLightbulb, LuPictureInPicture, LuPictureInPicture2 } from "react-icons/lu";
-import { TbImageInPicture } from "react-icons/tb";
 import { FaImage } from "react-icons/fa";
 
 function AboutMe() {
