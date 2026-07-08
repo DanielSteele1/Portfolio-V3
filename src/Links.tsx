@@ -19,10 +19,10 @@ function Links() {
             </div>
 
             <div className="section-heading">
-                Useful <div id="highlight-name">links</div> 📌
+                Useful <div id="highlight-name">{`{ Links }`}</div> 
             </div>
 
-            <div className="section-sub-heading">
+            <div className="links-sub-heading">
                 A list of curated developer tools, libraries and repositories.
                 Contains anything from tools & documentation, to handy lists for project inspiration.
             </div>

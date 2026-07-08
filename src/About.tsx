@@ -3,9 +3,18 @@ import { motion } from "motion/react"
 
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import Breadcrumbs from "./Breadcrumbs";
-import { SlPicture } from "react-icons/sl";
+import { Link } from "react-router-dom";
+import { FaCity, FaBookOpen, FaCode } from "react-icons/fa6";
+import SkillsMarquee from "./SkillsMarquee";
+import Statistics from "./Stats";
+import { TooltipFloating } from "@mantine/core";
+import GithubGraph from "./GithubGraph";
+import { LuLightbulb, LuPictureInPicture, LuPictureInPicture2 } from "react-icons/lu";
+import { TbImageInPicture } from "react-icons/tb";
+import { FaImage } from "react-icons/fa";
 
 function AboutMe() {
+
     return (
         <motion.div
             className="about"
@@ -19,70 +28,93 @@ function AboutMe() {
                 <div className="breadcrumbs">
                     <Breadcrumbs />
                 </div>
-
-            </div>
-            <div className="section-heading"> About <div id="highlight-name"> Me </div> 💻 </div>
-            <div className="banner">
-                <img src="Picture of the Bay -website.jpg"></img>
-                <span id="image-description"> <SlPicture /> Picture of Torbay, Devon, United Kingdom - Taken by myself in late 2023</span>
             </div>
 
-            <div className="About-text">
-                <div className="About-paragraph">
-                    <span className="About-para-intro">
-                        Hi! I'm Daniel Steele, a Front-end Developer from the UK
-                        <span id="emoji" className="fi fi-gb"> </span>
+            <div className="section-heading"> About <div id="highlight-name"> {`{ Me }`} </div> 💻 </div>
+
+            <div className="About-container">
+                <div className="landing-status-container">
+                    <div className="landing-status">
+                        <span id="status-text"> <FaCity /> Open to opportunities in the UK  </span>
+                        <span id="status-text"> <FaBookOpen /> Experimenting with: MantineUI </span>
+
+                        <Link to="https://job-board-murex-eight.vercel.app" id="status-text-a"> <FaCode style={{ fontSize: '25px' }} /> Current Project: Job Portal App</Link>
+                    </div>
+                </div>
+
+
+                <div className="skill-marquee">
+                    <SkillsMarquee />
+                </div>
+
+                <div className="landing-stats">
+                    <Statistics />
+                </div>
+
+                <div className="About-text">
+
+                    <span className="About-para-title">
+                        Hi! I'm Daniel Steele, a Frontend Developer from the UK
                     </span>
 
-                    <span className="About-paragraph-text">
-                        I have a passion for creating beautiful and functional websites and web apps alike.
-                        I have a strong interest in working with <a id="text-link" href="https://www.typescriptlang.org/"> TypeScript</a> and <a id="text-link" href="https://react.dev/">ReactJS</a>, and I'm constantly learning.
-                        Although most of my projects are full-stack related I've been focusing on frontend development and creating clean UI, as I love to experiment with CSS.
-                    </span>
-
-                    <div className="About-paragraph-text">
-                        <div className="highlight-1">
-                            I'm currently looking for local & remote opportunities, so if your a hiring manager and like what you see - feel free to reach out!
-                        </div>
+                    <div className="commit-graph">
+                        <GithubGraph loading={false} setLoading={function (): void {
+                            throw new Error("Function not implemented.");
+                        } } isThemeOn={false}/>
                     </div>
 
-                </div>
+                    <div className="About-paragraph">
+                        <span className="About-paragraph-text">
+                            I focus on bringing creative web applications to life with a mix of clean UI design and solid frontend code.
+                            I'm a big fan of working with <a id="highlight-name">React</a> and <a id="highlight-name">TypeScript</a>, and I'm always experimenting with <a id="highlight-name"> CSS </a> to make layouts pop.
+                            While I'm comfortable with <a id="highlight-name">Full-stack development</a>, I love the visual, fast-paced nature of crafting polished user experiences on the frontend.</span>
+                    </div>
 
-                <div className="About-paragraph">
+                    <div className="About-paragraph">
+                        <span className="About-paragraph-text">
+                            My passion lies with front end development - ever since I was 16 years old I wanted to learn how to develop for the web.
+                            Now, at 24 and after graduating from the <a id="highlight-name" href="https://www.plymouth.ac.uk"> University of Plymouth </a> in 2024,
+                            I'm creating front end and full stack web apps, striving to improve with each one.
+                        </span>
 
-                    <span className="About-paragraph-text">
-                        My passion lies with front end development - ever since I was 16 I wanted to learn how to develop for the web.
-                        Now, at 23 and after graduating from the <a id="text-link" href="https://www.plymouth.ac.uk"> University of Plymouth </a> in 2024,
-                        I'm creating front end and full stack web apps, striving to improve with each one.
-                    </span>
-                </div>
+                    </div>
 
-                <div className="About-paragraph">
-                    <span className="About-para-title"> My Hobbies & Personal Life </span>
+                    <div className="About-paragraph">
+                        <span className="About-para-title"> My Hobbies & Personal Life </span>
 
-                    <span className="About-paragraph-text">
-                        Outside of web development - I spend most of my time keeping up to date with tech related news,
-                        applying my knowledge of hardware to build computers as a hobby and playing PC games with friends.
-                        Some of favourite games i've played in the past are <a id="text-link" href="https://www.nomanssky.com"> No Mans Sky </a> & both <a id="text-link" href="https://unknownworlds.com/en/news?game=subnautica"> Subnautica games. </a>
-                    </span>
-                </div>
+                        <TooltipFloating
+                            label={ <span id="banner-tooltip"> <FaImage/>  Torbay, Devon, UK </span> }
+                            portalProps={{ target: document.body }}
+                            id="experience-tooltip"
+                        >
+                            <div className="banner">
+                             <img src="Picture of the Bay -website.jpg" />
+                            </div>
+                        </TooltipFloating>
 
-                <div className="About-paragraph">
-                    <span className="About-para-title"> What am i up to right now? </span>
+                        <span className="About-paragraph-text">
+                            Outside of web development, I spend most of my time keeping up to date with tech related news,
+                            applying my knowledge of hardware to build computers as a hobby and playing PC games with friends.
+                            Some of favourite games i've played in the past are <a id="highlight-name" href="https://www.nomanssky.com"> No Mans Sky </a> & both <a id="highlight-name" href="https://unknownworlds.com/en/news?game=subnautica"> Subnautica games. </a>
+                        </span>
+                    </div>
 
-                    <span className="About-paragraph-text">
-                        Right now, i'm making my own projects in order to constantly iterate on my skills to become more skilled as a developer.
-                        Some of the new technologies I've been using recently include GraphQL and libraries such as React-DnD and GSAP.
-                    </span>
+                    <div className="About-paragraph">
+                        <span className="About-para-title"> What am i up to right now? </span>
 
-                    <span className="About-paragraph-text"> I'm also working on a few projects, including Orbit - a recently released notes app, a Spotify insights app - and a lot more planned. </span>
+                        <span className="About-paragraph-text">
+                            Right now, i'm making my own projects in order to constantly iterate on my skills to become more skilled as a developer.
+                            I'm also working on a few projects, namely a Spotify Statistics app using thier API, and also a <span id="highlight-name">Jobs Portal Tracker</span>, using Supabase as a serverless backend/database.
+                        </span>
+
+                        <span className="About-paragraph-text">
+                            Ive also taken on a volunteer web developer role at <span id="highlight-name">FeedUsUp CIC</span>, a charity that has recently provided aid to Haiti as well as helped people deal with loneliness in the UK.
+                        </span>
+
+                    </div>
                 </div>
             </div>
-            <div className="about-footer">
-                <img src="Plymouth_Hoe.jpg"></img>
-                <span id="image-description"> <SlPicture />  Picture of Plymouth Hoe, Devon, United Kingdom - Where I studied and graduated.</span>
-            </div>
-        </motion.div >
+        </motion.div>
     )
 }
 

@@ -7,6 +7,7 @@ import { SiLinkedin } from 'react-icons/si';
 import { Link } from 'react-router-dom';
 
 import { TooltipFloating } from '@mantine/core';
+import { HiCursorClick } from 'react-icons/hi';
 
 interface ExperienceProps {
     handleDownloadAndView: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
@@ -80,7 +81,8 @@ function Experience({ handleDownloadAndView }: ExperienceProps) {
             <section className="Experience">
                 <div className="experience-list">
                     <div className="experience-top">
-                        <span className="experience-heading"> Professional Experience 💼 </span>
+                        <span className="experience-heading">
+                            <span id="highlight-name"> {`{ Experience }`} </span> </span>
                         <div className="container-div">
                             <button className="resume" onClick={handleDownloadAndView}><FaDownload /> Resume</button>
                             <Link className="github" to="https://github.com/danielsteele1"><LuGithub /> Github </Link>
@@ -94,7 +96,7 @@ function Experience({ handleDownloadAndView }: ExperienceProps) {
 
                             <TooltipFloating
                                 key={exp.id}
-                                label="View Company Website"
+                                label={ <span id="banner-tooltip"> <HiCursorClick/> View Company Site </span> }
                                 portalProps={{ target: document.body }}
                                 id="experience-tooltip"
                             >

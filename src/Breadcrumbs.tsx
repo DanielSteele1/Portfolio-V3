@@ -13,7 +13,7 @@ export default function Breadcrumbs() {
   const crumbs = [
     <div className="crumb" key="home">
       <Link to="/">Home</Link>
-      {pathCrumbs.length > 0 && ' > '}
+      {pathCrumbs.length > 0 && ' / '}
     </div>,
 
     ...pathCrumbs.map((crumb, i) => {

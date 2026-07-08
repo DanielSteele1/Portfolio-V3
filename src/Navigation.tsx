@@ -5,6 +5,11 @@ import Hamburger from 'hamburger-react';
 
 import { IoIosMoon, IoIosSunny } from "react-icons/io";
 import { Link } from 'react-router-dom';
+import { HiHome } from 'react-icons/hi';
+import { MdAccountCircle } from 'react-icons/md';
+import { GoPin, GoProject } from 'react-icons/go';
+import { FaBook } from 'react-icons/fa';
+import { TbBuilding } from 'react-icons/tb';
 
 type props = {
     handleThemeButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -51,7 +56,6 @@ function Navigation({ isThemeOn, handleThemeButton }: props) {
                             </Link>
                         </span>
 
-                        
                         <span className="nav-title" id="nav-projects">
                             <Link to="/Projects">
                                 Projects
@@ -64,6 +68,13 @@ function Navigation({ isThemeOn, handleThemeButton }: props) {
                             </Link>
                         </span>
 
+
+                        <span className="nav-title">
+                            <Link to="/Links">
+                                Links
+                            </Link>
+                        </span>
+
                         <span data-tooltip-id="tooltip-1" className="nav-title">
                             <Link to="/Blog">
                                 Blog
@@ -72,7 +83,7 @@ function Navigation({ isThemeOn, handleThemeButton }: props) {
 
                         <span className="nav-title">
                             <Link to="/Experience">
-                               Resume
+                                Resume
                             </Link>
                         </span>
 
@@ -119,31 +130,38 @@ function Navigation({ isThemeOn, handleThemeButton }: props) {
 
                             <span className="nav-title">
                                 <Link to="/" onClick={() => { setOpen(false) }}>
-                                    Home
+                                    <HiHome />  Home
                                 </Link>
                             </span>
 
                             <span className="nav-title">
                                 <Link to="/About" onClick={() => { setOpen(false) }}>
-                                    About
+                                    <MdAccountCircle />  About
                                 </Link>
                             </span>
 
                             <span className="nav-title" id="nav-projects">
                                 <Link to="/Projects" onClick={() => { setOpen(false) }}>
-                                    Projects
+                                    <GoProject /> Projects
                                 </Link>
                             </span>
 
                             <span className="nav-title">
                                 <Link to="/Blog" onClick={() => { setOpen(false) }}>
-                                    Blog
+                                    <FaBook /> Blog
                                 </Link>
                             </span>
 
                             <span className="nav-title">
+                                <Link to="/Experience" onClick={() => { setOpen(false) }}>
+                                    <TbBuilding />  Experience
+                                </Link>
+                            </span>
+
+
+                            <span className="nav-title">
                                 <Link to="/Links" onClick={() => { setOpen(false) }}>
-                                    Developer Links 
+                                    <GoPin />  Developer Links
                                 </Link>
                             </span>
 

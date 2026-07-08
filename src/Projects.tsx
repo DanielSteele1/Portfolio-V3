@@ -1,13 +1,10 @@
 import React, { JSX } from 'react';
 import { FaJs, FaNodeJs, FaReact, FaStar } from "react-icons/fa";
-import { LuGithub } from "react-icons/lu";
 import { SiCplusplus, SiCreatereactapp, SiMantine, SiMongodb, SiOpengl, SiReactrouter, SiSpotify, SiSupabase, SiTypescript, SiVite } from 'react-icons/si';
 import { GoLinkExternal } from "react-icons/go";
 
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import 'react-tooltip/dist/react-tooltip.css'
-
-
 
 interface Tag {
     icon: JSX.Element;
@@ -16,6 +13,8 @@ interface Tag {
 
 import { motion } from "motion/react"
 import { Link } from 'react-router-dom';
+import { FaGithub } from 'react-icons/fa6';
+import Breadcrumbs from './Breadcrumbs';
 
 interface ProjectCardProps {
 
@@ -29,22 +28,41 @@ interface ProjectCardProps {
     stars: number;
 }
 
-const Project_card: React.FC<ProjectCardProps> = ({ stars, title, src, tags, description, link, github }) => {
+const Project_card: React.FC<ProjectCardProps> = ({ stars, title, src, tags, link, github }) => {
 
     return (
 
         <div className="project-card">
-            <div className="project-image">
-                <a href={link} target="_blank" rel="noopener noreferrer">
-                    <img src={src} alt={title} loading="lazy" />
+            <div className="project-media">
+                <div className="project-overlay">
+                    <span className="project-title">
+                        {title}
+                    </span>
+
+                    <div className="project-buttons">
+                        <div className="project-button">
+                            <Link className="live-button" to={link} target="_blank" rel="noopener noreferrer">
+                                <GoLinkExternal style={{ fontSize: "25px" }} />
+                                <span className="button-text"> </span>
+                            </Link>
+                        </div>
+
+                        <div className="project-button" id="github-button">
+                            <Link className="github-button" to={github} target="_blank" rel="noopener noreferrer">
+                                <FaGithub style={{ fontSize: "25px" }} />
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+
+                <a className="project-image-link" href={link} target="_blank" rel="noopener noreferrer">
+                    <div className="project-image">
+                        <img src={src} alt={title} loading="lazy" />
+                    </div>
                 </a>
             </div>
 
             <div className="project-information">
-                <span className="project-title">
-                    <div className="gradient"> {title}</div>
-                </span>
-
                 <div className="project-tags">
                     {tags.map((tag, index) => (
                         <span
@@ -71,29 +89,10 @@ const Project_card: React.FC<ProjectCardProps> = ({ stars, title, src, tags, des
                         />
                     ))}
 
-                    <div className="stars"> <FaStar /> {stars} </div>
-
                 </div>
-
-                <div className="project-text">{description}</div>
+                <div className="stars"> <FaStar /> {stars} </div>
 
             </div>
-            <div className="project-buttons">
-                <div className="project-button">
-                    <Link className="live-button" to={link} target="_blank" rel="noopener noreferrer">
-                        <GoLinkExternal style={{ fontSize: "20px" }} />
-                        <span className="button-text">Live Project</span>
-                    </Link>
-                </div>
-
-                <div className="project-button" id="github-button">
-                    <Link className="github-button" to={github} target="_blank" rel="noopener noreferrer">
-                        <LuGithub style={{ fontSize: "23px" }} />
-                        <span className="button-text">Github</span>
-                    </Link>
-                </div>
-            </div>
-
         </div>
     )
 }
@@ -110,14 +109,15 @@ function Projects() {
                 viewport={{ once: true, amount: 0.2 }}
             >
 
-                <span className="projects-heading">
-                    My <div id="highlight-name"> Projects </div> 🍵
-                </span>
+                <div className="page-nav">
+                    <div className="breadcrumbs">
+                        <Breadcrumbs />
+                    </div>
+                </div>
 
-                <span className="project-sub-heading">
-                    <span>
-                        My collection of personal projects and apps, that I use to practice my skills and level up as a developer.
-                    </span>
+
+                <span className="projects-heading">
+                    My <div id="highlight-name"> {`{ Projects }`}</div> 🍵
                 </span>
 
                 <div className="project-container">
@@ -206,13 +206,6 @@ function Projects() {
                     >
 
                     </Project_card>
-
-                </div>
-
-                <span className="projects-heading">
-                    Older <div id="highlight-name"> Work </div>🏗️
-                </span>
-                <div className="project-container">
 
                     <Project_card title="SkyCompass"
                         description=" Skycompass is a web-based application that allows users to monitor up-to-date weather patterns across the globe. 

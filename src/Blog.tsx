@@ -62,7 +62,7 @@ function Blog() {
                 </div>
             </div>
 
-            <span className="blog-heading"> My Blog 📰</span>
+            <span className="blog-heading"> My <span id="highlight-name"> {`{ Blog }`} </span></span>
             <span className="blog-sub-heading"> This is my blog,
                 where I post updates on my upcoming/launched projects and
                 give insights on what i've learned from each one. Additionally,
