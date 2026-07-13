@@ -40,7 +40,7 @@ function Navigation({ isThemeOn, handleThemeButton }: props) {
         <div className="nav-container">
             <div className={`navigation ${scrolled ? "scrolled" : ""}`}>
                 <div className="nav-item">
-                    <span className="nav-title">
+                    <span className="nav-logo">
                         <a href="/">
                             <div className="logo" id="gradient"> Daniel Steele </div>
                         </a>

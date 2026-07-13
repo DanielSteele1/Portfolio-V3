@@ -551,7 +551,7 @@ body {
 }
 
 .landing-stats {
-  width: 100%;
+  width: 85%;
   margin: 0 auto;
 }
 
@@ -730,7 +730,7 @@ body {
   height: 65px;
   align-items: center;
   justify-content: space-between;
-  width: 85%;
+  width: 60%;
   position: fixed;
   top: 0;
   left: 0;
@@ -778,7 +778,6 @@ body {
 }
 
 .navigation.scrolled {
-
   backdrop-filter: blur(8px);
 }
 
@@ -801,6 +800,8 @@ body {
   flex-direction: row;
   color: var(--text-color);
 }
+
+
 
 .nav-title a:hover {
   cursor: pointer;
@@ -944,6 +945,29 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.pictures-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  overflow-x: scroll;
+}
+
+.pictures-personal-img {
+  display: flex;
+  border: none !important;
+  margin-right: 10px;
+}
+
+.pictures-personal-img img {
+  border: none !important;
+  height: 220px !important;
+  width: 200px !important;
 }
 
 .About-status-container {
@@ -1492,13 +1516,13 @@ body {
 .About-para-title {
   display: flex;
   width: 100%;
-  min-height: 200px;
+  min-height: 150px;
   height: fit-content;
   align-items: center;
   justify-content: center;
   text-align: center;
   white-space: wrap;
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: 350;
   font-family: 'Outfit', sans-serif;
   color: var(--text-color);
@@ -1547,14 +1571,14 @@ body {
   color: var(--text-color);
 }
 
-#banner-tooltip{
+#banner-tooltip {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-#banner-tooltip svg{
+#banner-tooltip svg {
   margin-right: 10px;
   margin-top: 3px;
 }
@@ -1562,19 +1586,13 @@ body {
 .banner {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
-  justify-content: center;
-  height: 250px;
-  width: fit-content;
-  align-items: center;
-  margin-bottom: 20px;
+  margin: 10px;
 }
 
 .banner img {
   width: 100%;
   height: 200px;
-  border-radius: 20px;
-  padding: 10px;
+  border-radius: 12px;
 }
 
 .about-footer img {
@@ -2124,6 +2142,15 @@ svg {
 
 @media (min-width: 1200px) and (max-width: 1600px) {
 
+
+  .pictures-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-x: scroll;
+  }
+
   .main-container {
     width: 80%;
   }
@@ -2402,6 +2429,26 @@ svg {
 }
 
 @media (min-width: 750px) and (max-width: 1000px) {
+
+
+  .pictures-container {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .pictures-personal-img {
+    display: flex;
+    height: 200px !important;
+    width: 250px !important;
+    margin-bottom: 20px;
+  }
+
+  .pictures-personal-img img {
+    height: 250px !important;
+    width: 250px !important;
+    margin: 0 auto !important;
+  }
 
   .landing-greeting {
     height: 100dvh;
@@ -3050,17 +3097,24 @@ svg {
   .nav-title svg {
     margin-right: 10px;
     font-size: 1.3rem;
-
+    color: var(--icon-color);
   }
 
   .nav-title a {
     display: inline-flex;
-    padding: 8px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     align-items: center;
     justify-content: flex-start;
-    font-weight: 450;
-    padding-left: 30px;
+    font-weight: 400;
+    padding-bottom: 10px;
+  }
+
+  .nav-logo a {
+    display: inline-flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 400;
   }
 
   #blog {
@@ -3180,11 +3234,11 @@ svg {
   }
 
   .banner img {
-    height: fit-content;
+    height: 100px;
+    width: 100%;
   }
 
   .about-grid {
-    margin: 0px;
     width: 100%;
   }
 
@@ -3395,6 +3449,30 @@ svg {
     align-items: center;
     justify-content: center;
     width: 100%;
+  }
+
+  .pictures-container {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .pictures-personal-img {
+    display: flex;
+    height: 280px !important;
+    width: 80% !important;
+    margin-bottom: 20px;
+  }
+
+  .pictures-personal-img img {
+    height: 300px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+
+  .logo-mobile {
+    height: fit-content;
+    width: fit-content;
   }
 
 }

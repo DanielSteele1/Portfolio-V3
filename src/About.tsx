@@ -1,5 +1,4 @@
 import "./App.css";
-import { motion } from "motion/react"
 
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import Breadcrumbs from "./Breadcrumbs";
@@ -11,16 +10,14 @@ import { TooltipFloating } from "@mantine/core";
 import GithubGraph from "./GithubGraph";
 import { FaImage } from "react-icons/fa";
 
+import PixelTransition from "./React-Bits/PixelTransition";
+
 function AboutMe() {
 
     return (
-        <motion.div
+        <div
             className="about"
             id="about"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.2 }}
         >
             <div className="page-nav">
                 <div className="breadcrumbs">
@@ -50,15 +47,47 @@ function AboutMe() {
                 </div>
 
                 <div className="About-text">
-
                     <span className="About-para-title">
                         Hi! I'm Daniel Steele, a Frontend Developer from the UK
                     </span>
 
-                    <div className="commit-graph">
-                        <GithubGraph loading={false} setLoading={function (): void {
-                            throw new Error("Function not implemented.");
-                        } } isThemeOn={false}/>
+                    <div className="pictures-container">
+
+
+                        <PixelTransition
+                            firstContent={
+                                <img
+                                    src="Daniel_Steele_2026_2.jpg"
+                                    alt="Picture of Daniel Steele"
+                                    style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                                />
+                            }
+                            secondContent={
+                                <div
+                                    style={{
+                                        width: "100%",
+                                        height: "100%",
+                                        display: "grid",
+                                        placeItems: "center",
+                                        backgroundColor: "#9a4cff"
+                                    }}
+                                >
+                                    <p style={{ fontWeight: 450, fontSize: "2rem", color: "#ffffff" }}>Hey :)</p>
+                                </div>
+                            }
+                            gridSize={6}
+                            pixelColor="#9a4cff"
+                            once={false}
+                            animationStepDuration={0.4}
+                            className="pictures-personal-img"
+                        />
+
+                        <div className="commit-graph">
+                            <GithubGraph loading={false} setLoading={function (): void {
+                                throw new Error("Function not implemented.");
+                            }} isThemeOn={false} />
+                        </div>
+
                     </div>
 
                     <div className="About-paragraph">
@@ -80,13 +109,14 @@ function AboutMe() {
                     <div className="About-paragraph">
                         <span className="About-para-title"> My Hobbies & Personal Life </span>
 
+
                         <TooltipFloating
-                            label={ <span id="banner-tooltip"> <FaImage/>  Torbay, Devon, UK </span> }
+                            label={<span id="banner-tooltip"> <FaImage />  Torbay, Devon, UK </span>}
                             portalProps={{ target: document.body }}
                             id="experience-tooltip"
                         >
                             <div className="banner">
-                             <img src="Picture of the Bay -website.jpg" />
+                                <img src="Picture of the Bay -website.jpg" />
                             </div>
                         </TooltipFloating>
 
@@ -112,7 +142,7 @@ function AboutMe() {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     )
 }
 
