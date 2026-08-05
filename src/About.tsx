@@ -27,20 +27,12 @@ function AboutMe() {
 
             <div className="section-heading"> About <div id="highlight-name"> {`{ Me }`} </div> 💻 </div>
 
+            <div className="skill-marquee">
+                <SkillsMarquee />
+            </div>
+
+
             <div className="About-container">
-                <div className="landing-status-container">
-                    <div className="landing-status">
-                        <span id="status-text"> <FaCity /> Open to opportunities in the UK  </span>
-                        <span id="status-text"> <FaBookOpen /> Experimenting with: MantineUI </span>
-
-                        <Link to="https://job-board-murex-eight.vercel.app" id="status-text-a"> <FaCode style={{ fontSize: '25px' }} /> Current Project: Job Portal App</Link>
-                    </div>
-                </div>
-
-
-                <div className="skill-marquee">
-                    <SkillsMarquee />
-                </div>
 
                 <div className="landing-stats">
                     <Statistics />
@@ -48,16 +40,20 @@ function AboutMe() {
 
                 <div className="About-text">
                     <span className="About-para-title">
-                        Hi! I'm Daniel Steele, a Frontend Developer from the UK
+                        Hi! I'm Daniel Steele
+
+                        <span id="highlight-name" className="About-para-secondary-title">
+                            Frontend Developer from the UK
+                        </span>
                     </span>
 
-                    <div className="pictures-container">
 
+                    <div className="pictures-container">
 
                         <PixelTransition
                             firstContent={
                                 <img
-                                    src="Daniel_Steele_2026_2.jpg"
+                                    src="Website_Pic2.jpg"
                                     alt="Picture of Daniel Steele"
                                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                                 />
@@ -90,6 +86,15 @@ function AboutMe() {
 
                     </div>
 
+                    <div className="landing-status-container">
+                        <div className="landing-status">
+                            <span id="status-text"> <FaCity /> Open to opportunities in the UK  </span>
+                            <span id="status-text"> <FaBookOpen /> Experimenting with: MantineUI </span>
+                            <Link to="https://job-board-murex-eight.vercel.app" id="status-text-a"> <FaCode style={{ fontSize: '25px' }} /> Current Project: Job Portal App</Link>
+                            <Link id="status-text" to="https://open.spotify.com/album/51C65YqHrDODM1hD5FEL5x?si=yfZcXlrwQSiR6rfzvGL_UQ"> <img className="song-cover" src="/I.jpg" /> <a>  I by Kendrick Lamar </a> </Link>
+                        </div>
+                    </div>
+
                     <div className="About-paragraph">
                         <span className="About-paragraph-text">
                             I focus on bringing creative web applications to life with a mix of clean UI design and solid frontend code.
@@ -107,27 +112,6 @@ function AboutMe() {
                     </div>
 
                     <div className="About-paragraph">
-                        <span className="About-para-title"> My Hobbies & Personal Life </span>
-
-
-                        <TooltipFloating
-                            label={<span id="banner-tooltip"> <FaImage />  Torbay, Devon, UK </span>}
-                            portalProps={{ target: document.body }}
-                            id="experience-tooltip"
-                        >
-                            <div className="banner">
-                                <img src="Picture of the Bay -website.jpg" />
-                            </div>
-                        </TooltipFloating>
-
-                        <span className="About-paragraph-text">
-                            Outside of web development, I spend most of my time keeping up to date with tech related news,
-                            applying my knowledge of hardware to build computers as a hobby and playing PC games with friends.
-                            Some of favourite games i've played in the past are <a id="highlight-name" href="https://www.nomanssky.com"> No Mans Sky </a> & both <a id="highlight-name" href="https://unknownworlds.com/en/news?game=subnautica"> Subnautica games. </a>
-                        </span>
-                    </div>
-
-                    <div className="About-paragraph">
                         <span className="About-para-title"> What am i up to right now? </span>
 
                         <span className="About-paragraph-text">
@@ -140,6 +124,33 @@ function AboutMe() {
                         </span>
 
                     </div>
+
+                    <div className="About-paragraph">
+                        <span className="About-para-title"> My Hobbies & Personal Life </span>
+
+                        <div className="about-content-media">
+                            <TooltipFloating
+                                label={<span id="banner-tooltip"> <FaImage />  Torbay, Devon, UK </span>}
+                                portalProps={{ target: document.body }}
+                                id="experience-tooltip"
+                            >
+                                <div className="about-image">
+                                    <img src="Picture of the Bay -website.jpg" />
+                                </div>
+                            </TooltipFloating>
+
+                        </div>
+
+                        <span className="About-paragraph-text">
+                            Outside of web development, I spend most of my time keeping up to date with tech related news,
+                            applying my knowledge of hardware to build computers as a hobby and playing PC games with friends.
+                            Some of favourite games i've played in the past are <a id="highlight-name" href="https://www.nomanssky.com"> No Mans Sky </a> & both <a id="highlight-name" href="https://unknownworlds.com/en/news?game=subnautica"> Subnautica games. </a>
+                            Recently, I've been listening to alot of tame impala.
+                        </span>
+
+
+                    </div>
+
                 </div>
             </div>
         </div>
