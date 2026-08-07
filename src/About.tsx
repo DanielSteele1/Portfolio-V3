@@ -90,7 +90,7 @@ function AboutMe() {
                         <div className="landing-status">
                             <span id="status-text"> <FaCity /> Open to opportunities in the UK  </span>
                             <span id="status-text"> <FaBookOpen /> Experimenting with: MantineUI </span>
-                            <Link to="https://job-board-murex-eight.vercel.app" id="status-text-a"> <FaCode style={{ fontSize: '25px' }} /> Current Project: Job Portal App</Link>
+                            <Link to="https://job-board-murex-eight.vercel.app" id="status-text-a"> <FaCode style={{ fontSize: '25px' }} /> Latest Project: Job Portal App</Link>
                             <Link id="status-text" to="https://open.spotify.com/album/51C65YqHrDODM1hD5FEL5x?si=yfZcXlrwQSiR6rfzvGL_UQ"> <img className="song-cover" src="/I.jpg" /> <a>  I by Kendrick Lamar </a> </Link>
                         </div>
                     </div>
