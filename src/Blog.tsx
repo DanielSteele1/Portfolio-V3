@@ -100,7 +100,6 @@ function Blog() {
                             date={blog.date}
                             description={blog.description}
                         />
-
                     ))
                 ) : (
 

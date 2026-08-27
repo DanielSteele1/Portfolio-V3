@@ -1,0 +1,180 @@
+[
+  {
+    "title": "Job's Portal",
+    "description": "A frontend application to search, track and apply for jobs. Features a number of search filters including title, location, seniority, remote & pay. It uses Adzuna's API to get job data, and includes ways for users to track application progress. Planned to implement client side logins, stored with Supabase.",
+    "src": "Jobs-Portal.png",
+    "date": "2026-07-01",
+    "tags": [
+      {
+        "icon": "FaReact",
+        "name": "React"
+      },
+      {
+        "icon": "SiTypescript",
+        "name": "TypeScript"
+      },
+      {
+        "icon": "SiReactrouter",
+        "name": "React-Router"
+      },
+      {
+        "icon": "FaReact",
+        "name": "Zustand (Global State managment)"
+      },
+      {
+        "icon": "SiMantine",
+        "name": "MantineUI"
+      },
+      {
+        "icon": "SiSupabase",
+        "name": "Supabase"
+      }
+    ],
+    "link": "https://job-board-murex-eight.vercel.app/",
+    "github": "https://github.com/DanielSteele1/JobBoard/tree/main/",
+    "stars": 3
+  },
+  {
+    "title": "Orbit - Productivity Tracker",
+    "date": "2025-06-31",
+    "description": "A Notes/productivity application, a blend of Trello and Google Keep. Features include the abillity to add/delete boards, and drag & drop to re-order tasks. Users can switch between two layouts. Uses React-router for multi-board support, localStorage for persistance & react-toast for user feedback on operations.",
+    "src": "Orbit_Kanban_App.png",
+    "tags": [
+      {
+        "icon": "FaReact",
+        "name": "React"
+      },
+      {
+        "icon": "SiTypescript",
+        "name": "TypeScript"
+      },
+      {
+        "icon": "SiReactrouter",
+        "name": "React-Router"
+      },
+      {
+        "icon": "SiVite",
+        "name": "Vite"
+      }
+    ],
+    "link": "https://trello-style-kanban-board-applicati-orcin.vercel.app",
+    "github": "https://github.com/DanielSteele1/Trello-Clone",
+    "stars": 5
+  },
+  {
+    "title": "Audio Stats - Spotify Dashboard",
+    "date": "2026-05-01",
+    "description": "A frontend web application intended to use Spotify's authentication and API service to get a users listening habits, and to visualise that data using vis libraries. Uses React/TS on the frontend.",
+    "src": "AudioStats_Real.png",
+    "tags": [
+      {
+        "icon": "FaReact",
+        "name": "React"
+      },
+      {
+        "icon": "SiTypescript",
+        "name": "TypeScript"
+      },
+      {
+        "icon": "SiReactrouter",
+        "name": "React-Router"
+      },
+      {
+        "icon": "SiSpotify",
+        "name": "Spotify's public API"
+      },
+      {
+        "icon": "SiMantine",
+        "name": "MantineUI"
+      },
+      {
+        "icon": "SiVite",
+        "name": "Vite"
+      }
+    ],
+    "link": "https://reddit-statistics-app.vercel.app/login",
+    "github": "https://github.com/DanielSteele1/Spotify-Statistics-Dashboard",
+    "stars": 3
+  },
+  {
+    "title": "FocusDev",
+    "date": "2025-03-01",
+    "description": "FocusDev is a utility app designed for developers. It features a Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few. Coded in JavaScript, React, Node.js & MongoDB. It also uses Bcrypt to securely store user data.",
+    "tags": [
+      {
+        "icon": "FaReact",
+        "name": "React"
+      },
+      {
+        "icon": "FaJs",
+        "name": "JavaScript"
+      },
+      {
+        "icon": "FaNodeJs",
+        "name": "NodeJs"
+      },
+      {
+        "icon": "SiMongodb",
+        "name": "MongoDB"
+      },
+      {
+        "icon": "SiCreatereactapp",
+        "name": "Create-React-App"
+      }
+    ],
+    "src": "FocusDev.png",
+    "link": "https://focusdev.vercel.app",
+    "github": "https://github.com/DanielSteele1/FocusDev",
+    "stars": 5
+  },
+  {
+    "title": "SkyCompass",
+    "date": "2024-06-01",
+    "description": "Skycompass is a web-based application that allows users to monitor up-to-date weather patterns across the globe. It utilises multiple APIs to create a dashboard displaying weather maps, as well a forecast page that predicts weather for up to 7 days. Using MongoDB & Bcrypt hashing for security, users can favourite locations for a more personalised experience.",
+    "src": "SkyCompass.png",
+    "tags": [
+      {
+        "icon": "FaReact",
+        "name": "React"
+      },
+      {
+        "icon": "FaJs",
+        "name": "JavaScript"
+      },
+      {
+        "icon": "FaNodeJs",
+        "name": "NodeJs"
+      },
+      {
+        "icon": "SiMongodb",
+        "name": "MongoDB"
+      },
+      {
+        "icon": "SiCreatereactapp",
+        "name": "Create-React-App"
+      }
+    ],
+    "link": "",
+    "github": "https://github.com/DanielSteele1/SkyCompass",
+    "stars": 3
+  },
+  {
+    "title": "EarthSim",
+    "date": "2023-12-01",
+    "description": "EarthSim is a project that I built in C++, using OpenGL and various libraries to create a 3D environment, with the goal of simulating our local system of planets, exposing me to core game development principles and GLSL. I have a web-based version planned.",
+    "src": "EarthSim.png",
+    "tags": [
+      {
+        "icon": "SiCplusplus",
+        "name": "C++"
+      },
+      {
+        "icon": "SiOpengl",
+        "name": "OpenGL"
+      }
+    ],
+    "link": "https://github.com/DanielSteele1/EarthSim",
+    "github": "https://github.com/DanielSteele1/EarthSim",
+    "stars": 3
+  }
+]

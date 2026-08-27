@@ -4,12 +4,13 @@ import 'react-tooltip/dist/react-tooltip.css'
 import Hamburger from 'hamburger-react';
 
 import { IoIosMoon, IoIosSunny } from "react-icons/io";
-import { Link } from 'react-router-dom';
-import { HiHome } from 'react-icons/hi';
+import { NavLink } from 'react-router-dom';
+import {  HiDocument, HiHome } from 'react-icons/hi';
 import { MdAccountCircle } from 'react-icons/md';
-import { GoPin, GoProject } from 'react-icons/go';
-import { FaBook } from 'react-icons/fa';
-import { TbBuilding } from 'react-icons/tb';
+import {  GoHome, GoPin, GoProject } from 'react-icons/go';
+import { FaBook} from 'react-icons/fa';
+import { TbBuilding, TbTools } from 'react-icons/tb';
+import { LuLink, LuNotebook } from 'react-icons/lu';
 
 type props = {
     handleThemeButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -27,7 +28,6 @@ function Navigation({ isThemeOn, handleThemeButton }: props) {
 
             const isScrolled = window.scrollY > 0;
             setScrolled(isScrolled);
-
         }
 
         window.addEventListener('scroll', handleScroll);
@@ -51,56 +51,63 @@ function Navigation({ isThemeOn, handleThemeButton }: props) {
                     <div className="nav-menu">
 
                         <span className="nav-title">
-                            <Link to="/">
-                                Home
-                            </Link>
+                            <NavLink to="/" end className="expandable-box">
+                                <GoHome />
+                                <div className='sliding-text'>Home</div>
+                            </NavLink>
                         </span>
 
                         <span className="nav-title" id="nav-projects">
-                            <Link to="/Projects">
-                                Projects
-                            </Link>
+                            <NavLink to="/Projects" className="expandable-box">
+                                <TbTools />
+                                <div className="sliding-text">Projects</div>
+                            </NavLink>
                         </span>
 
                         <span className="nav-title">
-                            <Link to="/About">
-                                About
-                            </Link>
+                            <NavLink to="/About" className="expandable-box">
+                                <MdAccountCircle />
+                                <div className="sliding-text"> About </div>
+                            </NavLink>
                         </span>
 
 
                         <span className="nav-title">
-                            <Link to="/Links">
-                                Links
-                            </Link>
+                            <NavLink to="/Links" className="expandable-box">
+                                <LuLink />
+                                <div className="sliding-text"> Links </div>
+                            </NavLink>
                         </span>
 
                         <span data-tooltip-id="tooltip-1" className="nav-title">
-                            <Link to="/Blog">
-                                Blog
-                            </Link>
+                            <NavLink to="/Blog" className="expandable-box">
+                                <LuNotebook />
+                                <div className="sliding-text"> Blog </div>
+                            </NavLink>
                         </span>
 
                         <span className="nav-title">
-                            <Link to="/Experience">
-                                Resume
-                            </Link>
+                            <NavLink to="/Experience" className="expandable-box">
+                                <HiDocument />
+                                <div className="sliding-text"> Resume </div>
+                            </NavLink>
                         </span>
 
-                        <button className="theme-button" onClick={handleThemeButton}>
-                            {isThemeOn ?
+                     <button className="theme-button" onClick={handleThemeButton}>
+                        {isThemeOn ?
 
-                                <IoIosMoon style={{
-                                    fontSize: '23px',
-                                }} /> :
+                            <IoIosMoon style={{
+                            }} /> :
 
-                                <IoIosSunny style={{
-                                    fontSize: '23px',
-                                }} />
-                            }
+                            <IoIosSunny style={{
+                            }} />
+                        }
 
-                        </button>
+                    </button>
+
                     </div>
+
+
                 </div>
 
                 <div className="nav-buttons">
@@ -129,40 +136,40 @@ function Navigation({ isThemeOn, handleThemeButton }: props) {
                         <div className="nav-backing-mobile">
 
                             <span className="nav-title">
-                                <Link to="/" onClick={() => { setOpen(false) }}>
+                                <NavLink to="/" end onClick={() => { setOpen(false) }}>
                                     <HiHome />  Home
-                                </Link>
+                                </NavLink>
                             </span>
 
                             <span className="nav-title">
-                                <Link to="/About" onClick={() => { setOpen(false) }}>
+                                <NavLink to="/About" onClick={() => { setOpen(false) }}>
                                     <MdAccountCircle />  About
-                                </Link>
+                                </NavLink>
                             </span>
 
                             <span className="nav-title" id="nav-projects">
-                                <Link to="/Projects" onClick={() => { setOpen(false) }}>
+                                <NavLink to="/Projects" onClick={() => { setOpen(false) }}>
                                     <GoProject /> Projects
-                                </Link>
+                                </NavLink>
                             </span>
 
                             <span className="nav-title">
-                                <Link to="/Blog" onClick={() => { setOpen(false) }}>
+                                <NavLink to="/Blog" onClick={() => { setOpen(false) }}>
                                     <FaBook /> Blog
-                                </Link>
+                                </NavLink>
                             </span>
 
                             <span className="nav-title">
-                                <Link to="/Experience" onClick={() => { setOpen(false) }}>
+                                <NavLink to="/Experience" onClick={() => { setOpen(false) }}>
                                     <TbBuilding />  Experience
-                                </Link>
+                                </NavLink>
                             </span>
 
 
                             <span className="nav-title">
-                                <Link to="/Links" onClick={() => { setOpen(false) }}>
+                                <NavLink to="/Links" onClick={() => { setOpen(false) }}>
                                     <GoPin />  Developer Links
-                                </Link>
+                                </NavLink>
                             </span>
 
                         </div>

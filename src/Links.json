@@ -1,0 +1,94 @@
+[
+    {
+      "category": "Inspiration Repositories",
+      "links": [
+        {
+          "title": "Github",
+          "url": "https://github.com/"
+        },
+        {
+          "title": "Emma Bostian's Developer Portfolio list",
+          "url": "https://github.com/DanielSteele1/developer-portfolios"
+        },
+        {
+          "title": "\"Ideas-for-projects-people-would-use\" github list",
+          "url": "https://github.com/Divide-By-0/ideas-for-projects-people-would-use"
+        }
+      ]
+    },
+    {
+      "category": "Cool Projects I like",
+      "links": [
+        {
+          "title": "React-Bits (Animation Lib)",
+          "url": "https://reactbits.dev/"        
+        }
+      ]
+    },
+    {
+      "category": "Documentation Websites",
+      "links": [
+        {
+          "title": "React Home Page",
+          "url": "https://react.dev/"
+        },
+        {
+          "title": "React Router",
+          "url": "https://react.dev/learn/creating-a-react-app#react-router-v7"
+        },
+        {
+          "title": "Vite Home Page",
+          "url": "https://vite.dev/"
+        },
+        {
+          "title": "NextJS Home Page",
+          "url": "https://nextjs.org/"
+        },
+        {
+          "title": "TypeScript Home Page",
+          "url": "https://www.typescriptlang.org/"
+        },
+        {
+          "title": "GSAP Home Page",
+          "url": "https://gsap.com/"
+        },
+        {
+          "title": "Framer Motion Home Page",
+          "url": "https://motion.dev/"
+        }
+      ]
+    },
+    {
+      "category": "Useful Libraries & Resources",
+      "links": [
+        {
+          "title": "ShadCN Home Page",
+          "url": "https://ui.shadcn.com/"
+        },
+        {
+          "title": "Mantine Home page",
+          "url": "https://mantine.dev/"
+        },
+        {
+          "title": "ChakraUI Home Page",
+          "url": "https://chakra-ui.com/"
+        },
+        {
+          "title": "MUI Home page",
+          "url": "https://mui.com/"
+        },
+        {
+          "title": "D3 Charts (Charts Lib)",
+          "url": "https://d3js.org/"
+        },
+        {
+          "title": "DnD-Kit (Drag and Drop Lib)",
+          "url": "https://dndkit.com/"
+        },
+        {
+          "title": "ToastifyJS",
+          "url": "https://github.com/apvarun/toastify-js"
+        }
+      ]
+    }
+  ]

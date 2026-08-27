@@ -31,7 +31,6 @@ function AboutMe() {
                 <SkillsMarquee />
             </div>
 
-
             <div className="About-container">
 
                 <div className="landing-stats">

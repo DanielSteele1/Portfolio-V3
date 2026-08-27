@@ -1,21 +1,50 @@
-import { FaBookOpen, FaGithub, FaReact } from "react-icons/fa6";
-import { LuChartBar, LuPaintbrush } from "react-icons/lu";
-import { SiChakraui, SiFramer, SiMantine, SiMui, SiNextdotjs, SiReact, SiTypescript, SiVite } from "react-icons/si";
-import { TbBread } from "react-icons/tb";
 
 import Breadcrumbs from './Breadcrumbs';
 
-function Links() {
+import { Accordion } from '@mantine/core';
+import linksData from './Links.json';
+
+interface LinkItem { 
+    title: string;
+    url: string;
+}
+
+interface Group {
+
+    category: string;
+    links: LinkItem[];
+}
+
+function Links(){
+
+   const links = linksData as Group[];
+
+   const linkGroups = links.map((group, index) => (
+
+    <Accordion.Item key={index} value={group.category}>
+    <Accordion.Control className="links-grid-title">{group.category}</Accordion.Control>
+
+        {group.links.map((link, index) => (
+
+        <Accordion.Panel key={index} className="link">
+            <a href={link.url}> 
+        {link.title}
+        
+         </a>
+       </Accordion.Panel>
+     
+      ))}
+
+    </Accordion.Item>
+
+   ));
 
     return (
         <section className="links">
-
             <div className="page-nav">
-
                 <div className="breadcrumbs">
                     <Breadcrumbs />
                 </div>
-
             </div>
 
             <div className="section-heading">
@@ -29,139 +58,20 @@ function Links() {
 
             <div className="links-backdrop">
 
-                <span className="links-grid-title"> Inspiration Repositories</span>
-                <div className="links-grid">
+                <section className="links-group">
+                    <h2 className="links-grid-title">Useful Links</h2>
 
-                    <a href="https://github.com/">
-                        <div className="link">
-                            <FaGithub /> Github
-                        </div>
-                    </a>
-                    <a href="https://github.com/DanielSteele1/developer-portfolios">
-                        <div className="link">
-                            <FaGithub /> Emma Bostian's Developer Portfolio list
-                        </div>
-                    </a>
+                        <Accordion 
+                        order={3} 
+                        variant="separated"
+                        defaultValue={links[0]?.category}
+                        chevronIconSize={22}>
+                        {linkGroups}
+                        </Accordion>
 
-                    <a href="https://github.com/Divide-By-0/ideas-for-projects-people-would-use">
-                        <div className="link">
-                            <FaGithub /> "Ideas-for-projects-people-would-use" github list
-                        </div>
-                    </a>
-                </div>
+                </section>
 
-                <span className="links-grid-title"> Documentation Websites </span>
-                <div className="links-grid">
-
-                    <a href="https://react.dev/">
-
-                        <div className="link">
-                            <FaReact /> React Home Page
-                        </div>
-                    </a>
-
-                    <a href="https://react.dev/learn/creating-a-react-app#react-router-v7">
-                        <div className="link">
-                            <SiReact /> React Router
-                        </div>
-                    </a>
-
-                    <a href="https://vite.dev/">
-
-                        <div className="link">
-                            <SiVite /> Vite Home Page
-                        </div>
-                    </a>
-
-
-                    <a href="https://nextjs.org/">
-
-                        <div className="link">
-                            <SiNextdotjs /> NextJS Home Page
-                        </div>
-                    </a>
-
-
-                    <a href="https://www.typescriptlang.org/">
-
-                        <div className="link">
-                            <SiTypescript /> TypeScript Home Page
-                        </div>
-                    </a>
-
-                    <a href="https://gsap.com/">
-
-                        <div className="link">
-                            <LuPaintbrush /> GSAP Home Page
-                        </div>
-                    </a>
-
-                    <a href="https://motion.dev/">
-                        <div className="link">
-                            <SiFramer /> Framer Motion Home Page
-                        </div>
-                    </a>
-
-                </div>
-
-                <span className="links-grid-title"> Useful Libraries & Resources </span>
-                <div className="links-grid">
-
-                    <a href="https://ui.shadcn.com/">
-
-                        <div className="link">
-                            <SiVite /> ShadCN Home Page
-                        </div>
-                    </a>
-
-
-                    <a href="https://mantine.dev/">
-
-                        <div className="link">
-                            <SiMantine /> Mantine Home page
-                        </div>
-                    </a>
-
-                    <a href="https://chakra-ui.com/">
-                        <div className="link">
-                            <SiChakraui /> ChakraUI Home Page
-                        </div>
-                    </a>
-
-
-                    <a href="https://mui.com/">
-
-                        <div className="link">
-                            <SiMui /> MUI Home page
-                        </div>
-                    </a>
-
-                    <a href="https://reactbits.dev/">
-
-                        <div className="link">
-                            <FaBookOpen /> React-Bits (Animation Lib)
-                        </div>
-                    </a>
-
-                    <a href="https://d3js.org/">
-                        <div className="link">
-
-                            <LuChartBar /> D3 Charts (Charts Lib)
-                        </div>
-                    </a>
-
-                    <a href="https://dndkit.com/">
-                        <div className="link">
-                            <FaBookOpen /> DnD-Kit (Drag and Drop Lib)
-                        </div>
-                    </a>
-
-                    <a href="https://github.com/apvarun/toastify-js">
-                        <div className="link">
-                            <TbBread /> ToastifyJS (Highly Customisable Toast Lib)
-                        </div>
-                    </a>
-                </div>
+            
             </div>
         </section>
     )
