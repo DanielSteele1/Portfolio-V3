@@ -8,16 +8,29 @@ import Breadcrumbs from './Breadcrumbs';
 import type { ProjectCardProps } from './ProjectCard';
 import ProjectCard from './ProjectCard';
 import projectsData from './projects.json';
-import { useState } from 'react';
-import { Select } from '@mantine/core';
+import { useEffect, useState } from 'react';
+import { Select, Skeleton } from '@mantine/core';
 
 console.table(projectsData);
 const projects = projectsData as ProjectCardProps[];
 
+
 function Projects() {
+const [isLoading, setLoading] = useState(false);
+
+
+useEffect(() => {
+
+    const timer = setTimeout(() => {
+        setLoading(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+
+}, []);
 
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedDate, setProjectDate] = useState('Pick a date');
+
 
     const filteredProjects = projects.filter((project => {
 
@@ -103,23 +116,31 @@ function Projects() {
                 />
                </div>
 
-                    {filteredProjects.length === 0 ? (
+                {filteredProjects.length === 0 ? (
                         <div className="no-results-projects"> 
                          No results found
                         </div>
                     ):(
+
+                    isLoading ?  (
                     <div className="project-container">
 
                     {filteredProjects.map((project) => (
-
                        <ProjectCard key={project.title} {...project}/>
-
                     ))}
-                    
+
                     </div>
-                )
-            
-                }
+                    ):(
+                    <div className="project-container">
+                        {filteredProjects.map((project) => (
+                            <div className='skeleton-container'>
+                            <Skeleton className="skeleton" key={project.title} height={350}>
+
+                            </Skeleton>
+                            </div>
+                        ))}
+                    </div>
+                    ))}
 
             </div>
             </motion.div>
