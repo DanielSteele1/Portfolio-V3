@@ -25,10 +25,10 @@ type Props = {
 const Dashboard = ({ handleDownloadAndView }: Props) => {
 
     const items = [
-  { image: '/public/Jobs-Portal.png', label: 'Personal Projects', link: '/Projects' },
-  { image: '/public/Picture of the Bay -website.jpg', label: 'About me', link: '/About' },
-  { image: '/public/blog.png', label: 'Blog', link: '/Blog' },
-  { image: 'public/Plymouth_Hoe.jpg', label: 'Experience', link: '/Experience' },
+  { image: '/Jobs-Portal.png', label: 'Personal Projects', link: '/Projects' },
+  { image: '/Picture of the Bay -website.jpg', label: 'About me', link: '/About' },
+  { image: '/blog.png', label: 'Blog', link: '/Blog' },
+  { image: '/Plymouth_Hoe.jpg', label: 'Experience', link: '/Experience' },
 ];
 
     return (
