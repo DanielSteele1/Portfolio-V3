@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Quicksand:wght@300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
 
 @media (min-width: 750px) and (max-width: 1200px) {
   .dashboard {
@@ -69,7 +70,8 @@ html {
   flex-direction: column;
   margin: 0;
   padding: 0;
-  height: 100dvh;
+  min-height: 100dvh;
+  height: fit-content;
   width: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -88,7 +90,6 @@ a {
   font-weight: 400;
   text-decoration: inherit;
   width: fit-content;
-  font-family: 'Outfit', sans-serif;
   color: var(--component-hover-background);
 }
 
@@ -99,12 +100,12 @@ a {
 [data-theme="light"] {
 
   --skeleton-bg: #ffffff;
-  --background: #eee9ee;
+  --background: #e2e2e2;
   --background-secondary: #f8f6f8;
   --icon-color: #9155eb;
   --main-gradient: linear-gradient(120deg, #9443ff, #b155ff, #d06cff);
   --button-gradient: #8c46e7;
-  --text-color: #222;
+  --text-color: #161616;
   --border-color: #3d4157;
   --Nav-menu-background: rgba(242, 242, 242, 0.9);
   --Nav-icon-background: #a35efd;
@@ -133,7 +134,7 @@ a {
   --icon-hover-color: #a871f1;
   --component-text-color: #a871f1;
   --component-background: #111111;
-  --component-hover-background: #a368f0;
+  --component-hover-background: #af72ff;
   --text-highlight-color: #5602c4e3;
 }
 
@@ -144,9 +145,9 @@ body {
   width: 100%;
   height: fit-content;
   min-height: auto;
-  font-size: 18px;
+  font-size: 1.0rem;
   background: var(--background);
-  font-family: 'Outfit', sans-serif;
+  font-family: "Google Sans Flex", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -255,11 +256,11 @@ body {
 .main-container {
   display: flex;
   width: 100%;
-  min-height: 100dvh;
   height: fit-content;
+  min-height: 100dvh;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   margin: 0 auto;
 }
 
@@ -384,10 +385,13 @@ body {
 .greeting {
   width: 100%;
   display: flex;
-  height: fit-content;
+  height: 75dvh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 25px;
 }
 
 .page-nav {
@@ -400,7 +404,6 @@ body {
   height: fit-content;
   width: 100%;
   margin: 0 auto;
-  font-family: 'Outfit', sans-serif;
   color: var(--component-hover-background);
   font-size: 1.5rem;
 }
@@ -439,17 +442,20 @@ body {
   height: 80px;
   width: 100%;
   font-size: 3.0rem;
-  font-family: 'Outfit', sans-serif;
   font-weight: 450;
   font-style: bold;
   color: var(--heading-color);
 }
 
 .landing-area {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: min(1100px, 100%);
+  height: fit-content;
   height: fit-content;
   align-items: center;
   justify-content: center;
+  text-align: center;
   border-radius: 8px;
   margin: 0 auto;
 }
@@ -479,7 +485,6 @@ body {
   width: 45px;
   border-radius: 10px;
 }
-
 
 #status-text-a,
 #status-text {
@@ -531,14 +536,13 @@ body {
 }
 
 .landing-header {
-  font-family: 'Outfit', sans-serif;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
-  font-size: 4.0rem;
-  font-weight: 450;
+  font-size: 5.0rem;
+  font-weight: 400;
   font-style: bold;
   color: var(--text-color);
 }
@@ -554,7 +558,7 @@ body {
 }
 
 .gradient-text {
-  padding: 10px;
+  padding: 15px;
   font-weight: 450;
 }
 
@@ -563,7 +567,6 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  font-family: 'Outfit' sans-serif;
   font-weight: 400;
   text-align: flex-start;
   font-size: 1.3rem;
@@ -572,11 +575,12 @@ body {
 .landing-greeting {
   display: flex;
   height: fit-content;
-  width: 100%;
+  width: min(860px, 100%);
   margin: 0 auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   font-size: 2.0rem;
   font-weight: 500;
   border-radius: 12px;
@@ -651,7 +655,6 @@ body {
 
 .component-title {
   display: flex;
-  font-family: 'Outfit', sans-serif;
   font-weight: 320;
   width: 100%;
   font-size: 2.0rem;
@@ -935,8 +938,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.4rem;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   flex-direction: row;
   color: var(--text-color);
   margin-right: 20px;
@@ -1049,7 +1051,6 @@ body {
 .links-group .mantine-Accordion-control {
   min-height: 50px;
   color: var(--text-color) !important;
-  font-family: 'Outfit', sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
   border: none;
@@ -1103,7 +1104,6 @@ body {
 .links-grid-title {
   font-size: 2.0rem;
   font-weight: 400;
-  font-family: 'Outfit', sans-serif;
   color: var(--text-color);
 }
 
@@ -1112,7 +1112,6 @@ body {
   font-size: 1.5rem;
   font-style: bold;
   font-weight: 400;
-  font-family: 'Outfit', sans-serif;
   color: var(--text-color);
   width: 100%;
   height: 100px;
@@ -1334,10 +1333,9 @@ body {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 150px;
+  width: 80%;
+  height: 300px;
   font-size: 4.0rem;
-  font-family: 'Outfit', sans-serif;
   font-weight: 450;
   color: var(--text-color);
 }
@@ -1353,7 +1351,6 @@ body {
   padding: 10px;
   justify-content: center;
   align-items: center;
-  font-family: 'Outfit', sans-serif;
 }
 
 .blog-sub-heading{
@@ -1367,14 +1364,12 @@ body {
   justify-content: center;
   text-align: center;
   align-items: center;
-  font-family: 'Outfit', sans-serif;
 }
 
 .links-sub-heading {
   display: flex;
   width: 60%;
   height: 150px;
-  font-family: 'Outfit', sans-serif;
   font-size: 1.3rem;
   text-align: center;
   font-weight: 450;
@@ -1420,7 +1415,6 @@ body {
   font-size: 3.0rem;
   width: 100%;
   height: fit-content;
-  font-family: 'Outfit', sans-serif;
   color: var(--text-color);
 }
 
@@ -1433,7 +1427,6 @@ body {
   align-items: flex-start;
   margin: 0 auto;
   height: fit-content;
-  font-family: 'Outfit', sans-serif;
   color: var(--text-color);
 }
 
@@ -1484,7 +1477,6 @@ body {
 .skills-title {
   color: var(--text-color);
   font-size: 1.2rem;
-  font-family: 'Outfit', sans-serif;
   transition: 0.3s;
   font-weight: 400;
   margin-left: 10px;
@@ -1663,7 +1655,6 @@ body {
   width: fit-content;
   height: auto;
   align-items: center;
-  font-family: 'Outfit', sans-serif;
   font-weight: 400;
   line-height: normal;
   color: #fff;
@@ -1757,7 +1748,6 @@ body {
   white-space: wrap;
   font-size: 2.6rem;
   font-weight: 350;
-  font-family: 'Outfit', sans-serif;
   color: var(--text-color);
 }
 
@@ -1778,7 +1768,6 @@ body {
   text-wrap: inherit;
   justify-content: center;
   align-items: center;
-  font-family: 'Outfit', sans-serif;
   line-height: 2.0rem;
   height: fit-content;
 }
@@ -1974,7 +1963,6 @@ body {
   background-color: var(--icon-color) !important;
   margin: 10px;
   border-radius: 10px !important;
-  font-family: 'Outfit', sans-serif !important;
   font-size: 1.0rem !important;
   font-weight: 550 !important;
 }
@@ -2024,17 +2012,15 @@ svg {
   justify-content: center;
   align-items: center;
   width: fit-content;
-  height: 250px;
+  height: 200px;
 }
 
 .cta-button {
   display: flex !important;
-  height: 60px !important;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 30px !important;
-  font-family: 'Outfit', sans-serif !important;
-  font-size: 1.4rem !important;
+  height: 55px !important;
+  margin-left: 20px;
+  border-radius: 300px !important;
+  font-size: 1.2rem !important;
   font-weight: 400 !important;
   color: whitesmoke !important;
   background-color: var(--component-hover-background) !important;
@@ -2088,7 +2074,6 @@ svg {
   align-items: center;
   display: flex;
   height: 45px;
-  font-family: 'Outfit', sans-serif;
   font-size: 1.0rem;
   background-color: var(--background-secondary);
   color: var(--text-color);
@@ -2103,7 +2088,6 @@ svg {
   align-items: center;
   justify-content: center;
   width: 100%;
-  font-family: 'Outfit', sans-serif;
   font-size: 2.0rem;
   border-radius: 12px;
   background-color: var(--background-secondary);
@@ -2123,7 +2107,6 @@ svg {
   width: fit-content;
   align-items: center;
   height: 45px;
-  font-family: 'Outfit', sans-serif;
   font-size: 1.0rem;
   background-color: var(--background-secondary) !important;
   color: var(--text-color);
@@ -2209,7 +2192,6 @@ svg {
   align-items: flex-start;
   justify-content: center;
   border-radius: 8px;
-  font-family: 'Outfit', sans-serif;
   background-color: transparent;
   background-color: var(--background-secondary);
   margin: 10px;
@@ -2224,7 +2206,6 @@ svg {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 10px;
-  font-family: 'Outfit', sans-serif;
 }
 
 .blog-date {
@@ -2307,7 +2288,6 @@ svg {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  font-family: 'Outfit', sans-serif;
   font-weight: 300;
 }
 
@@ -2472,6 +2452,52 @@ svg {
   margin-top: 10px;
 }
 
+.landing-sections{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100dvh;
+  height: fit-content;
+  width: 60%;
+  height: fit-content;
+}
+
+.landing-heading{
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  height: 140px;
+  font-size: 3.0rem;
+  color: var(--text-color);
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-section{
+  display: grid;
+  height: 160px;
+  width: 100%;
+  background-color: var(--background-secondary);
+  grid-template-columns: repeat(1, 1fr);
+  color: var(--text-color);
+  font-size: 2.5rem;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+.landing-section-desc{
+ font-size: 1.8rem;
+}
+
+.landing-section:hover{
+  cursor: pointer;
+  background-color: var(--component-hover-background);
+  transition: 0.3s ease-in-out;
+}
+
+
 @media (min-width: 1200px) and (max-width: 1600px) {
 
 
@@ -2565,6 +2591,15 @@ svg {
 
 @media (min-width: 1400px) and (max-width: 1600px) {
 
+  .landing-sections{
+  text-align: center;
+  width: 80%;
+}
+
+.landing-heading{
+  height: 200px;
+}
+
   .Frontend-skills,
   .Backend-skills,
   .Other {
@@ -2590,6 +2625,10 @@ svg {
   .about,
   .footer {
     width: 80%;
+  }
+
+  .main-container{
+    margin-top: 150px;
   }
 
   .Blog {
@@ -2620,6 +2659,15 @@ svg {
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
+
+.landing-sections{
+  text-align: center;
+  width: 80%;
+}
+
+.landing-heading{
+  height: 200px;
+}
 
   .projects,
   .about,
@@ -2676,7 +2724,8 @@ svg {
   }
 
   .main-container {
-    width: 60%;
+    width: 80%;
+    margin-top: 150px;
   }
 
   .navigation {
@@ -2687,9 +2736,17 @@ svg {
 
 @media (min-width: 1000px) and (max-width: 1200px) {
 
+  .landing-sections{
+  text-align: center;
+  width: 80%;
+}
+
+.landing-heading{
+  height: 200px;
+}
+
   .project-image img {
     display: block;
-    font-family: 'Outfit', sans-serif;
     background-color: var(--background-secondary);
     color: var(--component-hover-background);
     align-items: center;
@@ -2750,6 +2807,16 @@ svg {
 }
 
 @media (min-width: 750px) and (max-width: 1000px) {
+
+
+.landing-sections{
+  text-align: center;
+  width: 80%;
+}
+
+.landing-heading{
+  height: 200px;
+}
 
 .m_8fb7ebe7.mantine-Input-input.mantine-Select-input {
   margin: 0;
@@ -2830,7 +2897,6 @@ svg {
 
   .main-container {
     flex-direction: column;
-    height: fit-content;
     width: 100%;
   }
 
@@ -2843,7 +2909,9 @@ svg {
   }
 
   .greeting {
-    width: 100%;
+    width: min(900px, 100%);
+    height: min(68vh, 540px);
+    justify-content: center;
   }
 
   .skills {
@@ -2880,7 +2948,9 @@ svg {
   }
 
   .greeting {
-    width: 100%;
+    width: min(900px, 100%);
+    height: min(68vh, 540px);
+    justify-content: center;
   }
 
   .dashboard {
@@ -3076,9 +3146,10 @@ svg {
 
   .landing-greeting {
     width: 100%;
-    height: 300px !important;
+    height: 250px !important;
     padding: 10px;
     margin: 0 auto;
+    justify-content: center;
     text-align: center;
   }
 
@@ -3130,10 +3201,9 @@ svg {
 
   .main-container {
     flex-direction: column;
-    height: 100dvh;
+    height: fit-content;
     width: 100%;
     margin: 0 auto;
-    margin-top: 100px;
   }
 
   .socials {
@@ -3207,9 +3277,11 @@ svg {
   }
 
   .greeting {
-    height: 100%;
+    height: fit-content;
     width: 100%;
     flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 100px;
   }
 
   .dashboard-container {
@@ -3396,10 +3468,10 @@ svg {
   .nav-menu-mobile {
     display: flex;
     position: absolute;
-    left: 0;
-    top: 80px;
-    width: 100%;
-    padding: 10px;
+    top: 70px;
+    left: 1;
+    width: 90%;
+    padding-top: 10px;
     flex-direction: column;
     margin: 0 auto;
     transition: 0.3s ease-in;
@@ -3408,7 +3480,6 @@ svg {
     background-color: var(--background-secondary);
     backdrop-filter: blur(8px);
     border-radius: 12px;
-
   }
 
   .nav-menu-mobile.active {
@@ -3423,7 +3494,7 @@ svg {
   }
 
   .nav-backing-mobile {
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
   }
 
@@ -3686,8 +3757,11 @@ svg {
   }
 
   .landing-area {
+    display: flex;
     width: 100%;
+    height: fit-content;
     border-radius: 8px;
+    justify-content: center;
   }
 
   .breadcrumbs {
@@ -3696,7 +3770,6 @@ svg {
     height: fit-content;
     width: 100%;
     margin: 0 auto;
-    font-family: 'Outfit', sans-serif;
   }
 
   .About-text {
@@ -3724,7 +3797,6 @@ svg {
 
   .project-image img {
     display: block;
-    font-family: 'Outfit', sans-serif;
     background-color: var(--background-secondary);
     color: var(--component-hover-background);
     align-items: center;
@@ -3769,13 +3841,11 @@ svg {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: 'Outfit', sans-serif;
     font-weight: 450;
   }
 
   .breadcrumbs {
     display: flex;
-    font-family: 'Outfit', sans-serif;
     font-size: 1.3rem;
     font-weight: 450;
     margin: 0 auto;
@@ -3856,4 +3926,25 @@ svg {
 .mantine-Input-input .mantine-Select-input {
   margin: 0px !important;
 }
+
+.landing-sections{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-section{
+  width: 80%;
+  height: fit-content;
+}
+
+.landing-heading{
+  font-size: 2.3rem;
+  text-align: center;
+  height: 200px;
+}
+
 }

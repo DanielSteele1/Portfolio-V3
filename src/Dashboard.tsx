@@ -14,7 +14,9 @@ import { IoMdPin } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Button } from '@mantine/core';
-import GradientText from './React-Bits/GradientText';
+import FoldText from './React-Bits/FoldText';
+import AccordionGallery from './React-Bits/Accordion';
+import './React-Bits/Accordion.css';
 
 type Props = {
     handleDownloadAndView: (event: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>) => void;
@@ -22,8 +24,14 @@ type Props = {
 
 const Dashboard = ({ handleDownloadAndView }: Props) => {
 
-    return (
+    const items = [
+  { image: '/public/Jobs-Portal.png', label: 'Personal Projects', link: '/Projects' },
+  { image: '/public/Picture of the Bay -website.jpg', label: 'About me', link: '/About' },
+  { image: '/public/blog.png', label: 'Blog', link: '/Blog' },
+  { image: 'public/Plymouth_Hoe.jpg', label: 'Experience', link: '/Experience' },
+];
 
+    return (
         <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,17 +75,22 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                     <div className="landing-area">
                         <div className="landing-greeting">
 
-                            <span className="landing-header">
-                                Hey, I'm
-                                <GradientText
-                                    colors={["#5227FF", "#d85fd4"]}
-                                    animationSpeed={3.0}
-                                    showBorder={false}
-                                    className="gradient-text"
-                                >
-                                    {'{ Daniel Steele }'}
-                                </GradientText>
-                            </span>
+                                
+                            <FoldText
+                                className="gradient-text"
+                                text="Hey, i'm Daniel Steele"
+                                splitBy="char"
+                                hinge="top"
+                                trigger="mount"
+                                duration={0.65}
+                                stagger={0.045}
+                                ease="power3.out"
+                                perspective={700}
+                                creaseShading={0.55}
+                                fontSize={80}
+                                fontWeight={800}
+                                color="#834fff"
+                            /> 
 
                             <TypeAnimation
                                 className='type-animation'
@@ -145,7 +158,57 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                         </div>
                     </div>
                 </div>
-            </div >
+
+
+                <div className="landing-sections">
+                    <div className="landing-heading"> Welcome! Feel free to explore...</div>
+
+                    {/* <Link to="/Projects" className='landing-section'>
+                        <span className="landing-section-title"> Projects  </span>
+                        <span className="landing-section-desc"> A collection of personal portfolio projects. </span>
+                    </Link>
+                 
+                    <Link to="/About" className='landing-section'>
+                        <span className="landing-section-title"> About me </span>
+                        <span className="landing-section-desc"> A bit about who I am and my journey. </span>
+                    </Link>
+
+                    <Link to="/Blog" className='landing-section'>
+                        <span className="landing-section-title"> My Blog </span>
+                        <span className="landing-section-desc"> Contains writeups on recent projects + </span>
+                    </Link>
+
+                    <Link to="/Experience" className='landing-section'>
+                        <span className="landing-section-title"> Experience </span>
+                        <span className="landing-section-desc"> A List of my professional experiences. </span>
+                    </Link> */}
+
+            <AccordionGallery
+            items={items}
+            defaultIndex={2}
+            expandRatio={0.52}
+            trigger="hover"
+            grayscale={false}
+            accentColor="#ffffff"
+            overlayColor="#060010"
+            textColor="#ffffff"
+            showLabels
+            duration={0.6}
+            ease="power3.out"
+            parallax={0.5}
+            tilt={0}
+            stagger={0.06}
+            height={550}
+            gap={30}
+            radius={16}
+            orientation="vertical"
+            />
+
+            </div> 
+
+
+
+            </div>
         </motion.div >
     )
 }
