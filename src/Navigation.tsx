@@ -60,7 +60,7 @@ function Navigation({ isThemeOn, handleThemeButton }: props) {
                         <span className="nav-title" id="nav-projects">
                             <NavLink to="/Projects" className="expandable-box">
                                 <TbTools />
-                                <div className="sliding-text">Projects</div>
+                                <div className="sliding-text" >Projects</div>
                             </NavLink>
                         </span>
 

@@ -3,7 +3,7 @@
 ## What is Orbit Notes? ##
 Orbit Notes is a notes and productivity board application that lets you switch between both Kanban and masonry layouts. It can be used as either a notes app or a task tracking app.
 
-[🚀 Live Demo](https://trello-style-kanban-board-applicati-orcin.vercel.app/) | [💻 View Repository](https://github.com/DanielSteele1/Orbit-Kanban-board-application)
+[Live Demo](https://trello-style-kanban-board-applicati-orcin.vercel.app/) | [ View Repository](https://github.com/DanielSteele1/Orbit-Kanban-board-application)
 ----
 The idea for this app came from my own need for a productivity tool. I wanted a way to quickly track tasks and notes for my personal projects in one place. After doing some research, I realized that popular apps like Trello and Google Keep each specialized in different areas — Trello is great for task tracking but not ideal for taking notes, while Keep is great for notes but lacks proper task management.
 

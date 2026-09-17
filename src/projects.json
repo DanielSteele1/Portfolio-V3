@@ -1,4 +1,23 @@
 [
+    {
+    "title": "Coming Soon",
+    "date": "2026-09-01",
+    "description": "Coming soon - be sure to check back later.",
+    "src": "",
+    "tags": [
+      {
+        "icon": "SiTypescript",
+        "name": "TypeScript"
+      },
+      {
+        "icon": "FaReact",
+        "name": "React"
+      }
+    ],
+    "link": "https://github.com/DanielSteele1",
+    "github": "https://github.com/DanielSteele1"
+  },
+
   {
     "title": "Job's Portal",
     "description": "A frontend application to search, track and apply for jobs. Features a number of search filters including title, location, seniority, remote & pay. It uses Adzuna's API to get job data, and includes ways for users to track application progress. Planned to implement client side logins, stored with Supabase.",

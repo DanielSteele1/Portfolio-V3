@@ -1,5 +1,6 @@
 import { FaGithub } from "react-icons/fa6";
 import { GoLinkExternal } from "react-icons/go";
+import { AiFillPicture } from "react-icons/ai";
 import { Link } from "react-router";
 
 export interface ProjectCardProps {
@@ -54,10 +55,23 @@ function ProjectCard({
                     </div>
                 </div>
 
-                <a className="project-image-link" href={link} target="_blank" rel="noopener noreferrer">
+                <a className="project-image-link" href={link } target="_blank" rel="noopener noreferrer">
+                    
+                    { src ? (
                     <div className="project-image">
                         <img src={src} alt={title} loading="lazy" />
                     </div>
+                    ) : (
+
+                    <div className="image-not-found"> 
+
+                    <span> <AiFillPicture /> </span>
+                    
+                    </div>
+                    )
+                    
+                    }
+                   
                 </a>
             </div>
 

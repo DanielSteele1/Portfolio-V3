@@ -557,9 +557,15 @@ body {
   color: transparent;
 }
 
+
 .gradient-text {
   padding: 15px;
-  font-weight: 450;
+  font-weight: 400;
+  background: var(--main-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .landing-paragraph {
@@ -575,7 +581,7 @@ body {
 .landing-greeting {
   display: flex;
   height: fit-content;
-  width: min(860px, 100%);
+  width: 100%;
   margin: 0 auto;
   flex-direction: column;
   justify-content: center;
@@ -905,13 +911,10 @@ body {
 
 .sliding-text {
   display: inline-block; 
-  
   max-width: 0;
   opacity: 0;
   padding-left: 0;
-  
   transform: translateX(20px); 
-  
   transition: max-width 0.4s ease-in-out, 
   opacity 0.4s ease-in-out, 
   transform 0.4s ease-in-out,
@@ -938,20 +941,34 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 450;
   flex-direction: row;
-  color: var(--text-color);
   margin-right: 20px;
+  background: var(--main-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
+
+.nav-title svg{
+  color: var(--text-color);
+  border-radius: 20px;
+};
+
 
 .nav-title a:hover {
   cursor: pointer;
-  color: var(--component-hover-background);
   transition: 0.2s;
 }
 
 .nav-title a.active {
-  color: var(--component-hover-background);
+  color: var(--icon-color);
+  background: var(--main-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .footer-link a {
@@ -1548,7 +1565,7 @@ body {
 .project-card {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  width: 100%;
   height: fit-content;
   margin: 0 auto;
   align-items: flex-start;
@@ -1665,12 +1682,25 @@ body {
   background-color: var(--background-secondary);
   color: var(--component-hover-background);
   align-items: left;
-  height: auto;
   width: 100%;
   max-width: 100%;
   object-position: left;
   object-fit: contain;
   border-radius: 20px;
+}
+
+.image-not-found{
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  font-size: 5.0rem;
+  color: white;
+  background-color: #8b49ee;
 }
 
 .project-button a {
@@ -2019,16 +2049,18 @@ svg {
   display: flex !important;
   height: 55px !important;
   margin-left: 20px;
-  border-radius: 300px !important;
+  border-radius: 30px !important;
   font-size: 1.2rem !important;
-  font-weight: 400 !important;
-  color: whitesmoke !important;
-  background-color: var(--component-hover-background) !important;
+  font-weight: 450 !important;
+  color: var(--text-color) !important;
+  background-color: var(--background-secondary) !important;
 }
 
 .cta-button:hover {
+  background-color: var(--component-hover-background) !important;
   box-shadow: 0 6px 24px 0 rgba(140, 70, 231, 0.35), 0 4px 16px 0 rgba(0, 0, 0, 0.18);
   transition: box-shadow 0.22s cubic-bezier(0.4, 0.2, 0.2, 1), transform 0.18s, background 0.18s;
+  color: whitesmoke !important;
 }
 
 #resume-button svg {
