@@ -5,12 +5,11 @@ import Hamburger from 'hamburger-react';
 
 import { IoIosMoon, IoIosSunny } from "react-icons/io";
 import { NavLink } from 'react-router-dom';
-import {  HiDocument, HiHome } from 'react-icons/hi';
+import { HiHome } from 'react-icons/hi';
 import { MdAccountCircle } from 'react-icons/md';
-import {  GoHome, GoPin, GoProject } from 'react-icons/go';
+import { GoPin, GoProject } from 'react-icons/go';
 import { FaBook} from 'react-icons/fa';
-import { TbBuilding, TbTools } from 'react-icons/tb';
-import { LuLink, LuNotebook } from 'react-icons/lu';
+import { TbBuilding } from 'react-icons/tb';
 
 type props = {
     handleThemeButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
