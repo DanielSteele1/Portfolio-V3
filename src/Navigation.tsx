@@ -52,21 +52,18 @@ function Navigation({ isThemeOn, handleThemeButton }: props) {
 
                         <span className="nav-title">
                             <NavLink to="/" end className="expandable-box">
-                                <GoHome />
                                 <div className='sliding-text'>Home</div>
                             </NavLink>
                         </span>
 
                         <span className="nav-title" id="nav-projects">
                             <NavLink to="/Projects" className="expandable-box">
-                                <TbTools />
                                 <div className="sliding-text" >Projects</div>
                             </NavLink>
                         </span>
 
                         <span className="nav-title">
                             <NavLink to="/About" className="expandable-box">
-                                <MdAccountCircle />
                                 <div className="sliding-text"> About </div>
                             </NavLink>
                         </span>
@@ -74,21 +71,18 @@ function Navigation({ isThemeOn, handleThemeButton }: props) {
 
                         <span className="nav-title">
                             <NavLink to="/Links" className="expandable-box">
-                                <LuLink />
                                 <div className="sliding-text"> Links </div>
                             </NavLink>
                         </span>
 
                         <span data-tooltip-id="tooltip-1" className="nav-title">
                             <NavLink to="/Blog" className="expandable-box">
-                                <LuNotebook />
                                 <div className="sliding-text"> Blog </div>
                             </NavLink>
                         </span>
 
                         <span className="nav-title">
                             <NavLink to="/Experience" className="expandable-box">
-                                <HiDocument />
                                 <div className="sliding-text"> Resume </div>
                             </NavLink>
                         </span>
@@ -101,13 +95,10 @@ function Navigation({ isThemeOn, handleThemeButton }: props) {
 
                             <IoIosSunny style={{
                             }} />
+
                         }
-
                     </button>
-
                     </div>
-
-
                 </div>
 
                 <div className="nav-buttons">

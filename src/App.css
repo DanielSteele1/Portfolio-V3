@@ -909,41 +909,16 @@ body {
   transition: max-width 0.4s ease-in-out;
 }
 
-.sliding-text {
-  display: inline-block; 
-  max-width: 0;
-  opacity: 0;
-  padding-left: 0;
-  transform: translateX(20px); 
-  transition: max-width 0.4s ease-in-out, 
-  opacity 0.4s ease-in-out, 
-  transform 0.4s ease-in-out,
-  padding-left 0.4s ease-in-out;
-}
-
-.expandable-box:hover,
-.expandable-box.active {
-  max-width: 180px;
-}
-
-.expandable-box:hover .sliding-text,
-.expandable-box.active .sliding-text {
-  max-width: 100px;
-  opacity: 1;
-  padding-left: 15px;
-  transform: translateX(0);
-}
-
 .nav-title a {
   display: flex;
   height: 100%;
   width: 100%;
   justify-content: center;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 450;
   flex-direction: row;
-  margin-right: 20px;
+  padding: 10px;
   background: var(--main-gradient);
   -webkit-background-clip: text;
   background-clip: text;
