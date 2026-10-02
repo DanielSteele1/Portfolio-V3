@@ -67,20 +67,21 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                     <div className="landing-area">
                         <div className="landing-greeting">
 
-                            <FoldText
-                                className="gradient-text"
-                                text="Hey, I'm Daniel Steele"
-                                splitBy="char"
-                                hinge="top"
-                                trigger="mount"
-                                duration={1.00}
-                                stagger={0.045}
-                                ease="power3.out"
-                                perspective={700}
-                                creaseShading={0.55}
-                                fontSize={80}
-                                fontWeight={400}
-                            /> 
+                            <h1 className="gradient-text">
+                                <FoldText
+                                    text="Hey, I'm Daniel Steele"
+                                    splitBy="char"
+                                    hinge="top"
+                                    trigger="mount"
+                                    duration={1.00}
+                                    stagger={0.045}
+                                    ease="power3.out"
+                                    perspective={700}
+                                    creaseShading={0.55}
+                                    fontSize={80}
+                                    fontWeight={400}
+                                />
+                            </h1>
 
                             <TypeAnimation
                                 className='type-animation'
@@ -179,4 +180,3 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
 }
 
 export default Dashboard;
-

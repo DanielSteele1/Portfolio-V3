@@ -2,7 +2,7 @@
 import Navigation from './Navigation';
 import Dashboard from './Dashboard';
 import Footer from './Footer';
-import BlogPost from './BlogPost';
+import BlogPost, { BlogsArray } from './BlogPost';
 
 import NotFound from './NotFound';
 
@@ -14,11 +14,72 @@ import Links from './Links';
 
 import React, { useEffect, useState } from 'react';
 import { Analytics } from "@vercel/analytics/react"
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 
 import { MantineProvider } from "@mantine/core";
 import Experience from './Experience';
+
+const pageMetadata: Record<string, { title: string; description: string }> = {
+  '/': {
+    title: 'Daniel Steele | Frontend Developer in Devon, UK',
+    description: 'Daniel Steele is a frontend developer based in Devon, UK, building web applications with React, TypeScript and modern frontend tools.',
+  },
+  '/About': {
+    title: 'About Daniel Steele | Frontend Developer',
+    description: 'Learn about Daniel Steele, a UK frontend developer from Devon focused on React, TypeScript and polished web applications.',
+  },
+  '/Projects': {
+    title: 'Web Development Projects | Daniel Steele',
+    description: 'Explore web development projects by Daniel Steele, including applications built with React, TypeScript and modern web technologies.',
+  },
+  '/Experience': {
+    title: 'Development Experience | Daniel Steele',
+    description: 'View Daniel Steele’s frontend and full-stack development experience, education and skills.',
+  },
+  '/Skills': {
+    title: 'Frontend Development Skills | Daniel Steele',
+    description: 'Explore Daniel Steele’s frontend development skills, including React, TypeScript, CSS and modern web technologies.',
+  },
+  '/Blog': {
+    title: 'Development Blog | Daniel Steele',
+    description: 'Read Daniel Steele’s notes on web development, projects and building applications with modern frontend technologies.',
+  },
+  '/Links': {
+    title: 'Web Development Resources | Daniel Steele',
+    description: 'A collection of useful development resources and links from Daniel Steele.',
+  },
+};
+
+function PageMetadata() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const normalizedPath = pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname;
+    const blogSlug = normalizedPath.startsWith('/Blog/') ? normalizedPath.slice('/Blog/'.length) : '';
+    const blogPost = BlogsArray.find(post => post.slug === blogSlug);
+    const metadata = pageMetadata[normalizedPath] ?? (blogPost ? {
+      title: `${blogPost.title} | Daniel Steele`,
+      description: blogPost.description,
+    } : {
+      title: 'Page not found | Daniel Steele',
+      description: 'The page you are looking for could not be found.',
+    });
+    const canonicalUrl = new URL(normalizedPath, 'https://danielsteele.dev').toString();
+
+    document.title = metadata.title;
+    document.querySelector<HTMLMetaElement>('meta[name="robots"]')?.setAttribute('content', blogPost || pageMetadata[normalizedPath] ? 'index, follow, max-image-preview:large' : 'noindex, follow');
+    document.querySelector<HTMLMetaElement>('meta[name="description"]')?.setAttribute('content', metadata.description);
+    document.querySelector<HTMLLinkElement>('link[rel="canonical"]')?.setAttribute('href', canonicalUrl);
+    document.querySelector<HTMLMetaElement>('meta[property="og:title"]')?.setAttribute('content', metadata.title);
+    document.querySelector<HTMLMetaElement>('meta[property="og:description"]')?.setAttribute('content', metadata.description);
+    document.querySelector<HTMLMetaElement>('meta[property="og:url"]')?.setAttribute('content', canonicalUrl);
+    document.querySelector<HTMLMetaElement>('meta[name="twitter:title"]')?.setAttribute('content', metadata.title);
+    document.querySelector<HTMLMetaElement>('meta[name="twitter:description"]')?.setAttribute('content', metadata.description);
+  }, [pathname]);
+
+  return null;
+}
 
 declare global {
   interface Window {
@@ -85,6 +146,7 @@ function App() {
   return (
     <MantineProvider>
       <BrowserRouter>
+        <PageMetadata />
         <Navigation
           handleThemeButton={handleThemeButton}
           isThemeOn={isThemeOn} 

@@ -4,24 +4,70 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" href="/favicon_io/favicon.ico" sizes="any" />
-  <link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png" size="any"/>
-  <link rel="manifest" href="/public/images/site.webmanifest" />
+  <link rel="apple-touch-icon" href="/favicon_io/apple-touch-icon.png" />
+  <link rel="manifest" href="/favicon_io/site.webmanifest" />
+  <link rel="canonical" href="https://danielsteele.dev/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <meta name="robots" content="index, follow">
-  <meta name="keywords" content="Full Stack Engineer, Front-end engineer, TypeScript, React, Node.js, web development">
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="description"
-    content="Daniel Steele is a passionate Front-end Developer, with expertise in TypeScript, React and Node.js, among other technologies." />
-  <meta name="author" content="Daniel Steele">
-  <meta name="language" content="English">
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    content="Daniel Steele is a frontend developer based in Devon, UK, building web applications with React, TypeScript and modern frontend tools." />
+  <meta name="author" content="Daniel Steele" />
+  <meta name="theme-color" content="#111111" />
 
-  <title> Daniel Steele </title>
+  <title>Daniel Steele | Frontend Developer in Devon, UK</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Daniel Steele" />
+  <meta property="og:title" content="Daniel Steele | Frontend Developer in Devon, UK" />
+  <meta property="og:description"
+    content="Frontend developer based in Devon, UK, building web applications with React, TypeScript and modern frontend tools." />
+  <meta property="og:url" content="https://danielsteele.dev/" />
+  <meta property="og:image" content="https://danielsteele.dev/Website_Pic.JPG" />
+  <meta property="og:image:alt" content="Daniel Steele, frontend developer" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Daniel Steele | Frontend Developer in Devon, UK" />
+  <meta name="twitter:description"
+    content="Frontend developer based in Devon, UK, building web applications with React, TypeScript and modern frontend tools." />
+  <meta name="twitter:image" content="https://danielsteele.dev/Website_Pic.JPG" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://danielsteele.dev/#person",
+          "name": "Daniel Steele",
+          "url": "https://danielsteele.dev/",
+          "jobTitle": "Frontend Developer",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Devon",
+            "addressCountry": "GB"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/daniel-steele1/",
+            "https://github.com/DanielSteele1"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://danielsteele.dev/#website",
+          "url": "https://danielsteele.dev/",
+          "name": "Daniel Steele",
+          "publisher": {
+            "@id": "https://danielsteele.dev/#person"
+          }
+        }
+      ]
+    }
+  </script>
 
 </head>
 
-<body id="body" style="display:none">
+<body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 
@@ -54,16 +100,6 @@
       y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
     })(window, document, "clarity", "script", "rx97uolkbn");
   </script>
-
-
-  <script type="text/javascript">
-    window.onload = function () {
-      setTimeout(function () {
-        document.getElementById("body").style.display = "";
-      }, 400);
-    }
-  </script>
-
 
 
 </body>
