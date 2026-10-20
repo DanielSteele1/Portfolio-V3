@@ -9,7 +9,7 @@ import type { ProjectCardProps } from './ProjectCard';
 import ProjectCard from './ProjectCard';
 import projectsData from './projects.json';
 import { useEffect, useState } from 'react';
-import { Select, Skeleton } from '@mantine/core';
+import { Select } from '@mantine/core';
 
 console.table(projectsData);
 const projects = projectsData as ProjectCardProps[];
@@ -92,7 +92,7 @@ useEffect(() => {
                 </div>
 
                 <span className="projects-heading">
-                    My <div id="highlight-name"> {`{ Projects }`}</div> 🍵
+                    My <div id="highlight-name"> {`{ Projects }`}</div>
                 </span>
 
               <div className="project-main-container">
@@ -124,18 +124,33 @@ useEffect(() => {
                     isLoading ?  (
                     <div className="project-container">
 
-                    {filteredProjects.map((project) => (
-                       <ProjectCard key={project.title} {...project}/>
+                    {filteredProjects.map((project, index) => (
+                       <motion.div
+                            key={project.title}
+                            initial={{ opacity: 0, y: 18 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.45, delay: Math.min(index * 0.06, 0.3), ease: "easeOut" }}
+                       >
+                            <ProjectCard {...project}/>
+                       </motion.div>
                     ))}
 
                     </div>
                     ):(
-                    <div className="project-container">
+                    <div className="project-container" role="status" aria-label="Loading projects">
                         {filteredProjects.map((project) => (
-                            <div className='skeleton-container'>
-                            <Skeleton className="skeleton" key={project.title} height={350}>
-
-                            </Skeleton>
+                            <div className="project-skeleton" key={project.title} aria-hidden="true">
+                                <div className="project-skeleton-image" />
+                                <div className="project-skeleton-details">
+                                    <div className="project-skeleton-title" />
+                                    <div className="project-skeleton-tags">
+                                        <div />
+                                        <div />
+                                        <div />
+                                    </div>
+                                    <div className="project-skeleton-description" />
+                                    <div className="project-skeleton-description project-skeleton-description-short" />
+                                </div>
                             </div>
                         ))}
                     </div>

@@ -25,7 +25,7 @@ function AboutMe() {
                 </div>
             </div>
 
-            <div className="section-heading"> About <div id="highlight-name"> {`{ Me }`} </div> 💻 </div>
+            <div className="section-heading"> About <div id="highlight-name"> {`{ Me }`} </div> </div>
 
             <div className="skill-marquee">
                 <SkillsMarquee />
@@ -74,13 +74,12 @@ function AboutMe() {
                             pixelColor="#9a4cff"
                             once={false}
                             animationStepDuration={0.4}
+                            aspectRatio="133.1169%"
                             className="pictures-personal-img"
                         />
 
                         <div className="commit-graph">
-                            <GithubGraph loading={false} setLoading={function (): void {
-                                throw new Error("Function not implemented.");
-                            }} isThemeOn={false} />
+                            <GithubGraph loading={false}  isThemeOn={false} />
                         </div>
 
                     </div>
@@ -89,8 +88,7 @@ function AboutMe() {
                         <div className="landing-status">
                             <span id="status-text"> <FaCity /> Open to opportunities in the UK  </span>
                             <span id="status-text"> <FaBookOpen /> Experimenting with: MantineUI </span>
-                            <Link to="https://job-board-murex-eight.vercel.app" id="status-text-a"> <FaCode style={{ fontSize: '25px' }} /> Latest Project: Job Portal App</Link>
-                            <Link id="status-text" to="https://open.spotify.com/album/51C65YqHrDODM1hD5FEL5x?si=yfZcXlrwQSiR6rfzvGL_UQ"> <img className="song-cover" src="/I.jpg" /> <a>  I by Kendrick Lamar </a> </Link>
+                            <Link to="https://job-board-murex-eight.vercel.app" id="status-text-a"> <FaCode style={{ fontSize: '25px' }} /> Latest Project: Job Portal App </Link>
                         </div>
                     </div>
 
@@ -107,7 +105,6 @@ function AboutMe() {
                             Now, at 24 and after graduating from the <a id="highlight-name" href="https://www.plymouth.ac.uk"> University of Plymouth </a> in 2024,
                             I'm creating front end and full stack web apps, striving to improve with each one.
                         </span>
-
                     </div>
 
                     <div className="About-paragraph">
@@ -121,7 +118,6 @@ function AboutMe() {
                         <span className="About-paragraph-text">
                             Ive also taken on a volunteer web developer role at <span id="highlight-name">FeedUsUp CIC</span>, a charity that has recently provided aid to Haiti as well as helped people deal with loneliness in the UK.
                         </span>
-
                     </div>
 
                     <div className="About-paragraph">
@@ -146,7 +142,6 @@ function AboutMe() {
                             Some of favourite games i've played in the past are <a id="highlight-name" href="https://www.nomanssky.com"> No Mans Sky </a> & both <a id="highlight-name" href="https://unknownworlds.com/en/news?game=subnautica"> Subnautica games. </a>
                             Recently, I've been listening to alot of tame impala.
                         </span>
-
 
                     </div>
 

@@ -8,8 +8,8 @@ import { NavLink } from 'react-router-dom';
 import { HiHome } from 'react-icons/hi';
 import { MdAccountCircle } from 'react-icons/md';
 import { GoPin, GoProject } from 'react-icons/go';
-import { FaBook} from 'react-icons/fa';
 import { TbBuilding } from 'react-icons/tb';
+import { FaBlog } from 'react-icons/fa6';
 
 type props = {
     handleThemeButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -145,7 +145,7 @@ function Navigation({ isThemeOn, handleThemeButton }: props) {
 
                             <span className="nav-title">
                                 <NavLink to="/Blog" onClick={() => { setOpen(false) }}>
-                                    <FaBook /> Blog
+                                    <FaBlog/> Blog
                                 </NavLink>
                             </span>
 

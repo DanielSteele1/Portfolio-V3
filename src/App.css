@@ -473,11 +473,13 @@ body {
 }
 
 .landing-status {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
   width: 100%;
-  height: 80px;
+  height: 60px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .song-cover {
@@ -536,6 +538,44 @@ body {
 #status-text-a svg {
   display: inline-flex;
   padding-right: 10px;
+}
+
+.about .landing-status-container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  margin: 0 0 10px;
+}
+
+.about .landing-status {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  margin-top: 0;
+}
+
+.about #status-text,
+.about #status-text-a {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  min-height: 60px;
+  height: auto;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 12px;
+  line-height: 1.4;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.about #status-text svg,
+.about #status-text-a svg {
+  flex: 0 0 auto;
+  padding-right: 0;
 }
 
 .landing-header {
@@ -600,10 +640,6 @@ body {
   align-items: center;
 }
 
-.landing-stats {
-  width: 85%;
-  margin: 0 auto;
-}
 
 .dashboard-component,
 .component-none {
@@ -1136,15 +1172,31 @@ body {
 }
 
 .pictures-personal-img {
-  display: flex;
+  display: block;
+  width: 100%;
+  height: 200px;
   border: none !important;
-  margin-right: 10px;
+  margin: 0 auto;
 }
 
 .pictures-personal-img img {
   border: none !important;
-  height: 220px !important;
-  width: 200px !important;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 750px) {
+  .pictures-personal-img {
+    width: min(20vw, 100px);
+    height: 200px;
+  }
+
+  .pictures-personal-img img {
+    object-position: center 30%;
+  }
 }
 
 .About-status-container {
@@ -1547,20 +1599,66 @@ body {
   border-radius: 20px;
 }
 
-.skeleton-container{
-  display: flex;
+.project-skeleton {
+  position: relative;
   width: 100%;
-  min-height: 350px;
   border-radius: 20px;
   overflow: hidden;
   background-color: var(--background-secondary);
 }
 
-.skeleton{
-  box-sizing: border-box;
+.project-skeleton::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(105deg, transparent 25%, rgba(255, 255, 255, 0.12) 50%, transparent 75%);
+  transform: translateX(-100%);
+  animation: project-skeleton-shimmer 1.6s ease-in-out infinite;
+}
+
+.project-skeleton-image {
+  height: 220px;
+  background: color-mix(in srgb, var(--background-secondary), var(--text-color) 8%);
+}
+
+.project-skeleton-details {
   display: flex;
   flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+.project-skeleton-title,
+.project-skeleton-tags > div,
+.project-skeleton-description {
+  height: 12px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--background-secondary), var(--text-color) 12%);
+}
+
+.project-skeleton-title {
+  width: 42%;
+  height: 16px;
+}
+
+.project-skeleton-tags {
+  display: flex;
+  gap: 8px;
+}
+
+.project-skeleton-tags > div {
+  width: 56px;
+  height: 22px;
+  border-radius: 8px;
+}
+
+.project-skeleton-description {
   width: 100%;
+}
+
+.project-skeleton-description-short {
+  width: 68%;
 }
 
 .skeleton[data-visible]::before,
@@ -1746,6 +1844,8 @@ body {
   flex-direction: column;
   width: 100%;
   min-height: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;;
   height: fit-content;
   align-items: center;
   justify-content: center;
@@ -1829,8 +1929,11 @@ body {
 }
 
 .about-image img {
+  display: block;
   width: 100%;
-  height: 200px;
+  height: auto;
+  aspect-ratio: 2947 / 818;
+  object-fit: cover;
   border-radius: 12px;
 }
 
@@ -1870,7 +1973,7 @@ body {
   margin: 10px;
   justify-content: center;
   font-family: 'Quicksand', sans-serif;
-  font-weight: 600;
+  font-weight: 350;
   align-items: center;
 }
 
@@ -2646,7 +2749,6 @@ svg {
     width: 90%;
   }
 
-
   .landing-status-container {
     width: 100%;
     align-items: center;
@@ -2847,21 +2949,6 @@ svg {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-  }
-
-  .pictures-personal-img {
-    display: flex;
-    height: 200px !important;
-    width: 250px !important;
-    margin-bottom: 20px;
-  }
-
-  .pictures-personal-img img {
-    height: 250px !important;
-    width: 250px !important;
-    margin: 0 auto !important;
-    border-radius: 100px !important;
-
   }
 
   .landing-greeting {
@@ -3373,12 +3460,12 @@ svg {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    width: 90%;
+    width: 50%;
     padding: 10px;
   }
 
   #commit-graph {
-    width: 100%;
+    width: 80%;
   }
 
   .blog img {
@@ -3583,8 +3670,13 @@ svg {
   }
 
   .About-paragraph-text {
-    line-height: normal;
-    font-size: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    text-align: left;
+  }
+
+  .about .About-text {
+    width: 90%;
   }
 
   .greeting-cta {
@@ -3616,15 +3708,28 @@ svg {
 
   .About-para-title {
     width: 100%;
-
     text-align: center;
-    font-size: 2.0rem;
+    line-height: 1.25;
+  }
+
+  .about .About-text > .About-para-title {
+    min-height: 0;
+  }
+
+  .about .About-para-secondary-title {
+    font-size: 1.2rem;
+    line-height: 1.35;
+    text-wrap: balance;
   }
 
   .about-image,
   .about-footer {
     width: 100%;
     height: 150px;
+  }
+
+  .about .about-image {
+    height: auto;
   }
 
   #image-description {
@@ -3643,11 +3748,6 @@ svg {
     align-items: center;
     justify-content: center;
     padding-right: 10px;
-  }
-
-  .about-image img {
-    height: 100px;
-    width: 100%;
   }
 
   .about-grid {
@@ -3866,19 +3966,6 @@ svg {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-  }
-
-  .pictures-personal-img {
-    display: flex;
-    height: 280px !important;
-    width: 80% !important;
-    margin-bottom: 20px;
-  }
-
-  .pictures-personal-img img {
-    height: 300px !important;
-    width: 100% !important;
-    margin: 0 auto !important;
   }
 
   .logo-mobile {

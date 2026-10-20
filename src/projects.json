@@ -1,10 +1,14 @@
 [
     {
-    "title": "Coming Soon",
-    "date": "2026-09-01",
+    "title": "Collaborative Whiteboard - Coming Soon",
+    "date": "2026-10-01",
     "description": "Coming soon - be sure to check back later.",
     "src": "",
     "tags": [
+           {
+        "icon": "SiTypescript",
+        "name": "Coming Soon"
+      },
       {
         "icon": "SiTypescript",
         "name": "TypeScript"
@@ -12,6 +16,22 @@
       {
         "icon": "FaReact",
         "name": "React"
+      },
+      {
+        "icon": "FaReact",
+        "name": "LiveBlocks"
+      },
+            {
+        "icon": "Radix",
+        "name": "RadixUI"
+      },
+      {
+        "icon": "",
+        "name": "Zustand"
+      },
+              {
+        "icon": "",
+        "name": "Supabase"
       }
     ],
     "link": "https://github.com/DanielSteele1",

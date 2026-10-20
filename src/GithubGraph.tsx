@@ -1,29 +1,15 @@
 import { Loader } from "@mantine/core";
 import GitHubCalendar from "react-github-calendar";
 
-import { useEffect } from "react";
-
 import './App.css';
 
 interface GraphProps {
 
     loading: boolean;
-    setLoading: (loading: boolean) => void;
     isThemeOn: boolean;
 }
 
-function GithubGraph({ loading, setLoading }: GraphProps) {
-
-    useEffect(() => {
-
-        const timer = setTimeout(() => {
-
-            setLoading(false);
-        }, 100);
-
-        return () => clearTimeout(timer);
-
-    }, [setLoading]);
+function GithubGraph({ loading}: GraphProps) {
 
     return (
         <>
