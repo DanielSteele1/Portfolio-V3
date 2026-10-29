@@ -611,6 +611,19 @@ body {
   color: transparent;
 }
 
+.gradient-text .fold-text {
+  --fold-text-color: currentColor;
+}
+
+.gradient-text .fold-text-piece {
+  color: transparent !important;
+  background-image: var(--main-gradient);
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .landing-paragraph {
   display: flex;
   align-items: center;
