@@ -41,7 +41,7 @@
 
   {
     "title": "Job's Portal",
-    "description": "A frontend application to search, track and apply for jobs. Features a number of search filters including title, location, seniority, remote & pay. It uses Adzuna's API to get job data, and includes ways for users to track application progress. Planned to implement client side logins, stored with Supabase.",
+    "description": "A frontend application to search, track and apply for jobs. Features a number of search filters including title, location, seniority, remote & pay. It uses Adzuna's API to get job data, and includes ways for users to track application progress. Users can login with Google to save thier data permanently.",
     "src": "Jobs-Portal.png",
     "date": "2026-07-01",
     "tags": [
@@ -59,7 +59,7 @@
       },
       {
         "icon": "SiReactrouter",
-        "name": "React-Router"
+        "name": "Google Auth"
       },
       {
         "icon": "FaReact",
