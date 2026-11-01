@@ -1,14 +1,15 @@
 [
     {
     "title": "Collaborative Whiteboard - Coming Soon",
-    "date": "2026-10-01",
-    "description": "Coming soon - be sure to check back later.",
-    "src": "",
+    "date": "2026-11-01",
+    "description": "A real time collaborative workspace app, similar to figma, using shared canvases, live editing and presence with Liveblocks, ReactJs and TypeScript. users will get a share code that they can then privately share with  anyone, and only people with the code will be able to join a workspace.",
+    "src": "Collab-board-indev-1.png",
     "tags": [
            {
         "icon": "SiTypescript",
-        "name": "Coming Soon"
+        "name": "In Development"
       },
+
       {
         "icon": "SiTypescript",
         "name": "TypeScript"
@@ -34,8 +35,8 @@
         "name": "Supabase"
       }
     ],
-    "link": "https://github.com/DanielSteele1",
-    "github": "https://github.com/DanielSteele1"
+    "link": "https://github.com/DanielSteele1/collab-board",
+    "github": "https://github.com/DanielSteele1/collab-board"
   },
 
   {
@@ -44,6 +45,10 @@
     "src": "Jobs-Portal.png",
     "date": "2026-07-01",
     "tags": [
+                 {
+        "icon": "SiTypescript",
+        "name": "Deployed App"
+      },
       {
         "icon": "FaReact",
         "name": "React"
@@ -80,6 +85,10 @@
     "src": "Orbit_Kanban_App.png",
     "tags": [
       {
+        "icon": "SiTypescript",
+        "name": "Deployed App"
+      },
+      {
         "icon": "FaReact",
         "name": "React"
       },
@@ -106,6 +115,10 @@
     "description": "A frontend web application intended to use Spotify's authentication and API service to get a users listening habits, and to visualise that data using vis libraries. Uses React/TS on the frontend.",
     "src": "AudioStats_Real.png",
     "tags": [
+      {
+        "icon": "SiTypescript",
+        "name": "Deployed App"
+      },
       {
         "icon": "FaReact",
         "name": "React"
@@ -141,6 +154,10 @@
     "description": "FocusDev is a utility app designed for developers. It features a Notes app, Reusable code snippet feature, Calender, Github commit graph w/ stats, just to name a few. Coded in JavaScript, React, Node.js & MongoDB. It also uses Bcrypt to securely store user data.",
     "tags": [
       {
+        "icon": "SiCplusplus",
+        "name": "Practice Project"
+      },
+      {
         "icon": "FaReact",
         "name": "React"
       },
@@ -173,6 +190,10 @@
     "src": "SkyCompass.png",
     "tags": [
       {
+        "icon": "SiCplusplus",
+        "name": "University Project"
+      },
+      {
         "icon": "FaReact",
         "name": "React"
       },
@@ -203,6 +224,10 @@
     "description": "EarthSim is a project that I built in C++, using OpenGL and various libraries to create a 3D environment, with the goal of simulating our local system of planets, exposing me to core game development principles and GLSL. I have a web-based version planned.",
     "src": "EarthSim.png",
     "tags": [
+      {
+        "icon": "SiCplusplus",
+        "name": "University Project"
+      },
       {
         "icon": "SiCplusplus",
         "name": "C++"

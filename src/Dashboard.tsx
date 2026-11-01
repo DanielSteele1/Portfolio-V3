@@ -7,7 +7,6 @@ import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import './react-github-calendar.css';
 import './React-Bits/GradientText';
 
-
 import "/node_modules/flag-icons/css/flag-icons.min.css";
 import { IoMdPin } from 'react-icons/io';
 
