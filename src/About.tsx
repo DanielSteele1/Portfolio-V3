@@ -52,7 +52,7 @@ function AboutMe() {
                         <PixelTransition
                             firstContent={
                                 <img
-                                    src="Website_Pic2.jpg"
+                                    src="Daniel_Steele.jpg"
                                     alt="Picture of Daniel Steele"
                                     style={{ width: "100%", height: "100%", objectFit: "cover" }}
                                 />

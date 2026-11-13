@@ -2622,6 +2622,17 @@ svg {
 }
 
 
+.projects-overview, 
+.about-overview,
+.experience-overview,
+.blog-overview{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+}
+
+
 @media (min-width: 1200px) and (max-width: 1600px) {
 
 

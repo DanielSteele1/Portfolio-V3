@@ -14,7 +14,6 @@ import { Select } from '@mantine/core';
 console.table(projectsData);
 const projects = projectsData as ProjectCardProps[];
 
-
 function Projects() {
 const [isLoading, setLoading] = useState(false);
 

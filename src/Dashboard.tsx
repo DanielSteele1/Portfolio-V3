@@ -148,31 +148,6 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                     </div>
                 </div>
 
-{/* 
-                 <div className="landing-sections">
-                    <div className="landing-heading"> Welcome! Feel free to explore...</div>
-
-                     <Link to="/Projects" className='landing-section'>
-                        <span className="landing-section-title"> Projects  </span>
-                        <span className="landing-section-desc"> A collection of personal portfolio projects. </span>
-                    </Link>
-                 
-                    <Link to="/About" className='landing-section'>
-                        <span className="landing-section-title"> About me </span>
-                        <span className="landing-section-desc"> A bit about who I am and my journey. </span>
-                    </Link>
-
-                    <Link to="/Blog" className='landing-section'>
-                        <span className="landing-section-title"> My Blog </span>
-                        <span className="landing-section-desc"> Contains writeups on recent projects + </span>
-                    </Link>
-
-                    <Link to="/Experience" className='landing-section'>
-                        <span className="landing-section-title"> Experience </span>
-                        <span className="landing-section-desc"> A List of my professional experiences. </span>
-                    </Link>
-
-              </div> */}
             </div>
         </motion.div >
     )
