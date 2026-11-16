@@ -149,7 +149,7 @@ const Dashboard = ({ handleDownloadAndView }: Props) => {
                 </div>
 
             </div>
-        </motion.div >
+        </motion.div>
     )
 }
 
